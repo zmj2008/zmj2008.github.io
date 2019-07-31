@@ -76,7 +76,7 @@
     back2top_sidebar: false,
     fancybox: false,
     fastclick: false,
-    lazyload: false,
+    lazyload: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
@@ -96,7 +96,7 @@
 
 
   <meta name="description" content="APlayer HTML5 音乐播放器Hexo中安装hexo-tag-aplayer 是APlayer播放器在Hexo 标签插件（现已支持 MetingJS）在站点根目录下安装 1npm install --save hexo-tag-aplayer  Aplayer使用方式简单介绍12-- 简单格式 --&amp;#123;% aplayer title author url [picture_url,">
-<meta name="keywords" content="aplayer,Hexo,nexT">
+<meta name="keywords" content="Hexo,aplayer,nexT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo aplayer播放器的使用">
 <meta property="og:url" content="http://yoursite.com/2019/07/26/Hexo aplayer播放器的使用/index.html">
@@ -694,9 +694,9 @@
         
         <div class="post-tags">
           
-            <a href="/tags/aplayer/" rel="tag"><i class="fa fa-tag"></i> aplayer</a>
-          
             <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+          
+            <a href="/tags/aplayer/" rel="tag"><i class="fa fa-tag"></i> aplayer</a>
           
             <a href="/tags/nexT/" rel="tag"><i class="fa fa-tag"></i> nexT</a>
           
@@ -1073,6 +1073,8 @@
 
 
 
+  
+
 
 
 
@@ -1100,6 +1102,9 @@
 
   
   <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
