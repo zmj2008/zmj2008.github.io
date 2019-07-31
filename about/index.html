@@ -98,7 +98,7 @@
   <meta property="og:type" content="website">
 <meta property="og:title" content="About me">
 <meta property="og:url" content="http://yoursite.com/about/index.html">
-<meta property="og:site_name" content="Zhanminjie">
+<meta property="og:site_name" content="zhanminjie">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/shuimu.jpg">
 <meta property="og:updated_time" content="2019-07-31T06:07:23.059Z">
@@ -108,7 +108,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Zhanminjie" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="zhanminjie" type="application/atom+xml">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>About me | Zhanminjie</title>
+  <title>About me | zhanminjie</title>
   
 
 
@@ -186,7 +186,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Zhanminjie</span>
+        <span class="site-title">zhanminjie</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -845,11 +845,11 @@
     appId: 'oICPdD1z26J4vxuNr22SSHhe-gzGzoHsz',
     appKey: 'm6cABEaDSYMKyQuNMcja3X87',
     placeholder: 'ヾﾉ≧∀≦)o既然来了就随便说些什么吧',
-    avatar: '',
+    avatar: 'mp',
     meta: guest,
     pageSize: '10' || 10,
     visitor: false,
-    lang: 'mm' || 'zh-cn'
+    lang: 'zh-cn' || 'zh-cn'
   });
 </script>
 
@@ -1185,74 +1185,6 @@
 
 
   
-  
-  <script>
-    
-    function showTime(Counter) {
-      var entries = [];
-      var $visitors = $('.leancloud_visitors');
-
-      $visitors.each(function() {
-        entries.push( $(this).attr('id').trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
-        .done(function({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for (var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if (countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
-        });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'oICPdD1z26J4vxuNr22SSHhe-gzGzoHsz')
-        .done(function({ api_server }) {
-          var Counter = function(method, url, data) {
-            return $.ajax({
-              method: method,
-              url: 'https://' + api_server + '/1.1' + url,
-              headers: {
-                'X-LC-Id': 'oICPdD1z26J4vxuNr22SSHhe-gzGzoHsz',
-                'X-LC-Key': 'm6cABEaDSYMKyQuNMcja3X87',
-                'Content-Type': 'application/json',
-              },
-              data: data
-            });
-          };
-          
-            if ($('.post-title-link').length >= 1) {
-              showTime(Counter);
-            }
-          
-        });
-    });
-  </script>
-
-
 
   
 

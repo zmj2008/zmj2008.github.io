@@ -98,15 +98,19 @@
   <meta property="og:type" content="website">
 <meta property="og:title" content="留言互动">
 <meta property="og:url" content="http://yoursite.com/guestbook/index.html">
-<meta property="og:site_name" content="Zhanminjie">
+<meta property="og:site_name" content="zhanminjie">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-31T06:09:32.340Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/guestbook-%E9%85%8D%E5%9B%BE.jpg
+">
+<meta property="og:updated_time" content="2019-07-31T09:48:21.025Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="留言互动">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/guestbook-%E9%85%8D%E5%9B%BE.jpg
+">
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Zhanminjie" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="zhanminjie" type="application/atom+xml">
 
 
 
@@ -122,7 +126,7 @@
   };
 </script>
 
-  <title>留言互动 | Zhanminjie</title>
+  <title>留言互动 | zhanminjie</title>
   
 
 
@@ -161,6 +165,9 @@
   </style>
 </noscript>
 
+<link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+<script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -184,7 +191,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Zhanminjie</span>
+        <span class="site-title">zhanminjie</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -417,7 +424,12 @@
       <div class="post-body">
         
         
-          
+          <div align="center"> 
+<img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/guestbook-%E9%85%8D%E5%9B%BE.jpg
+">
+</div>
+
+    <div id="aplayer-VhGTkYTW" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="2709514173" data-server="netease" data-type="autoplay" data-mode="circulation" data-autoplay="false" data-mutex="false" data-listmaxheight="340px" data-preload="none" data-theme="#ad7a86"></div>
         
       </div>
       
@@ -841,11 +853,11 @@
     appId: 'oICPdD1z26J4vxuNr22SSHhe-gzGzoHsz',
     appKey: 'm6cABEaDSYMKyQuNMcja3X87',
     placeholder: 'ヾﾉ≧∀≦)o既然来了就随便说些什么吧',
-    avatar: '',
+    avatar: 'mp',
     meta: guest,
     pageSize: '10' || 10,
     visitor: false,
-    lang: 'mm' || 'zh-cn'
+    lang: 'zh-cn' || 'zh-cn'
   });
 </script>
 
@@ -1181,74 +1193,6 @@
 
 
   
-  
-  <script>
-    
-    function showTime(Counter) {
-      var entries = [];
-      var $visitors = $('.leancloud_visitors');
-
-      $visitors.each(function() {
-        entries.push( $(this).attr('id').trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
-        .done(function({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for (var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if (countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
-        });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'oICPdD1z26J4vxuNr22SSHhe-gzGzoHsz')
-        .done(function({ api_server }) {
-          var Counter = function(method, url, data) {
-            return $.ajax({
-              method: method,
-              url: 'https://' + api_server + '/1.1' + url,
-              headers: {
-                'X-LC-Id': 'oICPdD1z26J4vxuNr22SSHhe-gzGzoHsz',
-                'X-LC-Key': 'm6cABEaDSYMKyQuNMcja3X87',
-                'Content-Type': 'application/json',
-              },
-              data: data
-            });
-          };
-          
-            if ($('.post-title-link').length >= 1) {
-              showTime(Counter);
-            }
-          
-        });
-    });
-  </script>
-
-
 
   
 

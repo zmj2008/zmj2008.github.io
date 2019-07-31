@@ -100,7 +100,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="hello world">
 <meta property="og:url" content="http://yoursite.com/2019/07/21/hello world/index.html">
-<meta property="og:site_name" content="Zhanminjie">
+<meta property="og:site_name" content="zhanminjie">
 <meta property="og:description" content="匆匆25年过去了，还记得25年前的自己看狮子王时的情景么？ 最近狮子王真狮版又将这个故事重新映在了我们眼前，当电影落幕时看到很多人哭了。为何这样一部电影能如此深入打人心。 “25年前，父母陪我看狮子王；25年后，我带孩子看狮子王。” 曾今年少，不知何为艰苦，于是对未来充满热情于憧憬。 时间如白驹过隙，渐渐跨入而立之年，曾今的梦想早已偏离轨道，社会如同一片汪洋，一个人是如此的渺小，进去了才真正体会人">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-07-28T22:37:30.367Z">
@@ -110,7 +110,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Zhanminjie" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="zhanminjie" type="application/atom+xml">
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title>hello world | Zhanminjie</title>
+  <title>hello world | zhanminjie</title>
   
 
 
@@ -188,7 +188,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Zhanminjie</span>
+        <span class="site-title">zhanminjie</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -394,7 +394,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zhanminjie">
+      <meta itemprop="name" content="zhanminjie">
     </span>
 
     
@@ -483,16 +483,6 @@
           
 
           
-          
-            <span id="/2019/07/21/hello world/" class="post-meta-item leancloud_visitors" data-flag-title="hello world">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
           
 
           
@@ -1056,11 +1046,11 @@
     appId: 'oICPdD1z26J4vxuNr22SSHhe-gzGzoHsz',
     appKey: 'm6cABEaDSYMKyQuNMcja3X87',
     placeholder: 'ヾﾉ≧∀≦)o既然来了就随便说些什么吧',
-    avatar: '',
+    avatar: 'mp',
     meta: guest,
     pageSize: '10' || 10,
     visitor: false,
-    lang: 'mm' || 'zh-cn'
+    lang: 'zh-cn' || 'zh-cn'
   });
 </script>
 
@@ -1396,66 +1386,6 @@
 
 
   
-  
-  <script>
-    
-    function addCount(Counter) {
-      var $visitors = $('.leancloud_visitors');
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
-        .done(function({ results }) {
-          if (results.length > 0) {
-            var counter = results[0];
-            
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text(counter.time + 1);
-            
-            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
-            
-              .fail(function ({ responseJSON }) {
-                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
-              })
-          } else {
-            
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! More info at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
-            
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
-        });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'oICPdD1z26J4vxuNr22SSHhe-gzGzoHsz')
-        .done(function({ api_server }) {
-          var Counter = function(method, url, data) {
-            return $.ajax({
-              method: method,
-              url: 'https://' + api_server + '/1.1' + url,
-              headers: {
-                'X-LC-Id': 'oICPdD1z26J4vxuNr22SSHhe-gzGzoHsz',
-                'X-LC-Key': 'm6cABEaDSYMKyQuNMcja3X87',
-                'Content-Type': 'application/json',
-              },
-              data: data
-            });
-          };
-          
-            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
-            if (localhost.test(document.URL)) return;
-            addCount(Counter);
-          
-        });
-    });
-  </script>
-
-
 
   
 

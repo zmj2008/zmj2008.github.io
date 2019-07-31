@@ -100,7 +100,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Picgo GitHub自建图床">
 <meta property="og:url" content="http://yoursite.com/2019/07/27/Picgo Github自建图床功能/index.html">
-<meta property="og:site_name" content="Zhanminjie">
+<meta property="og:site_name" content="zhanminjie">
 <meta property="og:description" content="自建原因对于写博客的人来说，图裂是很让人然烦恼的一件事情。后来想到了自建图床，将所有图片上传云，并通过外联https连接用于博客或Markdownd的编写。正好自己用Hexo+Github搭建了博客，就想着用Github来做图片的云存储空间，电脑端使用Picgo传图软件。既使用Picgo+Github的方式自建图床。 GIthub仓库创建及获取token1.注册Github,新建仓库(此处略)。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/%E9%80%89%E6%8B%A9Generate%20token.png">
@@ -115,7 +115,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Zhanminjie" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="zhanminjie" type="application/atom+xml">
 
 
 
@@ -131,7 +131,7 @@
   };
 </script>
 
-  <title>Picgo GitHub自建图床 | Zhanminjie</title>
+  <title>Picgo GitHub自建图床 | zhanminjie</title>
   
 
 
@@ -193,7 +193,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Zhanminjie</span>
+        <span class="site-title">zhanminjie</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -399,7 +399,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zhanminjie">
+      <meta itemprop="name" content="zhanminjie">
     </span>
 
     
@@ -488,16 +488,6 @@
           
 
           
-          
-            <span id="/2019/07/27/Picgo Github自建图床功能/" class="post-meta-item leancloud_visitors" data-flag-title="Picgo GitHub自建图床">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
           
 
           
@@ -1089,11 +1079,11 @@
     appId: 'oICPdD1z26J4vxuNr22SSHhe-gzGzoHsz',
     appKey: 'm6cABEaDSYMKyQuNMcja3X87',
     placeholder: 'ヾﾉ≧∀≦)o既然来了就随便说些什么吧',
-    avatar: '',
+    avatar: 'mp',
     meta: guest,
     pageSize: '10' || 10,
     visitor: false,
-    lang: 'mm' || 'zh-cn'
+    lang: 'zh-cn' || 'zh-cn'
   });
 </script>
 
@@ -1429,66 +1419,6 @@
 
 
   
-  
-  <script>
-    
-    function addCount(Counter) {
-      var $visitors = $('.leancloud_visitors');
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
-        .done(function({ results }) {
-          if (results.length > 0) {
-            var counter = results[0];
-            
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text(counter.time + 1);
-            
-            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
-            
-              .fail(function ({ responseJSON }) {
-                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
-              })
-          } else {
-            
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! More info at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
-            
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
-        });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'oICPdD1z26J4vxuNr22SSHhe-gzGzoHsz')
-        .done(function({ api_server }) {
-          var Counter = function(method, url, data) {
-            return $.ajax({
-              method: method,
-              url: 'https://' + api_server + '/1.1' + url,
-              headers: {
-                'X-LC-Id': 'oICPdD1z26J4vxuNr22SSHhe-gzGzoHsz',
-                'X-LC-Key': 'm6cABEaDSYMKyQuNMcja3X87',
-                'Content-Type': 'application/json',
-              },
-              data: data
-            });
-          };
-          
-            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
-            if (localhost.test(document.URL)) return;
-            addCount(Counter);
-          
-        });
-    });
-  </script>
-
-
 
   
 

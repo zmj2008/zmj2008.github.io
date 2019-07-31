@@ -100,7 +100,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Typroa中文字体美化">
 <meta property="og:url" content="http://yoursite.com/2019/07/27/Typroa中文字体美化/index.html">
-<meta property="og:site_name" content="Zhanminjie">
+<meta property="og:site_name" content="zhanminjie">
 <meta property="og:description" content="好字体带来好心情 “Typora”这款Markdown编译器，是自己目前使用率最高的在线编译软件，其所见即所得、离线编辑让我觉得十分得心应手。但软件默认所带的中文字体显示为“宋体”，对于有一定审美度的用户来说可能不太美观，考虑到长期使用的缘故，漂亮字体能带给编译者带来好的心情，一个好的编译开始。 那如何更换字体呢？思路如下： 下载使用一款主题在官网选择一款Typora主题，例如主题Catfish,">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/Snipaste_2019-07-29_09-36-34.png">
@@ -113,7 +113,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Zhanminjie" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="zhanminjie" type="application/atom+xml">
 
 
 
@@ -129,7 +129,7 @@
   };
 </script>
 
-  <title>Typroa中文字体美化 | Zhanminjie</title>
+  <title>Typroa中文字体美化 | zhanminjie</title>
   
 
 
@@ -191,7 +191,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Zhanminjie</span>
+        <span class="site-title">zhanminjie</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -397,7 +397,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zhanminjie">
+      <meta itemprop="name" content="zhanminjie">
     </span>
 
     
@@ -486,16 +486,6 @@
           
 
           
-          
-            <span id="/2019/07/27/Typroa中文字体美化/" class="post-meta-item leancloud_visitors" data-flag-title="Typroa中文字体美化">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
           
 
           
@@ -1114,11 +1104,11 @@
     appId: 'oICPdD1z26J4vxuNr22SSHhe-gzGzoHsz',
     appKey: 'm6cABEaDSYMKyQuNMcja3X87',
     placeholder: 'ヾﾉ≧∀≦)o既然来了就随便说些什么吧',
-    avatar: '',
+    avatar: 'mp',
     meta: guest,
     pageSize: '10' || 10,
     visitor: false,
-    lang: 'mm' || 'zh-cn'
+    lang: 'zh-cn' || 'zh-cn'
   });
 </script>
 
@@ -1454,66 +1444,6 @@
 
 
   
-  
-  <script>
-    
-    function addCount(Counter) {
-      var $visitors = $('.leancloud_visitors');
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
-        .done(function({ results }) {
-          if (results.length > 0) {
-            var counter = results[0];
-            
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text(counter.time + 1);
-            
-            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
-            
-              .fail(function ({ responseJSON }) {
-                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
-              })
-          } else {
-            
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! More info at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
-            
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
-        });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'oICPdD1z26J4vxuNr22SSHhe-gzGzoHsz')
-        .done(function({ api_server }) {
-          var Counter = function(method, url, data) {
-            return $.ajax({
-              method: method,
-              url: 'https://' + api_server + '/1.1' + url,
-              headers: {
-                'X-LC-Id': 'oICPdD1z26J4vxuNr22SSHhe-gzGzoHsz',
-                'X-LC-Key': 'm6cABEaDSYMKyQuNMcja3X87',
-                'Content-Type': 'application/json',
-              },
-              data: data
-            });
-          };
-          
-            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
-            if (localhost.test(document.URL)) return;
-            addCount(Counter);
-          
-        });
-    });
-  </script>
-
-
 
   
 
