@@ -1799,7 +1799,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4ac760;
+  background: #fff;
 }
 .feed-link,
 .chat {
@@ -3007,7 +3007,7 @@ body {
   opacity: 1;
 }
 .header-inner {
-  opacity: 1;
+  opacity: 0.8;
 }
 code {
   color: #c7254e;
