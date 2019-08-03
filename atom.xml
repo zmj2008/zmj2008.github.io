@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-31T12:11:49.328Z</updated>
+  <updated>2019-08-03T05:02:06.943Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>时光de颜色</title>
+    <link href="http://yoursite.com/2019/08/03/%E6%97%B6%E5%85%89de%E9%A2%9C%E8%89%B2/"/>
+    <id>http://yoursite.com/2019/08/03/时光de颜色/</id>
+    <published>2019-08-03T04:54:21.000Z</published>
+    <updated>2019-08-03T05:02:06.943Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>有人说，时光是红色的，似热血，有温度，<br>有人说，时光是金色的，充满希望，闪闪发光，<br>有人说，时光是彩色的，实现梦想，无限可能。</p><p>或许，时光原本透明，点滴间折射时代的变迁，<br>每一分秒，因为我们经历，才有意义，<br>每一段记忆，只有我们奋斗，永不褪色！</p><p>或许，时光原本彩色，带着苦味，带着甜味。带着泪水，带着欢笑。</p><p>时光记录了每代国人的青春梦想和努力拼搏，<br>时光承载着国家70年的风雨历程，<br>时光见证了祖国的每一次辉煌时刻。</p><p>时光带不走的是每一个人的印记，留下的是每一个人的回忆。</p><p><strong>时光催促我们努力向前奔跑，鼓励我们向未知的明天拥抱。</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="时光" scheme="http://yoursite.com/tags/%E6%97%B6%E5%85%89/"/>
+    
+  </entry>
   
   <entry>
     <title>Markdown字体颜色编辑</title>
@@ -153,9 +178,9 @@
       <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
     
     
-      <category term="aplayer" scheme="http://yoursite.com/tags/aplayer/"/>
-    
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="aplayer" scheme="http://yoursite.com/tags/aplayer/"/>
     
       <category term="nexT" scheme="http://yoursite.com/tags/nexT/"/>
     
