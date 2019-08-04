@@ -1799,7 +1799,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #060aff;
+  background: #0bbf09;
 }
 .feed-link,
 .chat {
@@ -1989,7 +1989,7 @@ pre .javascript .function {
 .with-love {
   display: inline-block;
   margin: 0 5px;
-  color: #808080;
+  color: #000000;
 }
 .powered-by,
 .theme-info {
