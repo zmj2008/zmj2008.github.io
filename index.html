@@ -508,17 +508,6 @@
 
           
           
-            <span id="/2019/07/30/2019 读书计划/" class="post-meta-item leancloud_visitors" data-flag-title="2019读书计划">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">热度：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-				<span>℃</span>
-            </span>
-          
 
           
 
@@ -724,17 +713,6 @@
 
           
           
-            <span id="/2019/08/03/知乎个人实用文章整理/" class="post-meta-item leancloud_visitors" data-flag-title="知乎个人实用文章整理">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">热度：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-				<span>℃</span>
-            </span>
-          
 
           
 
@@ -934,17 +912,6 @@
           
 
           
-          
-            <span id="/2019/08/03/时光de颜色/" class="post-meta-item leancloud_visitors" data-flag-title="时光de颜色">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">热度：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-				<span>℃</span>
-            </span>
           
 
           
@@ -1151,17 +1118,6 @@
           
 
           
-          
-            <span id="/2019/07/31/Markdown字体颜色编辑/" class="post-meta-item leancloud_visitors" data-flag-title="Markdown字体颜色编辑">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">热度：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-				<span>℃</span>
-            </span>
           
 
           
@@ -1373,17 +1329,6 @@
 
           
           
-            <span id="/2019/07/27/Picgo Github自建图床功能/" class="post-meta-item leancloud_visitors" data-flag-title="Picgo GitHub自建图床">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">热度：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-				<span>℃</span>
-            </span>
-          
 
           
 
@@ -1587,17 +1532,6 @@
           
 
           
-          
-            <span id="/2019/07/27/Typroa中文字体美化/" class="post-meta-item leancloud_visitors" data-flag-title="Typroa中文字体美化">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">热度：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-				<span>℃</span>
-            </span>
           
 
           
@@ -1804,17 +1738,6 @@
           
 
           
-          
-            <span id="/2019/07/26/Hexo aplayer播放器的使用/" class="post-meta-item leancloud_visitors" data-flag-title="Hexo aplayer播放器的使用">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">热度：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-				<span>℃</span>
-            </span>
           
 
           
@@ -2023,17 +1946,6 @@ Aplayer使用方式简单介绍-- 简单格式 -
 
           
           
-            <span id="/2019/07/24/Hexo 环境搭建博客/" class="post-meta-item leancloud_visitors" data-flag-title="Hexo GitHub搭建博客">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">热度：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-				<span>℃</span>
-            </span>
-          
 
           
 
@@ -2241,17 +2153,6 @@ Aplayer使用方式简单介绍-- 简单格式 -
           
 
           
-          
-            <span id="/2019/07/21/hello world/" class="post-meta-item leancloud_visitors" data-flag-title="hello world">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">热度：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-				<span>℃</span>
-            </span>
           
 
           
@@ -2581,7 +2482,7 @@ Aplayer使用方式简单介绍-- 简单格式 -
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2019-08-04</span>
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2019-08-05</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -3119,74 +3020,6 @@ Aplayer使用方式简单介绍-- 简单格式 -
 
 
   
-  
-  <script>
-    
-    function showTime(Counter) {
-      var entries = [];
-      var $visitors = $('.leancloud_visitors');
-
-      $visitors.each(function() {
-        entries.push( $(this).attr('id').trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
-        .done(function({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for (var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if (countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
-        });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'JqpIfCvndYBtkMOSXA2L8yyE-gzGzoHsz')
-        .done(function({ api_server }) {
-          var Counter = function(method, url, data) {
-            return $.ajax({
-              method: method,
-              url: 'https://' + api_server + '/1.1' + url,
-              headers: {
-                'X-LC-Id': 'JqpIfCvndYBtkMOSXA2L8yyE-gzGzoHsz',
-                'X-LC-Key': 'mBDtU6S5JekMJusxtFSE5b58',
-                'Content-Type': 'application/json',
-              },
-              data: data
-            });
-          };
-          
-            if ($('.post-title-link').length >= 1) {
-              showTime(Counter);
-            }
-          
-        });
-    });
-  </script>
-
-
 
   
 
