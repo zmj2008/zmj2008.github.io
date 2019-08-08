@@ -429,7 +429,7 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/2019/08/08/Hexo nesT添加雪花飘落效果/" itemprop="url">
+          <a class="post-title-link" href="/c5826913/" itemprop="url">
             
               <span itemprop="name">Hexo NexT 添加雪花飘落效果</span>
             
@@ -1223,125 +1223,6 @@
           $('body').css('overflow', '');
 
           proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-<script>
-if ($('body').find('div.pdf').length) {
-  $.ajax({
-    type: 'GET',
-    url: '//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js',
-    dataType: 'script',
-    cache: true,
-    success: function() {
-      $('body').find('div.pdf').each(function(i, o) {
-        PDFObject.embed($(o).attr('target'), $(o), {
-          pdfOpenParams: {
-            navpanes: 0,
-            toolbar: 0,
-            statusbar: 0,
-            pagemode: 'thumbs',
-            view: 'FitH'
-          },
-          PDFJS_URL: '/lib/pdf/web/viewer.html',
-          height: $(o).attr('height') || '500px'
-        });
-      });
-    },
-  });
-}
-</script>
-
-
-  
-<script>
-if ($('body').find('pre.mermaid').length) {
-  $.ajax({
-    type: 'GET',
-    url: '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js',
-    dataType: 'script',
-    cache: true,
-    success: function() {
-      mermaid.initialize({
-        theme: 'forest',
-        logLevel: 3,
-        flowchart: { curve: 'linear' },
-        gantt: { axisFormat: '%m/%d/%Y' },
-        sequence: { actorMargin: 50 }
-      });
-    }
-  });
-}
-</script>
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-<!-- 雪花特效 -->
-<script type="text/javascript">
-  var windowWidth = $(window).width();
-  if (windowWidth > 480) {
-    document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
-  }
-</script>
-
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":100,"vOffset":-100},"mobile":{"show":true,"scale":0.5}});</script></body>
-</html>
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/clicklove.js"></script> proceedsearch();
         }
       });
     }
