@@ -294,9 +294,9 @@
       <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
     
     
-      <category term="aplayer" scheme="http://yoursite.com/tags/aplayer/"/>
-    
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="aplayer" scheme="http://yoursite.com/tags/aplayer/"/>
     
       <category term="nexT" scheme="http://yoursite.com/tags/nexT/"/>
     
@@ -323,9 +323,9 @@
       <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
-    
       <category term="GitHub" scheme="http://yoursite.com/tags/GitHub/"/>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
   </entry>
   
