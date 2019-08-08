@@ -106,7 +106,7 @@
 <meta property="og:description" content="引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。  这次主要介绍 NexT 7.2.0 主题底部添加运行时间设置。 底部添加运行时间找到 \themes\next\layout\_partials\下面的fo">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/12345.png">
-<meta property="og:updated_time" content="2019-08-08T04:10:08.319Z">
+<meta property="og:updated_time" content="2019-08-08T04:46:30.409Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo NexT 添加底部运行时间设置">
 <meta name="twitter:description" content="引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。  这次主要介绍 NexT 7.2.0 主题底部添加运行时间设置。 底部添加运行时间找到 \themes\next\layout\_partials\下面的fo">
@@ -248,7 +248,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">25</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">26</span></a>
 
   </li>
         
@@ -284,7 +284,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">16</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">17</span></a>
 
   </li>
         
@@ -452,7 +452,7 @@
                 
               
 
-              <time title="创建时间：2019-08-08 11:26:35 / 修改时间：12:10:08" itemprop="dateCreated datePublished" datetime="2019-08-08T11:26:35+08:00">2019-08-08</time>
+              <time title="创建时间：2019-08-08 11:26:35 / 修改时间：12:46:30" itemprop="dateCreated datePublished" datetime="2019-08-08T11:26:35+08:00">2019-08-08</time>
             </span>
           
 
@@ -535,7 +535,7 @@
 <h1 id="底部添加运行时间"><a href="#底部添加运行时间" class="headerlink" title="底部添加运行时间"></a>底部添加运行时间</h1><p>找到 <code>\themes\next\layout\_partials\</code>下面的<code>footer.swig</code>文件，底部添加以下代码：</p>
 <figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">"run_time"</span> style=<span class="string">" text-align:center;"</span>&gt;</span><br><span class="line">  &lt;span id=<span class="string">"timeDate"</span>&gt;载入天数...&lt;/span&gt;&lt;span id=<span class="string">"times"</span>&gt;载入时分秒...&lt;/span&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    var now = new Date(); </span><br><span class="line">    function createtime() &#123; </span><br><span class="line">        var grt= new Date(<span class="string">"07/23/2019 10:00:00"</span>);<span class="comment">//此处修改你的建站时间或者网站上线时间 </span></span><br><span class="line">        now.setTime(now.getTime()+<span class="number">250</span>); </span><br><span class="line">        days = (now - grt ) / <span class="number">1000</span> / <span class="number">60</span> / <span class="number">60</span> / <span class="number">24</span>; dnum = Math.floor(days); </span><br><span class="line">        hours = (now - grt ) / <span class="number">1000</span> / <span class="number">60</span> / <span class="number">60</span> - (<span class="number">24</span> * dnum); hnum = Math.floor(hours); </span><br><span class="line">        if(String(hnum).length ==<span class="number">1</span> )&#123;hnum = <span class="string">"0"</span> + hnum;&#125; minutes = (now - grt ) / <span class="number">1000</span> /<span class="number">60</span> - (<span class="number">24</span> * <span class="number">60</span> * dnum) - (<span class="number">60</span> * hnum); </span><br><span class="line">        mnum = Math.floor(minutes); if(String(mnum).length ==<span class="number">1</span> )&#123;mnum = <span class="string">"0"</span> + mnum;&#125; </span><br><span class="line">        seconds = (now - grt ) / <span class="number">1000</span> - (<span class="number">24</span> * <span class="number">60</span> * <span class="number">60</span> * dnum) - (<span class="number">60</span> * <span class="number">60</span> * hnum) - (<span class="number">60</span> * mnum); </span><br><span class="line">        snum = Math.round(seconds); if(String(snum).length ==<span class="number">1</span> )&#123;snum = <span class="string">"0"</span> + snum;&#125; </span><br><span class="line">        document.getElementById(<span class="string">"timeDate"</span>).innerHTML = <span class="string">"(*^_^*)本站已运行 "</span>+dnum+<span class="string">" 天 "</span>;      #可自行修改中文</span><br><span class="line">        document.getElementById(<span class="string">"times"</span>).innerHTML = hnum + <span class="string">" 小时 "</span> + mnum + <span class="string">" 分 "</span> + snum + <span class="string">" 秒"</span>; </span><br><span class="line">    &#125; </span><br><span class="line">    setInterval(<span class="string">"createtime()"</span>,<span class="number">250</span>);</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
-<p>hexo clean&amp; hexo g &amp;hexo s  即可本地预览效果。</p>
+<p><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>  即可本地预览效果。</p>
 
       
     </div>
@@ -634,6 +634,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/896b141d/" rel="prev" title="Hexo NesT 添加Live2d看板动画效果">
+                Hexo NesT 添加Live2d看板动画效果 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -709,7 +713,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -809,7 +813,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">25</span>
+                      
+                    
+                    <span class="site-state-item-count">26</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
