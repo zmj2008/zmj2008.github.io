@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-07T07:43:18.988Z</updated>
+  <updated>2019-08-08T00:24:16.889Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Win10系统优化2:软件辅助篇</title>
+    <link href="http://yoursite.com/2019/08/06/Win10%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%962%20%E8%BD%AF%E4%BB%B6%E8%BE%85%E5%8A%A9%E7%AF%87/"/>
+    <id>http://yoursite.com/2019/08/06/Win10系统优化2 软件辅助篇/</id>
+    <published>2019-08-06T13:30:19.000Z</published>
+    <updated>2019-08-08T00:24:16.889Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>最近对自己的本基本电脑重新安装了WIN10系统后，在操作系统上选择了参加Windows预览体验计划，直接跳到下一版本并安装了最新的更新。虽然系统已更新到最新，但还是需要对其进行一些必要的优化，才能使自己使用起来更加流畅。</p><p>本次介绍系统优化第二步软件辅助优化。</p><h1 id="软媒美化大师优化"><a href="#软媒美化大师优化" class="headerlink" title="软媒美化大师优化"></a><strong>软媒美化大师优化</strong></h1><p>下载<a href="https://www.lanzous.com/i5gol2d" target="_blank" rel="noopener">软媒美化大师单文件版3.7.0.0</a></p><p>系统外观—桌面设置</p><p><img src="https://i.loli.net/2019/08/07/9QkVxHmz2eRDSb4.jpg" alt></p><h1 id="软媒设置大师优化"><a href="#软媒设置大师优化" class="headerlink" title="软媒设置大师优化"></a><strong>软媒设置大师优化</strong></h1><p>下载<a href="https://www.lanzous.com/i5gol3e" target="_blank" rel="noopener">软媒设置大师单文件版3.7.2.0</a>              </p><p>系统设置—资源管理器</p><p><img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/Snipaste_2019-08-07_23-04-47.jpg" alt></p><p>系统设置—多媒体优化设置</p><p><img src="https://i.loli.net/2019/08/07/G5EqkgINQVjhn6C.jpg" alt></p><p>系统设置—错误报告</p><p><img src="https://i.loli.net/2019/08/07/nU4oMhdkRfEVjl1.jpg" alt></p><p>系统设置—开关机设置</p><p><img src="https://i.loli.net/2019/08/07/wOQZ8fheuAvRrWV.jpg" alt></p><p>右键菜单—新建菜单  删除无用右键菜单</p><p><img src="https://i.loli.net/2019/08/07/r1IuS2dUbNYZhHn.jpg" alt></p><p>右键菜单—发送到菜单  删除无用右键菜单</p><p><img src="https://i.loli.net/2019/08/07/VXie5dOrYy6bj8J.jpg" alt></p><p>右键菜单—添加右键菜单项目  添加上获得管理员所有权这个功能</p><p><img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/Snipaste_2019-08-07_23-19-55.jpg" alt></p><h1 id="DISM-优化"><a href="#DISM-优化" class="headerlink" title="DISM++优化"></a><strong>DISM++优化</strong></h1><p>下载 <a href="https://www.chuyu.me/zh-Hans/index.html" target="_blank" rel="noopener">DISM++</a></p><p>启动项管理—关闭开机磁盘检测。关闭开机启动OneDrive</p><p><img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/mcoNelUhAaCkrT2.jpg" alt></p><p>系统优化设置如下</p><p><img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/Snipaste_2019-08-07_23-38-36.jpg" alt></p><p><img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/Snipaste_2019-08-07_23-41-02.jpg" alt></p><p><img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/Snipaste_2019-08-07_23-42-49.jpg" alt></p><p><img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/Snipaste_2019-08-07_23-44-54.jpg" alt></p><p><img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/Snipaste_2019-08-07_23-48-24.jpg" alt></p><p><img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/Snipaste_2019-08-07_23-51-25.jpg" alt></p><p><img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/Snipaste_2019-08-07_23-53-10.jpg" alt></p><p><img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/Snipaste_2019-08-07_23-55-00.jpg" alt></p><p><img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/Snipaste_2019-08-07_23-56-55.jpg" alt></p><p><img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/Snipaste_2019-08-07_23-59-25.jpg" alt></p><h1 id="DISM-清理"><a href="#DISM-清理" class="headerlink" title="DISM++清理"></a><strong>DISM++清理</strong></h1><p><img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/Snipaste_2019-08-08_00-17-41.jpg" alt></p><h1 id="软媒清理大师清理"><a href="#软媒清理大师清理" class="headerlink" title="软媒清理大师清理"></a>软媒清理大师清理</h1><p>下载<a href="https://www.lanzous.com/i5grm9e" target="_blank" rel="noopener">软媒清理大师</a></p><p>一键清理</p><p><img src="https://i.loli.net/2019/08/08/MfIBT1CFpAGco6U.jpg" alt></p><p>深度清理</p><p><img src="https://i.loli.net/2019/08/08/8hGNiRl4yU6beAX.jpg" alt></p><p>系统瘦身</p><p><img src="https://i.loli.net/2019/08/08/9fWMCzY8VFH1loO.jpg" alt></p><h1 id="添加摄像头补丁"><a href="#添加摄像头补丁" class="headerlink" title="添加摄像头补丁"></a>添加摄像头补丁</h1><p>下载<a href="https://www.lanzous.com/i5gny3g" target="_blank" rel="noopener">摄像头补丁</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+      <category term="Windows" scheme="http://yoursite.com/categories/Windows/"/>
+    
+    
+      <category term="系统" scheme="http://yoursite.com/tags/%E7%B3%BB%E7%BB%9F/"/>
+    
+      <category term="优化" scheme="http://yoursite.com/tags/%E4%BC%98%E5%8C%96/"/>
+    
+      <category term="Windows" scheme="http://yoursite.com/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title>Win10系统优化1:手动优化篇</title>
