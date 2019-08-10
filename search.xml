@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[手机如何登陆Google应用商店]]></title>
+    <url>%2F34057798%2F</url>
+    <content type="text"><![CDATA[引言因为谷歌在国内的退出，导致很多人的Android手机上无法安装上Google play store。那是否有什么简单的方法能让手机安装上Google play store 呢？方法还是有的，大致介绍如下。 安装在PC机的安卓模拟器上安装Google空间。 雷电安卓模拟器 Google空间 雷电模拟器上安装Google空间 添加Google账户 账户添加绑定后既可以访问Googleplay应用商店。在自己的手机上也是如此的操作。 相对繁琐的是谷歌账号注册需科学上网，这里分享一个科学上网软件。 是不是发现原来访问Google play 应用商店是一件非常简单的事情！]]></content>
+      <categories>
+        <category>GooglePlay</category>
+      </categories>
+      <tags>
+        <tag>GooglePlay</tag>
+        <tag>手机</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[PicUploader图床工具设置]]></title>
     <url>%2Fcb6668a4%2F</url>
     <content type="text"><![CDATA[操作系统环境：Win10 需提前安装 git 然后创建文件夹，使用git命令下载 PicUploader 源代码 1git clone https://github.com/xiebruce/PicUploader.git 安装 phpstudy2018 于E盘（自选），把整个 PicUploader文件夹放置于E:\phpStudy\PHPTutorial\WWW目录下，进入E:\phpStudy\PHPTutorial\Apache\conf目录，找到vhosts.conf文件并打开，在原有代码下空一行，添加如下代码： 1234567&lt;VirtualHost *:80&gt; DocumentRoot "E:\phpStudy\PHPTutorial\WWW\PicUploader" ServerName api.picuploader.com DirectoryIndex dashboard.php ErrorLog "logs/api.picuploader.com-error.log" CustomLog "logs/api.picuploader.com-access.log" common&lt;/VirtualHost&gt; 打开phpStudy,切换至最新版php+Apache，重启后运行状态里Apache亮绿灯即可。 并保证PHP扩展中已开启php_fileinfo、php_curl、php_gd2、php_exif四个扩展。要使用网页版查看记录还需要开启php_pdo_sqlite和php_pdo_mysql 找到C:\Windows\System32\drivers\etc中的hosts文件，添加一条语句并保存。 1127.0.0.1 api.picuploader.com 打开浏览器，并输入http://api.picuploader.com如果一切正常可进入如下PicUploader Web界面 1http://api.picuploader.com 未完待续 参考博客：https://www.xiebruce.top/17.html]]></content>
@@ -8,8 +20,8 @@
         <category>PicUploader</category>
       </categories>
       <tags>
-        <tag>PicUploader</tag>
         <tag>图床</tag>
+        <tag>PicUploader</tag>
       </tags>
   </entry>
   <entry>
@@ -151,9 +163,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hexo NexT 点击头像回到首页设置]]></title>
+    <title><![CDATA[Hexo NexT 文章置顶设置]]></title>
     <url>%2Fa12a1a77%2F</url>
-    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 点击头像回到首页的设置。 点击头像回到首页修改/themes/next/layout/_macro/sidebar.swig，找到如下代码： 123&lt;img class="site-author-image" itemprop="image" src="&#123;&#123; url_for( theme.avatar | default(theme.images + '/avatar.gif') ) &#125;&#125;" alt="&#123;&#123; theme.author &#125;&#125;" /&gt; 在其前后加上&lt;a href=&quot;/&quot;&gt;&lt;/a&gt;即可，如下： 12345&lt;a href="/"&gt; &lt;img class="site-author-image" itemprop="image" src="&#123;&#123; url_for( theme.avatar | default(theme.images + '/avatar.gif') ) &#125;&#125;" alt="&#123;&#123; theme.author &#125;&#125;" /&gt;&lt;/a&gt; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
+    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 文章置顶的设置。 文章置顶关于主题文章置顶的功能，目前已经有修改后支持置顶的仓库，可以直接用以下命令安装。 12$ npm uninstall hexo-generator-index --save$ npm install hexo-generator-index-pin-top --save 然后在需要置顶的文章的 Front-matter 中加上 top: true 即可。比如下面这篇文章： 123456---title: hexo+GitHub博客搭建实战date: 2017-09-08 12:00:25categories: 博客搭建系列top: true--- 置顶功能已经可以实现，还需添加置顶标志 打开：/blog/themes/next/layout/_macro 目录下的 post.swig 文件，定位到 &lt;div class=&quot;post-meta&quot;&gt; 标签下,插入如下代码： 12345&#123;% if post.top %&#125; &lt;i class="fa fa-thumb-tack"&gt;&lt;/i&gt; &lt;font color=7D26CD&gt;置顶&lt;/font&gt; &lt;span class="post-meta-divider"&gt;|&lt;/span&gt;&#123;% endif %&#125; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
@@ -163,9 +175,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hexo NexT 文章置顶设置]]></title>
+    <title><![CDATA[Hexo NexT 点击头像回到首页设置]]></title>
     <url>%2Fa12a1a77%2F</url>
-    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 文章置顶的设置。 文章置顶关于主题文章置顶的功能，目前已经有修改后支持置顶的仓库，可以直接用以下命令安装。 12$ npm uninstall hexo-generator-index --save$ npm install hexo-generator-index-pin-top --save 然后在需要置顶的文章的 Front-matter 中加上 top: true 即可。比如下面这篇文章： 123456---title: hexo+GitHub博客搭建实战date: 2017-09-08 12:00:25categories: 博客搭建系列top: true--- 置顶功能已经可以实现，还需添加置顶标志 打开：/blog/themes/next/layout/_macro 目录下的 post.swig 文件，定位到 &lt;div class=&quot;post-meta&quot;&gt; 标签下,插入如下代码： 12345&#123;% if post.top %&#125; &lt;i class="fa fa-thumb-tack"&gt;&lt;/i&gt; &lt;font color=7D26CD&gt;置顶&lt;/font&gt; &lt;span class="post-meta-divider"&gt;|&lt;/span&gt;&#123;% endif %&#125; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
+    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 点击头像回到首页的设置。 点击头像回到首页修改/themes/next/layout/_macro/sidebar.swig，找到如下代码： 123&lt;img class="site-author-image" itemprop="image" src="&#123;&#123; url_for( theme.avatar | default(theme.images + '/avatar.gif') ) &#125;&#125;" alt="&#123;&#123; theme.author &#125;&#125;" /&gt; 在其前后加上&lt;a href=&quot;/&quot;&gt;&lt;/a&gt;即可，如下： 12345&lt;a href="/"&gt; &lt;img class="site-author-image" itemprop="image" src="&#123;&#123; url_for( theme.avatar | default(theme.images + '/avatar.gif') ) &#125;&#125;" alt="&#123;&#123; theme.author &#125;&#125;" /&gt;&lt;/a&gt; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
@@ -182,9 +194,9 @@
         <category>Picgo</category>
       </categories>
       <tags>
-        <tag>图床</tag>
         <tag>GitHub</tag>
         <tag>Picgo</tag>
+        <tag>图床</tag>
       </tags>
   </entry>
   <entry>
@@ -208,9 +220,9 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>aplayer</tag>
         <tag>Hexo</tag>
         <tag>NexT</tag>
+        <tag>aplayer</tag>
       </tags>
   </entry>
   <entry>
