@@ -156,9 +156,9 @@
         <category>Markdown</category>
       </categories>
       <tags>
+        <tag>Typora</tag>
         <tag>修改</tag>
         <tag>Markdown</tag>
-        <tag>Typora</tag>
         <tag>颜色</tag>
       </tags>
   </entry>
@@ -213,14 +213,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Typroa中文字体美化]]></title>
+    <title><![CDATA[Typora中文字体美化]]></title>
     <url>%2Fbb6a1532%2F</url>
     <content type="text"><![CDATA[好字体带来好心情 “Typora”这款Markdown编译器，是自己目前使用率最高的在线编译软件，其所见即所得、离线编辑让我觉得十分得心应手。但软件默认所带的中文字体显示为“宋体”，对于有一定审美度的用户来说可能不太美观，考虑到长期使用的缘故，漂亮字体能带给编译者带来好的心情，一个好的编译开始。 那如何更换字体呢？思路如下： 下载使用一款主题在官网选择一款Typora主题，例如主题Catfish,进入主题介绍查看对应主题字体说明，并下载主题。 下载完成主题压缩包后将压缩包里边的几个文件解压到Typora的自定义主题目录，文件包括： catfish.css catfish.styl catfish（文件夹） 重启Typora，在主题选项里将原主题切换为catfish。 下载思源黑体、思源宋体好在官方主题catfish说明中刚好给了两个链接： source-han-sans（思源黑体） source-han-serif（思源宋体） 点击链接进入Github网站，将文件列表上方，将Branch选项由’master’切换为’release’， 对于source-han-sans项目，点击进入OTF文件夹，然后点击进入SourceHanSansSC.zip，再点击download下载这个压缩包，解压后在SourceHanSansSC文件夹下，得到7种不同粗细思源黑体的*.otf格式的字体文件： 对于source-han-serif项目，操作方法类似，进入OTF文件夹后，分别下载SourceHanSerifSC_SB-H.zip与SourceHanSerifSC_EL-M.zip两个压缩包，解压得到7种不同粗细的思源宋体的*.otf格式文件。 对于每个*.otf文件，右键-&gt;安装，或者双击文件打开后，亦有安装按钮。 至此，安装了思源字体，重启Typora，但如此设置在catfish主题下字体是不会呈现出来的。 修改catfish.css字体装好了，catfish主题也是从官网上下载的，打开catfish.css文件，其body部分显示如下： 12345body &#123; background: #fff; font-family: Source Han Sans SC, sans-serif; color: #555;&#125; “font-family”第一默认的字体是”Source Han Sans”，这个肯定是和思源黑体有关的，但貌似不是Windows字体文件夹Font下面的字体名称。 在css文件中搜索下”Source Han Sans”，文档显示如下： 1234567891011121314151617181920212223242526272829303132333435363738394041424344@font-face &#123; font-family: Source Han Sans SC; font-weight: normal; src: local('Source Han Sans SC Regular'), url("catfish/SourceHanSansSC-Regular.otf");&#125;@font-face &#123; font-family: Source Han Sans; font-weight: bold; src: local('Source Han Sans SC Bold'), url("catfish/SourceHanSansSC-Bold.otf");&#125;@font-face &#123; font-family: Source Han Serif; font-weight: normal; src: local('Source Han Serif SC Regular'), url("catfish/SourceHanSerifSC-Regular.otf");&#125;@font-face &#123; font-family: Source Han Serif; font-weight: bold; src: local('Source Han Serif SC Bold'), url("catfish/SourceHanSerifSC-Bold.otf");&#125;@font-face &#123; font-family: mononoki; font-style: normal; font-weight: normal; src: local('mononoki Regular'), url("catfish/mononoki-Regular.woff");&#125;@font-face &#123; font-family: mononoki; font-style: italic; font-weight: normal; src: local('mononoki Italic'), url("catfish/mononoki-Italic.woff");&#125;@font-face &#123; font-family: mononoki; font-style: normal; font-weight: bold; src: local('mononoki Bold'), url("catfish/mononoki-Bold.woff");&#125;@font-face &#123; font-family: mononoki; font-style: italic; font-weight: bold; src: local('mononoki Bold Italic'), url("catfish/mononoki-BoldItalic.woff");&#125; 对于第一段设置大胆猜测一下，”font-family: Source Han Sans”以及”font-weight: normal”的字体所在的位置url为”catfish/SourceHanSans-Regular.ttc”。刚好，在自定义主题路径themes中的catfish，找到了”SourceHanSans-Regular.ttc”与”SourceHanSans-Bold.ttc”，但是Windows貌似不识别这种格式。 于是，我把上面下载的思源字体copy到themes/catfish的文件夹下面，然后修改catfish.css文档，修改了’Source Han Sans’与’Source Han Serif’指向的四处url（以下url中是博主字体的安装的路径）： 1234567891011121314151617181920212223242526272829303132333435363738394041424344@font-face &#123; font-family: Source Han Sans SC; font-weight: normal; src: local('Source Han Sans SC Regular'), url("Users\Mayjor_Zmj\AppData\Roaming\Typora\themes\catfish/SourceHanSansSC-Regular.otf");&#125;@font-face &#123; font-family: Source Han Sans; font-weight: bold; src: local('Source Han Sans SC Bold'), url("Users\Mayjor_Zmj\AppData\Roaming\Typora\themes\catfish/SourceHanSansSC-Bold.otf");&#125;@font-face &#123; font-family: Source Han Serif; font-weight: normal; src: local('Source Han Serif SC Regular'), url("Users\Mayjor_Zmj\AppData\Roaming\Typora\themes\catfish/SourceHanSerifSC-Regular.otf");&#125;@font-face &#123; font-family: Source Han Serif; font-weight: bold; src: local('Source Han Serif SC Bold'), url("Users\Mayjor_Zmj\AppData\Roaming\Typora\themes\catfish/SourceHanSerifSC-Bold.otf");&#125;@font-face &#123; font-family: mononoki; font-style: normal; font-weight: normal; src: local('mononoki Regular'), url("Users\Mayjor_Zmj\AppData\Roaming\Typora\themes\catfish/mononoki-Regular.woff");&#125;@font-face &#123; font-family: mononoki; font-style: italic; font-weight: normal; src: local('mononoki Italic'), url("Users\Mayjor_Zmj\AppData\Roaming\Typora\themes\catfish/mononoki-Italic.woff");&#125;@font-face &#123; font-family: mononoki; font-style: normal; font-weight: bold; src: local('mononoki Bold'), url("Users\Mayjor_Zmj\AppData\Roaming\Typora\themes\catfish/mononoki-Bold.woff");&#125;@font-face &#123; font-family: mononoki; font-style: italic; font-weight: bold; src: local('mononoki Bold Italic'), url("Users\Mayjor_Zmj\AppData\Roaming\Typora\themes\catfish/mononoki-BoldItalic.woff");&#125; 保存并重启Typora，主题选择catfish，字体修改成功。]]></content>
       <categories>
-        <category>Typroa</category>
+        <category>Typora</category>
       </categories>
       <tags>
-        <tag>Typroa</tag>
+        <tag>Typora</tag>
         <tag>修改</tag>
         <tag>Markdown</tag>
       </tags>
@@ -233,9 +233,9 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>aplayer</tag>
         <tag>Hexo</tag>
         <tag>NexT</tag>
+        <tag>aplayer</tag>
       </tags>
   </entry>
   <entry>
