@@ -33,8 +33,8 @@
         <category>PicUploader</category>
       </categories>
       <tags>
-        <tag>PicUploader</tag>
         <tag>图床</tag>
+        <tag>PicUploader</tag>
       </tags>
   </entry>
   <entry>
@@ -138,11 +138,11 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Typera Markdown语法详解]]></title>
+    <title><![CDATA[Typora Markdown语法详解]]></title>
     <url>%2F5ff886d0%2F</url>
     <content type="text"><![CDATA[[TOC] 行内代码12`这是行内代码``this is inline code` 这是行内代码 this is inline code 新建标题12345# 一级标题 #快捷按键 Ctrl+1## 二级标题 #快捷按键 Ctrl+2### 三级标题 #快捷按键 Ctrl+3#### 四级标题 #快捷按键 Ctrl+4##### 五级标题 #快捷按键 Ctrl+5 一级标题二级标题三级标题四级标题五级标题 改变字体12345*字体倾斜* #快捷按键 Ctrl+I**字体加粗** #快捷按键 Ctrl+B***字体加粗*** #快捷按键 Ctrl+B + Ctrl+I&lt;u&gt;字体加下划线&lt;/u&gt; #快捷按键 Ctrl+U~~删除字体~~ #快捷按键 Alt+Shift+5 字体倾斜 字体加粗 字体倾斜加粗 字体加下划线 删除字体 插入图片123# 图片链接![图片描述](图片路径 "title")![图片描述](图片路径) 插入链接12345678910# 自动链接&lt;https://www.mallai.top&gt;# 参考式链接[标记]:链接地址 "标题"# 只显示文本的超链接[文本](链接地址)# 链接访问: command + 单击 https://http://zhanmuji.lofter.com/ lofter 插入分割綫12***--- 插入代码块1`文本` # 单行 文本 插入引用123456789101112131415161718#连续引用&gt;引用文本1&gt;引用文本2&gt;引用文本3#带空格引用&gt;引用文本1&gt;&gt;引用文本3#嵌套引用*&gt;&gt;&gt;引用文本1&gt;&gt;引用文本2&gt;引用文本3#引用其他元素*&gt;#####引用五级标题&gt;```python```引用代码块 引用文本1 引用文本2 引用文本3 引用文本1 引用文本3 插入有序列表1使用数字和一个英文句点表示有序列表。 注意：英文句点后面一定要有一个空格，起到缩进的作用。 有序列表 有序列表 插入无序列表1使用 *，+，- 表示无序列表。 注意：符号后面一定要有一个空格，起到缩进的作用。 *号生列表 +号產生列表 -号產生列表 插入表格12345678910# 基本格式, -|-|-|默认居左对齐 #快捷方式 Ctrl+T学号|姓名|分数-|-|-| 小明|男|75小红|女|79# 指定表格单元格对齐方式冒号在左边表示左对齐，右边表示有对齐，两边都有表示居中。:-|:-:|-: 学号 姓名 分数 小明 男 75 小红 女 79 插入表情1:表情英文 #例如 :smile 插入注脚1[^注脚名字]:注脚文本 创建Latex数学公式1行间公式: $$公式$$ #快捷方式 Crtl+T 数学符号 1234小写希腊字母: \alpha \theta \pi \beta \phi \lambda \omega \xi \eta \epsilon \delta空格和换行:\quad \\ 12关系运算符:\times = \neq \ne \leq \le \geq \ge &gt; \sim \simeq \subset \subseteq \in \notin \propto 12其他符号:... \dots; ... \cdots \vdots \ddots \forall \exists 指数和下标 12指数: a^&#123;指数项&#125;下标: a_&#123;下标项&#125; 平方根运算 12平方根: \sqrt&#123;开根号项&#125;n次方根: \sqrt[n]&#123;开根号项&#125; 分数运算符 12\frac&#123;分子&#125;&#123;分母&#125;\frac&#123;1&#125;&#123;x&#125; 向量运算 123单个向量: \vec a从A到B向量: \overrightarrow&#123;AB&#125;反向从A到B: \overleftarrow&#123;AB&#125; 水平大括号 1\underbrace&#123;表达式&#125;_&#123;底部数据&#125; --&gt; \underbrace&#123;a + b + \cdots + z&#125;_&#123;26&#125; 水平线 12上水平线: \overline&#123;m+n&#125;下水平线: \underline&#123;m+n&#125; 创建Flow流程图1234创建Flow流程图 ```flow + 回车语法：流程图语法分为两个部分: 前面部分用来定义流程图元素，后面部分用来连接流程图元素，指定流程图的执行走向tag=&gt;type: content:&gt;url 连接元素 连接流程图直接用-&gt;来连接两个元素，几点说明如下： 使用 -&gt; 来连接两个元素 对于condition类型，有yes和no两个分支，如示例中的cond(yes)和cond(no) 每个元素可以制定分支走向，默认向下，也可以用right指向右边，如示例中sub1(right) 1234567891011121314151617st=&gt;start: 开始e=&gt;end: 结束c1=&gt;condition: 条件A? #操作、执行说明c2=&gt;condition: 条件B?c3=&gt;condition: 条件C?io=&gt;inputoutput: 输入输出De1=&gt;operation: mallAI:&gt;https://www.mallai.tope2=&gt;subroutine: 子文件st-&gt;c1(no)-&gt;ec1(yes,right)-&gt;c2c2(no)-&gt;ec2(yes,right)-&gt;c3c3(no)-&gt;ec3(yes,right)-&gt;ioio-&gt;e1e1-&gt;e2e2(left)-&gt;e tag 流程图元素, 在第二段连接元素时会用到。名称可以任意,一般为流程的英文缩写和数字的组合。 type 确定标签类型, =&gt;后面表示类型。由于标签的名称可以任意指定，所以要依赖type来确定标签的类型, 标签的类型有6种: start end operation subroutine condition inputoutput content 流程图文本框中描述内容, :后面表示内容, 中英文均可。特别注意，冒号与文本之间一定要有个空格 标签 描述 url 一个连接，与框框中的文本相绑定，:&gt;后面就是对应的 url 链接，点击文本时可以通过链接跳转到 url 指定页面 创建mermaid流程图1创建: ```mermaid + 回车 声明流程图，可以声明上下结构, 下上结构，左右结构，右左结构 TB - top bottom BT - bottom top RL - right left LR - left right TD - same as TB 1234567891011121314#连接形式A --&gt; B # 箭头A --- B # 无箭头实线A -- text -- B # AB连线中添加注释A --&gt; |text|B # AB连线中添加注释A-.-&gt;B # 虚线箭头A -. text .- B # 添加注释的虚线箭头A ==&gt; B # 加粗箭头A == text ==&gt; B # 加注释加粗的箭头#节点形式graph LR id # 默认为正方形，id为元素内文本 id[text] # id表示流程图元素唯一标识用于连接，text为元素内文本 节点和形状 描述 id 默认为正方形，id为元素内文本 id[text] 正方形 id(text) 圆角正方形 id((text)) 圆形 id&gt;text] 半方框 id{text} 条件判断框 12345678910111213graph LR A[A] --&gt; B(Bib) B --&gt; E&#123;E&#125; E -- hello ---F&#123;F&#125; F --&gt;|yes|M F --&gt;|no|N A --&gt; C((circle)) C --&gt; D&gt;D] D --&gt; |NICE|H(H) H ==&gt; I d --&gt; I f --&gt; d D --&gt; f 创建mermaid时序图1创建: ```mermaid +回车 消息链接样式 1[Actor][Arrow][Actor]:Message text 类型 描述 -&gt; 无箭头实线: Solid line without arrow –&gt; 无箭头虚线: Dotted line without arrow -&gt;&gt; 有箭头实线: Solid line with arrowhead –&gt;&gt; 有箭头虚线: Dotted line with arrowhead -x 实线末端带x: Solid line with a cross at the end (async) –x 虚线末端带x: Dotted line with a cross at the end (async) 123456789sequenceDiagram participant John participant Alice John -&gt;&gt; Alice: hello Alice Alice -&gt;&gt; John: hello John Note right of John: Right Text of John Note left of Alice: Left Text of Alice Note over Alice: Over Text of Alice Note over John: Over Text of John 创建mermaid甘特图1创建: ```mermaid +回车 声明甘特图 12345678910111213gantt # 标题 title 标题 # 时间格式 dateFormat YYYY-MM-DD # 任务模块 section 任务标题1 # 具体任务和时间 task1 :a1, 2014-01-01, 30d task2 :after a1 , 20d section 任务标题2 task1 :2014-01-12 , 12d task2 : 24d 123456789101112131415161718192021222324252627gantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2014-01-06,2014-01-08 Active task :active, des2, 2014-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2014-01-06,24h Implement parser and jison :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d section Documentation Describe gantt syntax :active, a1, after des1, 3d Add gantt diagram to demo page :after a1 , 20h Add another diagram to demo page :doc1, after a1 , 48h section Last section Describe gantt syntax :after doc1, 3d Add gantt diagram to demo page :20h Add another diagram to demo page :48h]]></content>
       <categories>
-        <category>Markdown</category>
+        <category>Typora</category>
       </categories>
       <tags>
         <tag>Markdown</tag>
@@ -153,12 +153,12 @@
     <url>%2Faff15728%2F</url>
     <content type="text"><![CDATA[Markdown字体颜色编辑 设置字体 1&lt;font color=red size=6 face=“黑体”&gt;字体颜色&lt;/font&gt; 设置背景颜色 123&lt;table&gt;&lt;tr&gt;&lt;td bgcolor=#7FFFD4&gt; 背景颜色 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; 固定图片显示大小 123&lt;img src="https://img-blog.csdn.net/20151129213701642" width=256 height=256 /&gt;&lt;img src="https://img-blog.csdn.net/20151129213701642" width="50%" height="50%" /&gt; 为字体添加颜色 我是黑体字 1&lt;font face="黑体"&gt;我是黑体字&lt;/font&gt; 我是微软雅黑 1&lt;font face="微软雅黑"&gt;我是微软雅黑&lt;/font&gt; 我是华文彩云 1&lt;font face="STCAIYUN"&gt;我是华文彩云&lt;/font&gt; color=#0099ff size=72 face=”黑体” 1&lt;font color=#0099ff size=72 face="黑体"&gt;color=#0099ff size=72 face="黑体"&lt;/font&gt; color=#00ffff 1&lt;font color=#00ffff size=72&gt;color=#00ffff&lt;/font&gt; color=gray 1&lt;font color=gray size=72&gt;color=gray&lt;/font&gt; 跨行表格、表格背景色 我占了三行 方法说明颜色名称颜色 此处实现方法利用 CSDN-markdown 内嵌 html 语言的优势 Hotpink rgb(240, 248, 255) 借助 table, tr, td 等表格标签的 bgcolor 属性实现背景色 AntiqueWhite rgb(255, 192, 203) 颜色列表参考 颜色名十六进制颜色值颜色AliceBlue#F0F8FFrgb(240, 248, 255)AntiqueWhite#FAEBD7rgb(250, 235, 215)Aqua#00FFFFrgb(0, 255, 255)Aquamarine#7FFFD4rgb(127, 255, 212)Azure#F0FFFFrgb(240, 255, 255)Beige#F5F5DCrgb(245, 245, 220)Bisque#FFE4C4rgb(255, 228, 196)Black#000000rgb(0, 0, 0)BlanchedAlmond#FFEBCDrgb(255, 235, 205)Blue#0000FFrgb(0, 0, 255)BlueViolet#8A2BE2rgb(138, 43, 226)Brown#A52A2Argb(165, 42, 42)BurlyWood#DEB887rgb(222, 184, 135)CadetBlue#5F9EA0rgb(95, 158, 160)Chartreuse#7FFF00rgb(127, 255, 0)Chocolate#D2691Ergb(210, 105, 30)Coral#FF7F50rgb(255, 127, 80)CornflowerBlue#6495EDrgb(100, 149, 237)Cornsilk#FFF8DCrgb(255, 248, 220)Crimson#DC143Crgb(220, 20, 60)Cyan#00FFFFrgb(0, 255, 255)DarkBlue#00008Brgb(0, 0, 139)DarkCyan#008B8Brgb(0, 139, 139)DarkGoldenRod#B8860Brgb(184, 134, 11)DarkGray#A9A9A9rgb(169, 169, 169)DarkGreen#006400rgb(0, 100, 0)DarkKhaki#BDB76Brgb(189, 183, 107)DarkMagenta#8B008Brgb(139, 0, 139)DarkOliveGreen#556B2Frgb(85, 107, 47)Darkorange#FF8C00rgb(255, 140, 0)DarkOrchid#9932CCrgb(153, 50, 204)DarkRed#8B0000rgb(139, 0, 0)DarkSalmon#E9967Argb(233, 150, 122)DarkSeaGreen#8FBC8Frgb(143, 188, 143)DarkSlateBlue#483D8Brgb(72, 61, 139)DarkSlateGray#2F4F4Frgb(47, 79, 79)DarkTurquoise#00CED1rgb(0, 206, 209)DarkViolet#9400D3rgb(148, 0, 211)DeepPink#FF1493rgb(255, 20, 147)DeepSkyBlue#00BFFFrgb(0, 191, 255)DimGray#696969rgb(105, 105, 105)DodgerBlue#1E90FFrgb(30, 144, 255)Feldspar#D19275rgb(209, 146, 117)FireBrick#B22222rgb(178, 34, 34)FloralWhite#FFFAF0rgb(255, 250, 240)ForestGreen#228B22rgb(34, 139, 34)Fuchsia#FF00FFrgb(255, 0, 255)Gainsboro#DCDCDCrgb(220, 220, 220)GhostWhite#F8F8FFrgb(248, 248, 255)Gold#FFD700rgb(255, 215, 0)GoldenRod#DAA520rgb(218, 165, 32)Gray#808080rgb(128, 128, 128)Green#008000rgb(0, 128, 0)GreenYellow#ADFF2Frgb(173, 255, 47)HoneyDew#F0FFF0rgb(240, 255, 240)HotPink#FF69B4rgb(255, 105, 180)IndianRed#CD5C5Crgb(205, 92, 92)Indigo#4B0082rgb(75, 0, 130)Ivory#FFFFF0rgb(255, 255, 240)Khaki#F0E68Crgb(240, 230, 140)Lavender#E6E6FArgb(230, 230, 250)LavenderBlush#FFF0F5rgb(255, 240, 245)LawnGreen#7CFC00rgb(124, 252, 0)LemonChiffon#FFFACDrgb(255, 250, 205)LightBlue#ADD8E6rgb(173, 216, 230)LightCoral#F08080rgb(240, 128, 128)LightCyan#E0FFFFrgb(224, 255, 255)LightGoldenRodYellow#FAFAD2rgb(250, 250, 210)LightGrey#D3D3D3rgb(211, 211, 211)LightGreen#90EE90rgb(144, 238, 144)LightPink#FFB6C1rgb(255, 182, 193)LightSalmon#FFA07Argb(255, 160, 122)LightSeaGreen#20B2AArgb(32, 178, 170)LightSkyBlue#87CEFArgb(135, 206, 250)LightSlateBlue#8470FFrgb(132, 112, 255)LightSlateGray#778899rgb(119, 136, 153)LightSteelBlue#B0C4DErgb(176, 196, 222)LightYellow#FFFFE0rgb(255, 255, 224)Lime#00FF00rgb(0, 255, 0)LimeGreen#32CD32rgb(50, 205, 50)Linen#FAF0E6rgb(250, 240, 230)Magenta#FF00FFrgb(255, 0, 255)Maroon#800000rgb(128, 0, 0)MediumAquaMarine#66CDAArgb(102, 205, 170)MediumBlue#0000CDrgb(0, 0, 205)MediumOrchid#BA55D3rgb(186, 85, 211)MediumPurple#9370D8rgb(147, 112, 216)MediumSeaGreen#3CB371rgb(60, 179, 113)MediumSlateBlue#7B68EErgb(123, 104, 238)MediumSpringGreen#00FA9Argb(0, 250, 154)MediumTurquoise#48D1CCrgb(72, 209, 204)MediumVioletRed#C71585rgb(199, 21, 133)MidnightBlue#191970rgb(25, 25, 112)MintCream#F5FFFArgb(245, 255, 250)MistyRose#FFE4E1rgb(255, 228, 225)Moccasin#FFE4B5rgb(255, 228, 181)NavajoWhite#FFDEADrgb(255, 222, 173)Navy#000080rgb(0, 0, 128)OldLace#FDF5E6rgb(253, 245, 230)Olive#808000rgb(128, 128, 0)OliveDrab#6B8E23rgb(107, 142, 35)Orange#FFA500rgb(255, 165, 0)OrangeRed#FF4500rgb(255, 69, 0)Orchid#DA70D6rgb(218, 112, 214)PaleGoldenRod#EEE8AArgb(238, 232, 170)PaleGreen#98FB98rgb(152, 251, 152)PaleTurquoise#AFEEEErgb(175, 238, 238)PaleVioletRed#D87093rgb(216, 112, 147)PapayaWhip#FFEFD5rgb(255, 239, 213)PeachPuff#FFDAB9rgb(255, 218, 185)Peru#CD853Frgb(205, 133, 63)Pink#FFC0CBrgb(255, 192, 203)Plum#DDA0DDrgb(221, 160, 221)PowderBlue#B0E0E6rgb(176, 224, 230)Purple#800080rgb(128, 0, 128)Red#FF0000rgb(255, 0, 0)RosyBrown#BC8F8Frgb(188, 143, 143)RoyalBlue#4169E1rgb(65, 105, 225)SaddleBrown#8B4513rgb(139, 69, 19)Salmon#FA8072rgb(250, 128, 114)SandyBrown#F4A460rgb(244, 164, 96)SeaGreen#2E8B57rgb(46, 139, 87)SeaShell#FFF5EErgb(255, 245, 238)Sienna#A0522Drgb(160, 82, 45)Silver#C0C0C0rgb(192, 192, 192)SkyBlue#87CEEBrgb(135, 206, 235)SlateBlue#6A5ACDrgb(106, 90, 205)SlateGray#708090rgb(112, 128, 144)Snow#FFFAFArgb(255, 250, 250)SpringGreen#00FF7Frgb(0, 255, 127)SteelBlue#4682B4rgb(70, 130, 180)Tan#D2B48Crgb(210, 180, 140)Teal#008080rgb(0, 128, 128)Thistle#D8BFD8rgb(216, 191, 216)Tomato#FF6347rgb(255, 99, 71)Turquoise#40E0D0rgb(64, 224, 208)Violet#EE82EErgb(238, 130, 238)VioletRed#D02090rgb(208, 32, 144)Wheat#F5DEB3rgb(245, 222, 179)White#FFFFFFrgb(255, 255, 255)WhiteSmoke#F5F5F5rgb(245, 245, 245)Yellow#FFFF00rgb(255, 255, 0)YellowGreen#9ACD32rgb(154, 205, 50)]]></content>
       <categories>
-        <category>Typroa</category>
+        <category>Markdown</category>
       </categories>
       <tags>
-        <tag>Typroa</tag>
         <tag>修改</tag>
         <tag>Markdown</tag>
+        <tag>Typora</tag>
         <tag>颜色</tag>
       </tags>
   </entry>
@@ -176,9 +176,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hexo NexT 点击头像回到首页设置]]></title>
+    <title><![CDATA[Hexo NexT 文章置顶设置]]></title>
     <url>%2Fa12a1a77%2F</url>
-    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 点击头像回到首页的设置。 点击头像回到首页修改/themes/next/layout/_macro/sidebar.swig，找到如下代码： 123&lt;img class="site-author-image" itemprop="image" src="&#123;&#123; url_for( theme.avatar | default(theme.images + '/avatar.gif') ) &#125;&#125;" alt="&#123;&#123; theme.author &#125;&#125;" /&gt; 在其前后加上&lt;a href=&quot;/&quot;&gt;&lt;/a&gt;即可，如下： 12345&lt;a href="/"&gt; &lt;img class="site-author-image" itemprop="image" src="&#123;&#123; url_for( theme.avatar | default(theme.images + '/avatar.gif') ) &#125;&#125;" alt="&#123;&#123; theme.author &#125;&#125;" /&gt;&lt;/a&gt; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
+    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 文章置顶的设置。 文章置顶关于主题文章置顶的功能，目前已经有修改后支持置顶的仓库，可以直接用以下命令安装。 12$ npm uninstall hexo-generator-index --save$ npm install hexo-generator-index-pin-top --save 然后在需要置顶的文章的 Front-matter 中加上 top: true 即可。比如下面这篇文章： 123456---title: hexo+GitHub博客搭建实战date: 2017-09-08 12:00:25categories: 博客搭建系列top: true--- 置顶功能已经可以实现，还需添加置顶标志 打开：/blog/themes/next/layout/_macro 目录下的 post.swig 文件，定位到 &lt;div class=&quot;post-meta&quot;&gt; 标签下,插入如下代码： 12345&#123;% if post.top %&#125; &lt;i class="fa fa-thumb-tack"&gt;&lt;/i&gt; &lt;font color=7D26CD&gt;置顶&lt;/font&gt; &lt;span class="post-meta-divider"&gt;|&lt;/span&gt;&#123;% endif %&#125; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
@@ -188,9 +188,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hexo NexT 文章置顶设置]]></title>
+    <title><![CDATA[Hexo NexT 点击头像回到首页设置]]></title>
     <url>%2Fa12a1a77%2F</url>
-    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 文章置顶的设置。 文章置顶关于主题文章置顶的功能，目前已经有修改后支持置顶的仓库，可以直接用以下命令安装。 12$ npm uninstall hexo-generator-index --save$ npm install hexo-generator-index-pin-top --save 然后在需要置顶的文章的 Front-matter 中加上 top: true 即可。比如下面这篇文章： 123456---title: hexo+GitHub博客搭建实战date: 2017-09-08 12:00:25categories: 博客搭建系列top: true--- 置顶功能已经可以实现，还需添加置顶标志 打开：/blog/themes/next/layout/_macro 目录下的 post.swig 文件，定位到 &lt;div class=&quot;post-meta&quot;&gt; 标签下,插入如下代码： 12345&#123;% if post.top %&#125; &lt;i class="fa fa-thumb-tack"&gt;&lt;/i&gt; &lt;font color=7D26CD&gt;置顶&lt;/font&gt; &lt;span class="post-meta-divider"&gt;|&lt;/span&gt;&#123;% endif %&#125; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
+    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 点击头像回到首页的设置。 点击头像回到首页修改/themes/next/layout/_macro/sidebar.swig，找到如下代码： 123&lt;img class="site-author-image" itemprop="image" src="&#123;&#123; url_for( theme.avatar | default(theme.images + '/avatar.gif') ) &#125;&#125;" alt="&#123;&#123; theme.author &#125;&#125;" /&gt; 在其前后加上&lt;a href=&quot;/&quot;&gt;&lt;/a&gt;即可，如下： 12345&lt;a href="/"&gt; &lt;img class="site-author-image" itemprop="image" src="&#123;&#123; url_for( theme.avatar | default(theme.images + '/avatar.gif') ) &#125;&#125;" alt="&#123;&#123; theme.author &#125;&#125;" /&gt;&lt;/a&gt; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
@@ -208,8 +208,8 @@
       </categories>
       <tags>
         <tag>GitHub</tag>
-        <tag>图床</tag>
         <tag>Picgo</tag>
+        <tag>图床</tag>
       </tags>
   </entry>
   <entry>
@@ -233,9 +233,9 @@
         <category>Hexo</category>
       </categories>
       <tags>
+        <tag>aplayer</tag>
         <tag>Hexo</tag>
         <tag>NexT</tag>
-        <tag>aplayer</tag>
       </tags>
   </entry>
   <entry>
