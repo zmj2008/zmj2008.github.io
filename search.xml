@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[群发工资条-Word邮件合并功能]]></title>
+    <url>%2Fe98d8324%2F</url>
+    <content type="text"><![CDATA[邮件合并Word中文字内容（为邮件发送内容） 群发工资条-Word邮件合并功能 Excel中的数据 鼠标放置在尊敬的后面，点击开始邮件合并——邮件合并分布向导 选择电子邮件——下一步 开始文档 选择使用当前文档——下一步：选择收件人 选择预览找到Excel数据表格 确定使用表格——下一步：攥写电子邮件 选择其它项目，在Word文档对应位置插入 表格对应表头 选择下一步：预览电子邮件 未有问题选择发送邮件，（打开Outlook后）。 邮件发送成功]]></content>
+      <categories>
+        <category>Word</category>
+      </categories>
+      <tags>
+        <tag>Word</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo nesT添加视频]]></title>
     <url>%2F16f30d64%2F</url>
     <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 为了增加博客站点的趣味性，这次主要介绍 NexT 7.2.0 中添加视频。 添加B站视频视频页面点击分享—复制嵌入式代码，复制到文章页面内, 再在&lt;iframe&gt;``&lt;/iframe&gt;头部添加width``height视频尺寸参数代码设置即可。 1&lt;iframe width="100%" height="500" src="//player.bilibili.com/player.html?aid=63296007&amp;cid=109923855&amp;page=1" scrolling="no" border="0"frameborder="no" framespacing="0" allowfullscreen="true"&gt; &lt;/iframe&gt; 视频效果如下： #]]></content>
@@ -58,8 +69,8 @@
         <category>PicUploader</category>
       </categories>
       <tags>
-        <tag>图床</tag>
         <tag>PicUploader</tag>
+        <tag>图床</tag>
       </tags>
   </entry>
   <entry>
@@ -233,8 +244,8 @@
       </categories>
       <tags>
         <tag>GitHub</tag>
-        <tag>Picgo</tag>
         <tag>图床</tag>
+        <tag>Picgo</tag>
       </tags>
   </entry>
   <entry>
