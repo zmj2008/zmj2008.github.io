@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-16T04:13:40.789Z</updated>
+  <updated>2019-08-16T04:18:57.041Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>qBittorrent添加Tracker提速</title>
-    <link href="http://yoursite.com/16f30d64/"/>
-    <id>http://yoursite.com/16f30d64/</id>
+    <link href="http://yoursite.com/c69d7f4a/"/>
+    <id>http://yoursite.com/c69d7f4a/</id>
     <published>2019-08-15T22:01:57.000Z</published>
-    <updated>2019-08-16T04:13:40.789Z</updated>
+    <updated>2019-08-16T04:18:57.041Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>种子和磁力链接是现在使用最为广泛的资源下载形式了，但是资源找到了，如何顺畅地下载下来也是个问题。qBittorrent 是一款开源免费的种子和磁力链接下载工具，支持 Windows、Mac 和 Linux，且功能非常强大。由于国内大部分用户并没有公网 IP，直接使用可能会有个很现实的问题——下载没速度！本文介绍如何提高qBittorrent 下载速度。</p><p><img src="https://i.loli.net/2019/08/16/yIOshcjrQD89HK6.png" alt></p><h1 id="添加Tracker以提速"><a href="#添加Tracker以提速" class="headerlink" title="添加Tracker以提速"></a>添加Tracker以提速</h1><p>qBittorrent -&gt; 工具 -&gt; 选项 -&gt; BitTorrent, 拉到最下面-&gt;勾选 “自动添加以下 trackers 到新的 torrents:” 并添加Tracker。</p><p><a href="https://torrents.io/tracker-list/" target="_blank" rel="noopener">Tracker1</a>.</p><p><a href="https://newtrackon.com/list" target="_blank" rel="noopener">Tracer2</a>.</p><p><a href="https://github.com/ngosang/trackerslist" target="_blank" rel="noopener">Tracker3</a>.</p><p><img src="https://i.loli.net/2019/08/15/P9i8bMVzoAQtH5Y.jpg" alt></p><p><img src="https://i.loli.net/2019/08/15/eaXLqf1gvz4IKi2.jpg" alt></p><h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p><img src="https://i.loli.net/2019/08/15/J2ySXChDU9piMTx.jpg" alt></p><p><img src="https://i.loli.net/2019/08/15/OR8Xm9VMdrpwgeu.jpg" alt></p><p>点击检查更新，自动安装完成插件。</p>]]></content>
     

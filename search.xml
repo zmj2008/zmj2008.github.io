@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[qBittorrent添加Tracker提速]]></title>
-    <url>%2F16f30d64%2F</url>
+    <url>%2Fc69d7f4a%2F</url>
     <content type="text"><![CDATA[前言种子和磁力链接是现在使用最为广泛的资源下载形式了，但是资源找到了，如何顺畅地下载下来也是个问题。qBittorrent 是一款开源免费的种子和磁力链接下载工具，支持 Windows、Mac 和 Linux，且功能非常强大。由于国内大部分用户并没有公网 IP，直接使用可能会有个很现实的问题——下载没速度！本文介绍如何提高qBittorrent 下载速度。 添加Tracker以提速qBittorrent -&gt; 工具 -&gt; 选项 -&gt; BitTorrent, 拉到最下面-&gt;勾选 “自动添加以下 trackers 到新的 torrents:” 并添加Tracker。 Tracker1. Tracer2. Tracker3. 安装插件 点击检查更新，自动安装完成插件。]]></content>
       <categories>
         <category>qBittorrent</category>
