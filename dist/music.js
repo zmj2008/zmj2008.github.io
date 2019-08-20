@@ -7,7 +7,7 @@ const ap = new APlayer({
    	  {
         name: "红色",
         artist: '幼稚园杀手',
-        url: 'http://m10.music.126.net/20190819205315/29ccd8791ccc1d2ea3b895874a242351/ymusic/055f/0f0e/530f/25032b676f8d57b87eb9ded452e0ef51.mp3',
+        url: 'http://m10.music.126.net/20190821004158/6c223d0111ce10346c15a895247bca6e/ymusic/5259/0e0e/010e/e337c1ab539d0aaad6836da29b94151f.mp3',
         cover: 'http://p2.music.126.net/C14iCBb0gWujgZnCc9SwpA==/109951164298313032.jpg',
       },
 	  {
