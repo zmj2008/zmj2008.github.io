@@ -98,7 +98,7 @@
 
 
   <meta name="description" content="自建原因对于写博客的人来说，图裂是很让人然烦恼的一件事情。后来想到了自建图床，将所有图片上传云，并通过外联https连接用于博客或Markdownd的编写。正好自己用Hexo+Github搭建了博客，就想着用Github来做图片的云存储空间，电脑端使用Picgo传图软件。既使用Picgo+Github的方式自建图床。 GIthub仓库创建及获取token1.注册Github,新建仓库(此处略)。">
-<meta name="keywords" content="图床,GitHub,Picgo">
+<meta name="keywords" content="GitHub,图床,Picgo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Picgo GitHub自建图床">
 <meta property="og:url" content="http://iamzmj.top/posts/77f24ba4.html">
@@ -499,18 +499,6 @@
           
             
             
-              
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
-                <a href="/posts/77f24ba4.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/posts/77f24ba4.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -630,9 +618,9 @@
         
         <div class="post-tags">
           
-            <a href="/tags/图床/" rel="tag"><i class="fa fa-tag"></i> 图床</a>
-          
             <a href="/tags/GitHub/" rel="tag"><i class="fa fa-tag"></i> GitHub</a>
+          
+            <a href="/tags/图床/" rel="tag"><i class="fa fa-tag"></i> 图床</a>
           
             <a href="/tags/Picgo/" rel="tag"><i class="fa fa-tag"></i> Picgo</a>
           
@@ -682,7 +670,7 @@
           
 
   
-    <div class="comments" id="comments">
+    <div class="comments" id="gitalk-container">
     </div>
 
   
@@ -1189,35 +1177,36 @@
   
 
   
-  
+
 
   
+    
 
-<script src="https://cdn.jsdelivr.net/npm/valine@1.3.9/dist/Valine.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
 
 <script>
-  var GUEST = ['nick', 'mail', 'link'];
-  var guest = 'nick,mail,link';
-  guest = guest.split(',').filter(function(item) {
-    return GUEST.indexOf(item) > -1;
+  var gitalk = new Gitalk({
+    clientID: 'd33d32ca4257c4b13465',
+    clientSecret: '3b326b001e05373520d94537f882be3877e39726',
+    repo: 'zmj2008'comments',
+    owner: 'zmj2008',
+    admin: ['zmj2008'],
+    id: md5(location.pathname),
+    
+      language: 'zh-CN',
+    
+    distractionFreeMode: 'true'
   });
-  new Valine({
-    el: '#comments',
-    verify: false,
-    notify: true,
-    appId: 'hMFv869gC9bvX6VNubWgEPhR-gzGzoHsz',
-    appKey: '3eBeLpb60Hg1sH1D9gyQqolg',
-    placeholder: 'ヾﾉ≧∀≦)o既然来了就随便说些什么吧',
-    avatar: 'mp',
-    meta: guest,
-    pageSize: '10' || 10,
-    visitor: false,
-    lang: 'zh-cn' || 'zh-cn'
-  });
+  gitalk.render('gitalk-container');
 </script>
-
-
-
 
   
 
