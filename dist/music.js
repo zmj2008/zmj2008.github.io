@@ -15,6 +15,18 @@ const ap = new APlayer({
         artist: '音阙诗听',
         url: 'http://fs.open.kugou.com/d400d05776124b525f8016d1b9069147/5d5d2d81/G153/M04/13/14/OYcBAFz3fF6AbF0fADS_2OPt0ag626.mp3',
         cover: 'http://imge.kugou.com/stdmusic/150/20190605/20190605155235947489.jpg',
+      },
+	  {
+        name: "画",
+        artist: 'G.E.M.邓紫棋',
+        url: 'http://fs.open.kugou.com/68c388c49ee08cea383b92e0ea01753d/5d5d2fb5/G072/M03/1B/04/iA0DAFc4Oq2ASH8UACk2YICuxZ0695.mp3',
+        cover: 'http://singerimg.kugou.com/uploadpic/softhead/150/20190720/20190720220214641.jpg',
+      },
+	  {
+        name: "起风了",
+        artist: '吴青峰',
+        url: 'http://fs.open.kugou.com/7a8151cc7804a2f2fb403ff8ddfcaf13/5d5d3247/G160/M06/14/09/4A0DAFzjihCAPfDzAEioCffXZ3U002.mp3',
+        cover: 'http://singerimg.kugou.com/uploadpic/softhead/150/20190708/20190708113533315.jpg',
       }
     ]
 });
