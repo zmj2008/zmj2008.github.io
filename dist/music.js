@@ -11,10 +11,10 @@ const ap = new APlayer({
         cover: 'https://p1.music.126.net/r-azCsdyaGb8FPPPilsbqQ==/109951164227988047.jpg',
       },
 	  {
-        name: "红色高跟鞋",
-        artist: '蔡健雅',
-        url: 'http://m10.music.126.net/20190819204845/8388b31c47f8ebb41c9d406e1c797d7d/ymusic/a391/279d/1655/ebc8f929b98e7b29f9e5adc0a31df24f.mp3',
-        cover: 'http://p1.music.126.net/2toWuH2oD6c0dM6QLdThzg==/109951163165824418.jpg',
+        name: "芒种",
+        artist: '音阙诗听',
+        url: 'http://fs.open.kugou.com/d400d05776124b525f8016d1b9069147/5d5d2d81/G153/M04/13/14/OYcBAFz3fF6AbF0fADS_2OPt0ag626.mp3',
+        cover: 'http://imge.kugou.com/stdmusic/150/20190605/20190605155235947489.jpg',
       }
     ]
 });
