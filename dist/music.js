@@ -5,10 +5,10 @@ const ap = new APlayer({
     
 	audio: [
    	  {
-        name: "红色",
-        artist: '幼稚园杀手',
-        url: 'http://m10.music.126.net/20190821004158/6c223d0111ce10346c15a895247bca6e/ymusic/5259/0e0e/010e/e337c1ab539d0aaad6836da29b94151f.mp3',
-        cover: 'http://p2.music.126.net/C14iCBb0gWujgZnCc9SwpA==/109951164298313032.jpg',
+        name: "多想在平庸的生活拥抱你",
+        artist: '隔壁老樊',
+        url: 'http://fs.open.kugou.com/4748d3a7da77bc9fd79d4ae8be6b2800/5d5d2dbd/G151/M07/15/04/d5QEAFz6V_CAR0r7AEHlOc5g6DE932.mp3',
+        cover: 'https://p1.music.126.net/r-azCsdyaGb8FPPPilsbqQ==/109951164227988047.jpg',
       },
 	  {
         name: "红色高跟鞋",
