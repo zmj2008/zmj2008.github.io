@@ -223,9 +223,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hexo NexT 文章置顶设置]]></title>
+    <title><![CDATA[Hexo NexT 点击头像回到首页设置]]></title>
     <url>%2Fposts%2Fa12a1a77.html</url>
-    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 文章置顶的设置。 文章置顶关于主题文章置顶的功能，目前已经有修改后支持置顶的仓库，可以直接用以下命令安装。 12$ npm uninstall hexo-generator-index --save$ npm install hexo-generator-index-pin-top --save 然后在需要置顶的文章的 Front-matter 中加上 top: true 即可。比如下面这篇文章： 123456---title: hexo+GitHub博客搭建实战date: 2017-09-08 12:00:25categories: 博客搭建系列top: true--- 置顶功能已经可以实现，还需添加置顶标志 打开：/blog/themes/next/layout/_macro 目录下的 post.swig 文件，定位到 &lt;div class=&quot;post-meta&quot;&gt; 标签下,插入如下代码： 12345&#123;% if post.top %&#125; &lt;i class="fa fa-thumb-tack"&gt;&lt;/i&gt; &lt;font color=7D26CD&gt;置顶&lt;/font&gt; &lt;span class="post-meta-divider"&gt;|&lt;/span&gt;&#123;% endif %&#125; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
+    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 点击头像回到首页的设置。 点击头像回到首页修改/themes/next/layout/_macro/sidebar.swig，找到如下代码： 123&lt;img class="site-author-image" itemprop="image" src="&#123;&#123; url_for( theme.avatar | default(theme.images + '/avatar.gif') ) &#125;&#125;" alt="&#123;&#123; theme.author &#125;&#125;" /&gt; 在其前后加上&lt;a href=&quot;/&quot;&gt;&lt;/a&gt;即可，如下： 12345&lt;a href="/"&gt; &lt;img class="site-author-image" itemprop="image" src="&#123;&#123; url_for( theme.avatar | default(theme.images + '/avatar.gif') ) &#125;&#125;" alt="&#123;&#123; theme.author &#125;&#125;" /&gt;&lt;/a&gt; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
@@ -235,9 +235,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hexo NexT 点击头像回到首页设置]]></title>
+    <title><![CDATA[Hexo NexT 文章置顶设置]]></title>
     <url>%2Fposts%2Fa12a1a77.html</url>
-    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 点击头像回到首页的设置。 点击头像回到首页修改/themes/next/layout/_macro/sidebar.swig，找到如下代码： 123&lt;img class="site-author-image" itemprop="image" src="&#123;&#123; url_for( theme.avatar | default(theme.images + '/avatar.gif') ) &#125;&#125;" alt="&#123;&#123; theme.author &#125;&#125;" /&gt; 在其前后加上&lt;a href=&quot;/&quot;&gt;&lt;/a&gt;即可，如下： 12345&lt;a href="/"&gt; &lt;img class="site-author-image" itemprop="image" src="&#123;&#123; url_for( theme.avatar | default(theme.images + '/avatar.gif') ) &#125;&#125;" alt="&#123;&#123; theme.author &#125;&#125;" /&gt;&lt;/a&gt; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
+    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 文章置顶的设置。 文章置顶关于主题文章置顶的功能，目前已经有修改后支持置顶的仓库，可以直接用以下命令安装。 12$ npm uninstall hexo-generator-index --save$ npm install hexo-generator-index-pin-top --save 然后在需要置顶的文章的 Front-matter 中加上 top: true 即可。比如下面这篇文章： 123456---title: hexo+GitHub博客搭建实战date: 2017-09-08 12:00:25categories: 博客搭建系列top: true--- 置顶功能已经可以实现，还需添加置顶标志 打开：/blog/themes/next/layout/_macro 目录下的 post.swig 文件，定位到 &lt;div class=&quot;post-meta&quot;&gt; 标签下,插入如下代码： 12345&#123;% if post.top %&#125; &lt;i class="fa fa-thumb-tack"&gt;&lt;/i&gt; &lt;font color=7D26CD&gt;置顶&lt;/font&gt; &lt;span class="post-meta-divider"&gt;|&lt;/span&gt;&#123;% endif %&#125; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
@@ -280,9 +280,9 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>aplayer</tag>
         <tag>Hexo</tag>
         <tag>NexT</tag>
+        <tag>aplayer</tag>
       </tags>
   </entry>
   <entry>
