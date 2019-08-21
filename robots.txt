@@ -11,6 +11,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://iamzmj.top/sitemap.xml
-Sitemap: https://iamzmj.top/baidusitemap.xml
- 
+Sitemap: http://iamzmj.top/sitemap.xml
+Sitemap: http://iamzmj.top/baidusitemap.xml
