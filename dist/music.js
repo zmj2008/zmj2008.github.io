@@ -2,8 +2,7 @@ const ap = new APlayer({
     container: document.getElementById('aplayer'),
     fixed: true,
     autoplay:false,
-    
-	audio: [
+   	audio: [
    	  {
         name: "多想在平庸的生活拥抱你",
         artist: '隔壁老樊',
