@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[2019华为开发者大会鸿蒙OS正式发布]]></title>
+    <url>%2Fposts%2F402eb62c.html</url>
+    <content type="text"><![CDATA[HarmonyOS 鸿蒙OS发布2019年8月9日，华为消费者业务在其全球开发者大会上正式向全球发布其全新的基于微内核的面向全场景的分布式操作系统——鸿蒙OS。随着华为全场景智慧生活战略的不断完善，鸿蒙OS将作为华为迎接全场景体验时代到来的产物，发挥其轻量化、小巧、功能强大的优势，率先应用在智能手表、智慧屏、车载设备、智能音箱等智能终端上，着力构建一个跨终端的融合共享生态，重塑安全可靠的运行环境，为消费者打造全场景智慧生活新体验。 在过去的传统模式下，每一类新形态终端的出现，都会伴随新的操作系统的诞生。早在十年前，华为就开始思考面对未来的全场景智慧时代，用户需要一个完全突破物理空间的跨硬件、跨平台、无缝的全新体验。 在本次开发者大会上华为消费者业务CEO余承东在介绍鸿蒙OS开发初衷时表示：“随着全场景智慧时代的到来，华为认为需要进一步提升操作系统的跨平台能力，包括支持全场景、跨多设备和平台的能力以及应对低时延、高安全性挑战的能力，因此逐渐形成了鸿蒙OS的雏形，可以说鸿蒙OS的出发点和Android、iOS都不一样，是一款全新的基于微内核的面向全场景的分布式操作系统，能够同时满足全场景流畅体验、架构级可信安全、跨终端无缝协同以及一次开发多终端部署的要求，鸿蒙应未来而生。” 鸿蒙OS （HarmonyOS）四大技术特点 鸿蒙OS的设计初衷是为满足全场景智慧体验的高标准的连接要求，为此华为提出了4大特性的系统解决方案。 1．分布式架构首次用于终端OS，实现跨终端无缝协同体验 鸿蒙OS的“分布式OS架构”和“分布式软总线技术”通过公共通信平台，分布式数据管理，分布式能力调度和虚拟外设四大能力，将相应分布式应用的底层技术实现难度对应用开发者屏蔽。 使开发者能够聚焦自身业务逻辑，像开发同一终端一样开发跨终端分布式应用，也使最终消费者享受到强大的跨终端业务协同能力为各使用场景带来的无缝体验。 2. 确定时延引擎和高性能IPC技术实现系统天生流畅 鸿蒙 OS通过使用确定时延引擎和高性能IPC两大技术解决现有系统性能不足的问题。确定时延引擎可在任务执行前分配系统中任务执行优先级及时限进行调度处理，优先级高的任务资源将优先保障调度，应用响应时延降低25.7%。鸿蒙微内核结构小巧的特性使IPC（进程间通信）性能大大提高，进程通信效率较现有系统提升5倍。 3. 基于微内核架构重塑终端设备可信安全 鸿蒙OS采用全新的微内核设计，拥有更强的安全特性和低时延等特点。微内核设计的基本思想是简化内核功能，在内核之外的用户态尽可能多地实现系统服务，同时加入相互之间的安全保护。微内核只提供最基础的服务，比如多进程调度和多进程通信等。 鸿蒙OS将微内核技术应用于可信执行环境（TEE），通过形式化方法，重塑可信安全。形式化方法是利用数学方法，从源头验证系统正确，无漏洞的有效手段。传统验证方法如功能验证，模拟攻击等只能在选择的有限场景进行验证，而形式化方法可通过数据模型验证所有软件运行路径。 鸿蒙OS首次将形式化方法用于终端TEE，显著提升安全等级。同时由于鸿蒙OS微内核的代码量只有Linux宏内核的千分之一，其受攻击几率也大幅降低。 4. 通过统一IDE支撑一次开发，多端部署，实现跨终端生态共享 鸿蒙OS凭借多终端开发IDE，多语言统一编译，分布式架构Kit提供屏幕布局控件以及交互的自动适配，支持控件拖拽，面向预览的可视化编程，从而使开发者可以基于同一工程高效构建多端自动运行App，实现真正的一次开发，多端部署，在跨设备之间实现共享生态。华为方舟编译器是首个取代Android虚拟机模式的静态编译器，可供开发者在开发环境中一次性将高级语言编译为机器码。此外，方舟编译器未来将支持多语言统一编译，可大幅提高开发效率。 开发者计划及生态建设 华为还公布了鸿蒙内核及OS的演进路标，将在今年首发的智慧屏产品中率先使用鸿蒙 OS 1.0。未来三年，除完善相关技术外，鸿蒙OS会逐步应用在可穿戴、智慧屏、车机等更多智能设备中。 鸿蒙OS发展的关键在于生态，生态的关键在于应用和开发者。为快速推动鸿蒙OS的生态发展，鸿蒙OS将向全球开发者开源，并推动成立开源基金会，建立开源社区，与开发者一起共同推动鸿蒙的发展，并通过讨论对产业或技术发展提出建议。 目前，中国已经具备健全的应用生态和庞大的用户基础，未来华为将依托中国、面向全球打造鸿蒙OS生态，通过聚焦新的价值，开放在通信、照相、全场景、AI等方面的核心能力，与各界生态伙伴共同打造出面向消费者体验更佳的应用和服务，为产业注入新活力，共创全场景智慧化新体验与新生态。在超前的技术特性和战略布局下，鸿蒙OS不仅能为消费者带来万物互联的全场景智慧生活的极致体验，也能让设备商在5G+AI+IOT爆发的全场景智慧化时代抢占先机，让开发者以最少投入覆盖最多用户，快速实现全场景业务创新。 华为消费者业务CEO余承东表示：“我们相信鸿蒙OS的推出会极大地提升产业的活力和生态的丰富性，希望鸿蒙OS的推出能够为全场景时代带来更加丰富多彩的体验。我们欢迎全球开发者积极支持鸿蒙OS生态建设，共同为消费者打造全场景智慧化生活体验”。 文章转自@华为终端官方知乎机构]]></content>
+      <categories>
+        <category>新闻</category>
+      </categories>
+      <tags>
+        <tag>华为</tag>
+        <tag>HarmonyOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Windows下Git多账号同一电脑多个ssh-key的管理]]></title>
+    <url>%2Fposts%2F1526b943.html</url>
+    <content type="text"><![CDATA[在一台电脑主机上，如何进行不同博客的推送管理一时间让我非常头痛。最终在百度帮助下了解了在Windows环境下配置Git多账号的方法来支持这项操作，既然在同一个电脑上如何管理多个ssh-key。 本次需要将两个不同的博客代码分别托管到云码和Github上。 云码注册的邮箱是：435271761@qq.com Github注册的邮箱是：zhanminjie@aliyun.com 首先 管理员运行CMD.exe 执行命令 ssh-keygen -t rsa -C zhanminjie@aliyun.com创建github对应的sshkey，命名为id_rsa 执行命令 ssh-keygen -t rsa -C 435271761@qq.com创建云码对应的sshkey，命名为id_rsa_github 示意如下： 123456789101112131415161718192021C:\Users\Mayjor_Zmj&gt;ssh-keygen -t rsa -C 435271761@qq.comGenerating public/private rsa key pair.Enter file in which to save the key (C:\Users\Mayjor_Zmj/.ssh/id_rsa): id_rsa_githubEnter passphrase (empty for no passphrase):Enter same passphrase again:Your identification has been saved in id_rsa_github.Your public key has been saved in id_rsa_github.pub.The key fingerprint is:SHA256:TmR4BCxLZX1JVRB/dtI9B1JVL18Y+PiEruvFs/MOUSE 435271761@qq.comThe key's randomart image is:+---[RSA 2048]----+| o+o...oE**.+|| o..o. o .+ *o|| . o. +. +*.X|| . + o.o*=|| S ..o .|| o .... || . .= || ...+ || .o..+o |+----[SHA256]-----+ 将生成的4个文件放入id_ rsa,id_rsa.pub(公钥); id_rsa_github,id_rsagithub.pub(公钥) C:\Users\Mayjor_Zmj\ .ssh 文件夹下 把云码和github对应的公钥绑定到对应网站到服务器 在.ssh目录下创建config文本文件并完成相关配置(最核心的地方) 每个账号单独配置一个Host，每个Host要取一个别名，每个Host主要配置HostName和IdentityFile两个属性即可 Host的名字可以取为自己喜欢的名字，不过这个会影响git相关命令，例如：Host mygithub 这样定义的话，命令如下，即git@后面紧跟的名字改为mygithubgit clone git@github:PopFisher/AndroidRotateAnim.git HostName 这个是真实的域名地址IdentityFile 这里是id_rsa的地址PreferredAuthentications 配置登录时用什么权限认证–可设为publickey,password publickey,keyboard-interactive等User 配置使用用户名 12345678910111213###我自己的配置###Host github.com HostName github.com IdentityFile C:\\Users\\Mayjor_Zmj\\.ssh\\id_rsa PreferredAuthentications publickey User username1# 配置git.oschina.net Host gitee.com HostName git.oschina.net IdentityFile C:\\Users\\Mayjor_Zmj\\.ssh\\id_rsa_github PreferredAuthentications publickey User username2 以管理员身份运行Git Bash客户端，执行测试命令测试是否配置成功 测试1成功： 123Mayjor_Zmj@DESKTOP-CVQMHBH MINGW64 ~/Desktop$ ssh -T git@github.comHi zmj2008! You've successfully authenticated, but GitHub does not provide shell access #出现该句表示成功 测试2未成功： 123Mayjor_Zmj@DESKTOP-CVQMHBH MINGW64 ~/Desktop$ ssh -T git@gitee.comgit@gitee.com: Permission denied (publickey). #测试未成功 若发生上述情况，处理的解决办法是先输入eval ssh-agent -s 再输入ssh-add ~/.ssh/id_rsa_github就解决了。 1234567Mayjor_Zmj@DESKTOP-CVQMHBH MINGW64 ~/Desktop$ eval `ssh-agent -s`Agent pid 1749Mayjor_Zmj@DESKTOP-CVQMHBH MINGW64 ~/Desktop$ ssh-add ~/.ssh/id_rsa_githubIdentity added: /c/Users/Mayjor_Zmj/.ssh/id_rsa_github (/c/Users/Mayjor_Zmj/.ssh/id_rsa_github) 测试2成功： 123Mayjor_Zmj@DESKTOP-CVQMHBH MINGW64 ~/Desktop$ ssh -T git@gitee.comHi zhanminjie! You've successfully authenticated, but GITEE.COM does not provide shell access. 这样两个博客分别推送就不会相互受到影响了。]]></content>
+      <categories>
+        <category>ssh-key</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>ssh-key</tag>
+        <tag>多账号</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo nest添加标签云]]></title>
     <url>%2Fposts%2F449f6cd5.html</url>
     <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 下添加标签云hexo-tag-cloud设置。 添加标签云设置进入到站点的根目录，在 package.json 中添加依赖: &quot;hexo-tag-cloud&quot;: &quot;2.0.*&quot; 使用命令行进行安装插件 1npm install hexo-tag-cloud@^2.0.* --save 在主题文件夹找到文件 theme/next/layout/_macro/sidebar.swig, 然后添加如下代码： 123456789101112&#123;% if site.tags.length &gt; 1 %&#125;&lt;script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"&gt;&lt;/script&gt;&lt;script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"&gt;&lt;/script&gt;&lt;div class="widget-wrap"&gt; &lt;h3 class="widget-title"&gt;Tag Cloud&lt;/h3&gt; &lt;div id="myCanvasContainer" class="widget tagcloud"&gt; &lt;canvas width="250" height="250" id="resCanvas" style="width=100%"&gt; &#123;&#123; list_tags() &#125;&#125; &lt;/canvas&gt; &lt;/div&gt;&lt;/div&gt;&#123;% endif %&#125; 添加位置于： 123456789101112131415161718192021222324252627 &#123;% if theme.back2top.enable and theme.back2top.sidebar %&#125; &lt;div class="back-to-top"&gt; &lt;i class="fa fa-arrow-up"&gt;&lt;/i&gt; &#123;% if theme.back2top.scrollpercent %&#125; &lt;span id="scrollpercent"&gt;&lt;span&gt;0&lt;/span&gt;%&lt;/span&gt; &#123;% endif %&#125; &lt;/div&gt; &#123;% endif %&#125; #在该处代码下面添加 &#123;% if site.tags.length &gt; 1 %&#125; &lt;script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"&gt;&lt;/script&gt; &lt;script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"&gt;&lt;/script&gt; &lt;div class="widget-wrap"&gt; &lt;div id="myCanvasContainer" class="widget tagcloud"&gt; &lt;canvas width="200" height="250" id="resCanvas" style="width=100%"&gt; &#123;&#123; list_tags() &#125;&#125; &lt;/canvas&gt; &lt;/div&gt; &lt;/div&gt; &#123;% endif %&#125; &lt;/div&gt; #在该处代码上面添加 &lt;/aside&gt; &#123;% if theme.sidebar.dimmer %&#125; &lt;div id="sidebar-dimmer"&gt;&lt;/div&gt; &#123;% endif %&#125; &#123;% endmacro %&#125; 在本地下预览效果 hexo clean &amp;&amp; hexo g &amp;&amp; hexo s]]></content>
@@ -11,18 +37,6 @@
         <tag>Hexo</tag>
         <tag>nest</tag>
         <tag>tagcloud</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Github实用开源项目]]></title>
-    <url>%2Fposts%2F7377a68b.html</url>
-    <content type="text"><![CDATA[最全中文诗歌古典文集数据库 chinese-poetry最全的中华古典文集数据库, 包含 5.5 万首唐诗、26 万首宋诗和 2.1 万首宋词.和其他古典文集。 诗人包括唐宋两朝近 1.4 万古诗人, 和两宋时期 1.5 千古词人. 数据来源于互联网. 谷歌访问助手 google-access-helper最简单易用的谷歌访问助手,为chrome扩展用户量身打造。可以解决chrome扩展无法自动更新的问题，同时可以访问谷歌google搜索，gmail邮箱，google+等谷歌服务。本软件已破解，可永久免费使用！ 百度下载 baidu-netdisk-downloaderxBND 是一款图形界面的百度网盘不限速下载器，支持 Windows、Linux 和 Mac， BT下载 qBittorrent-Enhanced-EditionQBittorrent是一个新的轻量级BitTorrent客户端，可运行于Linux、windows及其他可能系统，它简单易用，漂亮的外观，功能强大。现在它可以被视为一个良好的替代其他BitTorrent软件的客户端 # 持续更新]]></content>
-      <categories>
-        <category>Github</category>
-      </categories>
-      <tags>
-        <tag>开源</tag>
-        <tag>Github</tag>
       </tags>
   </entry>
   <entry>
@@ -61,18 +75,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[2019华为开发者大会鸿蒙OS正式发布]]></title>
-    <url>%2Fposts%2F402eb62c.html</url>
-    <content type="text"><![CDATA[HarmonyOS 鸿蒙OS发布2019年8月9日，华为消费者业务在其全球开发者大会上正式向全球发布其全新的基于微内核的面向全场景的分布式操作系统——鸿蒙OS。随着华为全场景智慧生活战略的不断完善，鸿蒙OS将作为华为迎接全场景体验时代到来的产物，发挥其轻量化、小巧、功能强大的优势，率先应用在智能手表、智慧屏、车载设备、智能音箱等智能终端上，着力构建一个跨终端的融合共享生态，重塑安全可靠的运行环境，为消费者打造全场景智慧生活新体验。 在过去的传统模式下，每一类新形态终端的出现，都会伴随新的操作系统的诞生。早在十年前，华为就开始思考面对未来的全场景智慧时代，用户需要一个完全突破物理空间的跨硬件、跨平台、无缝的全新体验。 在本次开发者大会上华为消费者业务CEO余承东在介绍鸿蒙OS开发初衷时表示：“随着全场景智慧时代的到来，华为认为需要进一步提升操作系统的跨平台能力，包括支持全场景、跨多设备和平台的能力以及应对低时延、高安全性挑战的能力，因此逐渐形成了鸿蒙OS的雏形，可以说鸿蒙OS的出发点和Android、iOS都不一样，是一款全新的基于微内核的面向全场景的分布式操作系统，能够同时满足全场景流畅体验、架构级可信安全、跨终端无缝协同以及一次开发多终端部署的要求，鸿蒙应未来而生。” 鸿蒙OS （HarmonyOS）四大技术特点 鸿蒙OS的设计初衷是为满足全场景智慧体验的高标准的连接要求，为此华为提出了4大特性的系统解决方案。 1．分布式架构首次用于终端OS，实现跨终端无缝协同体验 鸿蒙OS的“分布式OS架构”和“分布式软总线技术”通过公共通信平台，分布式数据管理，分布式能力调度和虚拟外设四大能力，将相应分布式应用的底层技术实现难度对应用开发者屏蔽。 使开发者能够聚焦自身业务逻辑，像开发同一终端一样开发跨终端分布式应用，也使最终消费者享受到强大的跨终端业务协同能力为各使用场景带来的无缝体验。 2. 确定时延引擎和高性能IPC技术实现系统天生流畅 鸿蒙 OS通过使用确定时延引擎和高性能IPC两大技术解决现有系统性能不足的问题。确定时延引擎可在任务执行前分配系统中任务执行优先级及时限进行调度处理，优先级高的任务资源将优先保障调度，应用响应时延降低25.7%。鸿蒙微内核结构小巧的特性使IPC（进程间通信）性能大大提高，进程通信效率较现有系统提升5倍。 3. 基于微内核架构重塑终端设备可信安全 鸿蒙OS采用全新的微内核设计，拥有更强的安全特性和低时延等特点。微内核设计的基本思想是简化内核功能，在内核之外的用户态尽可能多地实现系统服务，同时加入相互之间的安全保护。微内核只提供最基础的服务，比如多进程调度和多进程通信等。 鸿蒙OS将微内核技术应用于可信执行环境（TEE），通过形式化方法，重塑可信安全。形式化方法是利用数学方法，从源头验证系统正确，无漏洞的有效手段。传统验证方法如功能验证，模拟攻击等只能在选择的有限场景进行验证，而形式化方法可通过数据模型验证所有软件运行路径。 鸿蒙OS首次将形式化方法用于终端TEE，显著提升安全等级。同时由于鸿蒙OS微内核的代码量只有Linux宏内核的千分之一，其受攻击几率也大幅降低。 4. 通过统一IDE支撑一次开发，多端部署，实现跨终端生态共享 鸿蒙OS凭借多终端开发IDE，多语言统一编译，分布式架构Kit提供屏幕布局控件以及交互的自动适配，支持控件拖拽，面向预览的可视化编程，从而使开发者可以基于同一工程高效构建多端自动运行App，实现真正的一次开发，多端部署，在跨设备之间实现共享生态。华为方舟编译器是首个取代Android虚拟机模式的静态编译器，可供开发者在开发环境中一次性将高级语言编译为机器码。此外，方舟编译器未来将支持多语言统一编译，可大幅提高开发效率。 开发者计划及生态建设 华为还公布了鸿蒙内核及OS的演进路标，将在今年首发的智慧屏产品中率先使用鸿蒙 OS 1.0。未来三年，除完善相关技术外，鸿蒙OS会逐步应用在可穿戴、智慧屏、车机等更多智能设备中。 鸿蒙OS发展的关键在于生态，生态的关键在于应用和开发者。为快速推动鸿蒙OS的生态发展，鸿蒙OS将向全球开发者开源，并推动成立开源基金会，建立开源社区，与开发者一起共同推动鸿蒙的发展，并通过讨论对产业或技术发展提出建议。 目前，中国已经具备健全的应用生态和庞大的用户基础，未来华为将依托中国、面向全球打造鸿蒙OS生态，通过聚焦新的价值，开放在通信、照相、全场景、AI等方面的核心能力，与各界生态伙伴共同打造出面向消费者体验更佳的应用和服务，为产业注入新活力，共创全场景智慧化新体验与新生态。在超前的技术特性和战略布局下，鸿蒙OS不仅能为消费者带来万物互联的全场景智慧生活的极致体验，也能让设备商在5G+AI+IOT爆发的全场景智慧化时代抢占先机，让开发者以最少投入覆盖最多用户，快速实现全场景业务创新。 华为消费者业务CEO余承东表示：“我们相信鸿蒙OS的推出会极大地提升产业的活力和生态的丰富性，希望鸿蒙OS的推出能够为全场景时代带来更加丰富多彩的体验。我们欢迎全球开发者积极支持鸿蒙OS生态建设，共同为消费者打造全场景智慧化生活体验”。 文章转自@华为终端官方知乎机构]]></content>
-      <categories>
-        <category>新闻</category>
-      </categories>
-      <tags>
-        <tag>华为</tag>
-        <tag>HarmonyOS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[手机如何登陆Google应用商店]]></title>
     <url>%2Fposts%2F34057798.html</url>
     <content type="text"><![CDATA[引言因为谷歌在国内的退出，导致很多人的Android手机上无法安装上Google play store。那是否有什么简单的方法能让手机安装上Google play store 呢？方法还是有的，大致介绍如下。 安装在PC机的安卓模拟器上安装Google空间。 雷电安卓模拟器 Google空间 雷电模拟器上安装Google空间 添加Google账户 账户添加绑定后既可以访问Googleplay应用商店。在自己的手机上也是如此的操作。 相对繁琐的是谷歌账号注册需科学上网，这里分享一个科学上网软件。 是不是发现原来访问Google play 应用商店是一件非常简单的事情！]]></content>
@@ -92,8 +94,8 @@
         <category>PicUploader</category>
       </categories>
       <tags>
-        <tag>图床</tag>
         <tag>PicUploader</tag>
+        <tag>图床</tag>
       </tags>
   </entry>
   <entry>
@@ -134,9 +136,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Win10系统优化1:手动优化篇]]></title>
-    <url>%2Fposts%2F50153a61.html</url>
-    <content type="text"><![CDATA[引言最近对自己的本基本电脑重新安装了WIN10系统后，在操作系统上选择了参加Windows预览体验计划，直接跳到下一版本并安装了最新的更新。虽然系统已更新到最新，但还是需要对其进行一些必要的优化，才能使自己使用起来更加流畅。 本次介绍系统优化第一步手动优化。 手动优化—设置优化点击桌面左下角Win图标，点击设置按钮进入设置主界面。 系统设置 点击系统—点击通知和操作—关闭通知 设备设置 点击设备—自动播放—关闭自动播放 点击设备—USB—关闭USB设备提示通知，避免USB电涌问题 网络和Internet设置 点击网络和internet—状态—网络和共享中心—更改高级共享设置——启用共享文件夹/启用无密码共享 点击网络和internet—代理—关闭代理 个性化设置 点击个性化—点击主题—点击右侧桌面图标—勾选图标 点击个性化—点击开始—关闭偶尔在“开始”菜单中显示建议 点击个性化—点击开始—点击选择哪些文件显示在“开始”菜单栏上—除设置全部关闭 点击个性化—点击任务栏—选择设置任务栏已满时合并 点击个性化—点击任务栏—点击打开或关闭系统图标 应用设置 点击应用—点击离线地图—关闭地图更新 点击应用—点击可使用网站打开应用—关闭关联应用 游戏设置 点击游戏—点击游戏栏—关闭游戏视频录制功能 隐私设置 点击隐私—点击常规—关闭常规里的所有内容 点击隐私—诊断和反馈—关闭诊断数据 点击隐私—诊断和反馈—点击活动历史记录 更新和安全设置 点击更新和安全—点击传递优化—关闭传递优化 手动优化—控制面板优化点击控制面版—切换成大图标方便查看 Internet选项设置 点击Internet选项—点击常规—标签页—进行如下设置 点击Internet选项—点击常规—浏览历史记录设置—进行如下设置 点击Internet选项—点击隐私—关闭弹窗阻止程序 点击Internet选项—点击高级—勾选允许运行或按照软件，即使签名无效，避免安装插件时弹出提示框 点击Internet选项—点击高级—取消勾选默认IE浏览器检测 自带防火墙设置 点击Windows Defender防火墙—点击左侧启用或关闭Windows Defender防火墙—关闭防火墙 安全维护设置 点击安全和维护—点击左侧更改用户账户控制设置—关闭用户控制提示 程序和功能设置 点击程序和功能—点击左侧启用或关闭Windows功能—开启SMB1.0服务 电源选项设置 点击电源选项—点击左侧选择电源按钮的功能—点击当前不可用设置—勾选休眠 文件夹选项设置 点击文件夹资源管理器选项—点击查看—勾选以下内容 系统高级设置 点击系统—高级系统设置—高级—性能设置—视觉效果—按个人设置自定义设置 点击系统—高级系统设置—高级—性能设置—高级—虚拟内存设置如下 疑难解答设置 点击疑难解答—点击左侧更改设置—关闭计算机维护，疑难解答，故障排除 手动优化—服务项优化右键桌面我的电脑—点击管理—点击服务和应用程序—点击服务 禁用程序兼容性助手找到Program Compatibility Assistant Service 并禁用，避免弹出程序是否正确安装的提示窗口 禁用超级预读找到SysMain 并禁用，避免弹出程序是否正确安装的提示窗口 手动优化—策略组优化WIN+R 打开运行对话框，输入gpedit.msc，直接运行组策略 启用“关闭加载性能通知”，防止打开IE浏览器状态栏提示关闭加载项来提高浏览器运行速度的提示。启用“自动激活新安装的加载项”，比如迅雷下载加载项等等可自动激活。禁用“打开建议网站”，无用的收藏夹网址建议禁止。 （计算机配置里的设置同用户配置里的设置一样，此处省略） 启用“阻止IE首次运行向导设置” （计算机配置里的设置同用户配置里的设置一样，此处省略） 启用“阻止订阅网页源和网页快讯” （计算机配置里的设置同用户配置里的设置一样，此处省略） 禁用“快速关机优化” 启用“允许管理员忽略设备安装限制策略” 启用“设备驱动程序的代码签名” 手动优化—其它设置设置快速访问栏 关闭磁盘索引设置右键点击C盘—选择属性—常规—设置如下 隐藏小娜，任务视图，人脉回到桌面，取消前面对应的勾选即可。 整理磁贴调整一下开始屏幕，删除自己认为无用的箭头磁贴，按照自己的喜好增加删除调整磁贴既可。]]></content>
+    <title><![CDATA[Win10系统优化2:软件辅助篇]]></title>
+    <url>%2Fposts%2Fe177ee84.html</url>
+    <content type="text"><![CDATA[引言最近对自己的本基本电脑重新安装了WIN10系统后，在操作系统上选择了参加Windows预览体验计划，直接跳到下一版本并安装了最新的更新。虽然系统已更新到最新，但还是需要对其进行一些必要的优化，才能使自己使用起来更加流畅。 本次介绍系统优化第二步软件辅助优化。 软媒美化大师优化下载软媒美化大师单文件版3.7.0.0 系统外观—桌面设置 软媒设置大师优化下载软媒设置大师单文件版3.7.2.0 系统设置—资源管理器 系统设置—多媒体优化设置 系统设置—错误报告 系统设置—开关机设置 右键菜单—新建菜单 删除无用右键菜单 右键菜单—发送到菜单 删除无用右键菜单 右键菜单—添加右键菜单项目 添加上获得管理员所有权这个功能 DISM++优化下载 DISM++ 启动项管理—关闭开机磁盘检测。关闭开机启动OneDrive 系统优化设置如下 DISM++清理 软媒清理大师清理下载软媒清理大师 一键清理 深度清理 系统瘦身 添加摄像头补丁下载摄像头补丁]]></content>
       <categories>
         <category>Windows</category>
       </categories>
@@ -147,9 +149,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Win10系统优化2:软件辅助篇]]></title>
-    <url>%2Fposts%2Fe177ee84.html</url>
-    <content type="text"><![CDATA[引言最近对自己的本基本电脑重新安装了WIN10系统后，在操作系统上选择了参加Windows预览体验计划，直接跳到下一版本并安装了最新的更新。虽然系统已更新到最新，但还是需要对其进行一些必要的优化，才能使自己使用起来更加流畅。 本次介绍系统优化第二步软件辅助优化。 软媒美化大师优化下载软媒美化大师单文件版3.7.0.0 系统外观—桌面设置 软媒设置大师优化下载软媒设置大师单文件版3.7.2.0 系统设置—资源管理器 系统设置—多媒体优化设置 系统设置—错误报告 系统设置—开关机设置 右键菜单—新建菜单 删除无用右键菜单 右键菜单—发送到菜单 删除无用右键菜单 右键菜单—添加右键菜单项目 添加上获得管理员所有权这个功能 DISM++优化下载 DISM++ 启动项管理—关闭开机磁盘检测。关闭开机启动OneDrive 系统优化设置如下 DISM++清理 软媒清理大师清理下载软媒清理大师 一键清理 深度清理 系统瘦身 添加摄像头补丁下载摄像头补丁]]></content>
+    <title><![CDATA[Win10系统优化1:手动优化篇]]></title>
+    <url>%2Fposts%2F50153a61.html</url>
+    <content type="text"><![CDATA[引言最近对自己的本基本电脑重新安装了WIN10系统后，在操作系统上选择了参加Windows预览体验计划，直接跳到下一版本并安装了最新的更新。虽然系统已更新到最新，但还是需要对其进行一些必要的优化，才能使自己使用起来更加流畅。 本次介绍系统优化第一步手动优化。 手动优化—设置优化点击桌面左下角Win图标，点击设置按钮进入设置主界面。 系统设置 点击系统—点击通知和操作—关闭通知 设备设置 点击设备—自动播放—关闭自动播放 点击设备—USB—关闭USB设备提示通知，避免USB电涌问题 网络和Internet设置 点击网络和internet—状态—网络和共享中心—更改高级共享设置——启用共享文件夹/启用无密码共享 点击网络和internet—代理—关闭代理 个性化设置 点击个性化—点击主题—点击右侧桌面图标—勾选图标 点击个性化—点击开始—关闭偶尔在“开始”菜单中显示建议 点击个性化—点击开始—点击选择哪些文件显示在“开始”菜单栏上—除设置全部关闭 点击个性化—点击任务栏—选择设置任务栏已满时合并 点击个性化—点击任务栏—点击打开或关闭系统图标 应用设置 点击应用—点击离线地图—关闭地图更新 点击应用—点击可使用网站打开应用—关闭关联应用 游戏设置 点击游戏—点击游戏栏—关闭游戏视频录制功能 隐私设置 点击隐私—点击常规—关闭常规里的所有内容 点击隐私—诊断和反馈—关闭诊断数据 点击隐私—诊断和反馈—点击活动历史记录 更新和安全设置 点击更新和安全—点击传递优化—关闭传递优化 手动优化—控制面板优化点击控制面版—切换成大图标方便查看 Internet选项设置 点击Internet选项—点击常规—标签页—进行如下设置 点击Internet选项—点击常规—浏览历史记录设置—进行如下设置 点击Internet选项—点击隐私—关闭弹窗阻止程序 点击Internet选项—点击高级—勾选允许运行或按照软件，即使签名无效，避免安装插件时弹出提示框 点击Internet选项—点击高级—取消勾选默认IE浏览器检测 自带防火墙设置 点击Windows Defender防火墙—点击左侧启用或关闭Windows Defender防火墙—关闭防火墙 安全维护设置 点击安全和维护—点击左侧更改用户账户控制设置—关闭用户控制提示 程序和功能设置 点击程序和功能—点击左侧启用或关闭Windows功能—开启SMB1.0服务 电源选项设置 点击电源选项—点击左侧选择电源按钮的功能—点击当前不可用设置—勾选休眠 文件夹选项设置 点击文件夹资源管理器选项—点击查看—勾选以下内容 系统高级设置 点击系统—高级系统设置—高级—性能设置—视觉效果—按个人设置自定义设置 点击系统—高级系统设置—高级—性能设置—高级—虚拟内存设置如下 疑难解答设置 点击疑难解答—点击左侧更改设置—关闭计算机维护，疑难解答，故障排除 手动优化—服务项优化右键桌面我的电脑—点击管理—点击服务和应用程序—点击服务 禁用程序兼容性助手找到Program Compatibility Assistant Service 并禁用，避免弹出程序是否正确安装的提示窗口 禁用超级预读找到SysMain 并禁用，避免弹出程序是否正确安装的提示窗口 手动优化—策略组优化WIN+R 打开运行对话框，输入gpedit.msc，直接运行组策略 启用“关闭加载性能通知”，防止打开IE浏览器状态栏提示关闭加载项来提高浏览器运行速度的提示。启用“自动激活新安装的加载项”，比如迅雷下载加载项等等可自动激活。禁用“打开建议网站”，无用的收藏夹网址建议禁止。 （计算机配置里的设置同用户配置里的设置一样，此处省略） 启用“阻止IE首次运行向导设置” （计算机配置里的设置同用户配置里的设置一样，此处省略） 启用“阻止订阅网页源和网页快讯” （计算机配置里的设置同用户配置里的设置一样，此处省略） 禁用“快速关机优化” 启用“允许管理员忽略设备安装限制策略” 启用“设备驱动程序的代码签名” 手动优化—其它设置设置快速访问栏 关闭磁盘索引设置右键点击C盘—选择属性—常规—设置如下 隐藏小娜，任务视图，人脉回到桌面，取消前面对应的勾选即可。 整理磁贴调整一下开始屏幕，删除自己认为无用的箭头磁贴，按照自己的喜好增加删除调整磁贴既可。]]></content>
       <categories>
         <category>Windows</category>
       </categories>
@@ -211,9 +213,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hexo nest文章置顶设置]]></title>
+    <title><![CDATA[Hexo nest点击头像回到首页设置]]></title>
     <url>%2Fposts%2Fa12a1a77.html</url>
-    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 文章置顶的设置。 文章置顶关于主题文章置顶的功能，目前已经有修改后支持置顶的仓库，可以直接用以下命令安装。 12$ npm uninstall hexo-generator-index --save$ npm install hexo-generator-index-pin-top --save 然后在需要置顶的文章的 Front-matter 中加上 top: true 即可。比如下面这篇文章： 123456---title: hexo+GitHub博客搭建实战date: 2017-09-08 12:00:25categories: 博客搭建系列top: true--- 置顶功能已经可以实现，还需添加置顶标志 打开：/blog/themes/next/layout/_macro 目录下的 post.swig 文件，定位到 &lt;div class=&quot;post-meta&quot;&gt; 标签下,插入如下代码： 12345&#123;% if post.top %&#125; &lt;i class="fa fa-thumb-tack"&gt;&lt;/i&gt; &lt;font color=7D26CD&gt;置顶&lt;/font&gt; &lt;span class="post-meta-divider"&gt;|&lt;/span&gt;&#123;% endif %&#125; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
+    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 点击头像回到首页的设置。 点击头像回到首页修改/themes/next/layout/_macro/sidebar.swig，找到如下代码： 123&lt;img class="site-author-image" itemprop="image" src="&#123;&#123; url_for( theme.avatar | default(theme.images + '/avatar.gif') ) &#125;&#125;" alt="&#123;&#123; theme.author &#125;&#125;" /&gt; 在其前后加上&lt;a href=&quot;/&quot;&gt;&lt;/a&gt;即可，如下： 12345&lt;a href="/"&gt; &lt;img class="site-author-image" itemprop="image" src="&#123;&#123; url_for( theme.avatar | default(theme.images + '/avatar.gif') ) &#125;&#125;" alt="&#123;&#123; theme.author &#125;&#125;" /&gt;&lt;/a&gt; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
@@ -223,9 +225,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hexo nest点击头像回到首页设置]]></title>
+    <title><![CDATA[Hexo nest文章置顶设置]]></title>
     <url>%2Fposts%2Fa12a1a77.html</url>
-    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 点击头像回到首页的设置。 点击头像回到首页修改/themes/next/layout/_macro/sidebar.swig，找到如下代码： 123&lt;img class="site-author-image" itemprop="image" src="&#123;&#123; url_for( theme.avatar | default(theme.images + '/avatar.gif') ) &#125;&#125;" alt="&#123;&#123; theme.author &#125;&#125;" /&gt; 在其前后加上&lt;a href=&quot;/&quot;&gt;&lt;/a&gt;即可，如下： 12345&lt;a href="/"&gt; &lt;img class="site-author-image" itemprop="image" src="&#123;&#123; url_for( theme.avatar | default(theme.images + '/avatar.gif') ) &#125;&#125;" alt="&#123;&#123; theme.author &#125;&#125;" /&gt;&lt;/a&gt; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
+    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 文章置顶的设置。 文章置顶关于主题文章置顶的功能，目前已经有修改后支持置顶的仓库，可以直接用以下命令安装。 12$ npm uninstall hexo-generator-index --save$ npm install hexo-generator-index-pin-top --save 然后在需要置顶的文章的 Front-matter 中加上 top: true 即可。比如下面这篇文章： 123456---title: hexo+GitHub博客搭建实战date: 2017-09-08 12:00:25categories: 博客搭建系列top: true--- 置顶功能已经可以实现，还需添加置顶标志 打开：/blog/themes/next/layout/_macro 目录下的 post.swig 文件，定位到 &lt;div class=&quot;post-meta&quot;&gt; 标签下,插入如下代码： 12345&#123;% if post.top %&#125; &lt;i class="fa fa-thumb-tack"&gt;&lt;/i&gt; &lt;font color=7D26CD&gt;置顶&lt;/font&gt; &lt;span class="post-meta-divider"&gt;|&lt;/span&gt;&#123;% endif %&#125; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
@@ -242,9 +244,9 @@
         <category>Picgo</category>
       </categories>
       <tags>
+        <tag>图床</tag>
         <tag>GitHub</tag>
         <tag>Picgo</tag>
-        <tag>图床</tag>
       </tags>
   </entry>
   <entry>
@@ -268,9 +270,9 @@
         <category>Hexo</category>
       </categories>
       <tags>
+        <tag>aplayer</tag>
         <tag>Hexo</tag>
         <tag>nest</tag>
-        <tag>aplayer</tag>
       </tags>
   </entry>
   <entry>
