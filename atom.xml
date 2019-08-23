@@ -75,6 +75,31 @@
   </entry>
   
   <entry>
+    <title>Hugo安装</title>
+    <link href="https://www.iamzmj.top/posts/d5c577fc.html"/>
+    <id>https://www.iamzmj.top/posts/d5c577fc.html</id>
+    <published>2019-08-23T06:45:26.000Z</published>
+    <updated>2019-08-23T14:47:35.490Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><script type="text/javascript" src="/js/src/bai.js"></script><p><img src="https://i.loli.net/2019/08/22/vbItmrTBUC81yLQ.jpg" alt></p><p>Hugo是一个用<a href="https://golang.org/" rel="external nofollow noopener noreferrer" target="_blank">Go</a>编写的静态HTML和CSS网站生成器。它针对速度，易用性和可配置性进行了优化。Hugo获取包含内容和模板的目录，并将它们呈现为完整的HTML网站。</p><p>Hugo依赖Markdown文件和元数据的前端内容，您可以从任何目录运行Hugo。这适用于您没有特权帐户的共享主机和其他系统。Hugo在几分之一秒内呈现了一个中等规模的典型网站。一个好的经验法则是每个内容呈现大约1毫秒。Hugo旨在适用于任何类型的网站，包括博客和文档等。</p><h2 id="方式1：命令行安装"><a href="#方式1：命令行安装" class="headerlink" title="方式1：命令行安装"></a>方式1：命令行安装</h2><p>先安装<a href="https://chocolatey.org/install" rel="external nofollow noopener noreferrer" target="_blank">Chocolatey</a>，管理员方式运行cmd.exe，输入</p><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@"%SystemRoot%\System32\WindowsPowerShell\v1<span class="number">.0</span>\powershell.exe<span class="string">" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "</span>iex ((New-Object System.Net.WebClient).DownloadString(<span class="string">'https://chocolatey.org/install.ps1'</span>))<span class="string">" &amp;&amp; SET "</span>PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin<span class="string">"</span></span><br></pre></td></tr></table></figure><p>安装hugo，管理员方式运行cmd.exe，输入</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco <span class="keyword">install</span> hugo -<span class="keyword">confirm</span></span><br></pre></td></tr></table></figure><h2 id="方式2：zip安装"><a href="#方式2：zip安装" class="headerlink" title="方式2：zip安装"></a>方式2：zip安装</h2><p>点击<a href="https://github.com/gohugoio/hugo/releases" rel="external nofollow noopener noreferrer" target="_blank">Hugo</a>，选择对应系统（WIN10 64位）最新版—并下载</p><p><img src="https://i.loli.net/2019/08/22/nIQhbLrjWT3OuN7.jpg" alt></p><p>下载完成后—解压到自己制定文件夹，我这里是（C:\hugo0.56.2）下，该版本为之前已下载。</p><p>为Hugo添加环境变量（自行百度就可以添加）</p><p>添加完成后，WIN+R打开运行框输入 <code>Hugo version</code> 若显示<code>Hugo Static Site Generator v0.56.2-5F033A7F windows/amd64 BuildDate: 2019-07-30T09:06:05Z</code>说明安装成功。</p><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">Microsoft</span> <span class="selector-tag">Windows</span> <span class="selector-attr">[版本 10.0.18950.1000]</span></span><br><span class="line">(c) <span class="selector-tag">2019</span> <span class="selector-tag">Microsoft</span> <span class="selector-tag">Corporation</span>。保留所有权利。</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">C</span>:\<span class="selector-tag">Users</span>\<span class="selector-tag">Mayjor_Zmj</span>&gt;<span class="selector-tag">hugo</span> <span class="selector-tag">version</span></span><br><span class="line"><span class="selector-tag">Hugo</span> <span class="selector-tag">Static</span> <span class="selector-tag">Site</span> <span class="selector-tag">Generator</span> <span class="selector-tag">v0</span><span class="selector-class">.56</span><span class="selector-class">.2-5F033A7F</span> <span class="selector-tag">windows</span>/<span class="selector-tag">amd64</span> <span class="selector-tag">BuildDate</span>: <span class="selector-tag">2019-07-30T09</span><span class="selector-pseudo">:06</span><span class="selector-pseudo">:05Z</span>         #表示安装成功</span><br></pre></td></tr></table></figure><h1 id="生成站点根目录"><a href="#生成站点根目录" class="headerlink" title="生成站点根目录"></a>生成站点根目录</h1><p>输入<code>cd c:/hugo0.56.2</code>进入Hugo文件夹</p><figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">C:</span>\Users\Mayjor_Zmj&gt;cd c:/hugo0<span class="meta">.56</span><span class="meta">.2</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">c:</span>\hugo0<span class="meta">.56</span><span class="meta">.2</span>&gt;</span><br></pre></td></tr></table></figure><p>新建博客站点blog,输入<code>new site c:/hugo0.56.2/Blog</code></p><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">c:\hugo0.<span class="number">56.2</span>&gt;hugo <span class="keyword">new</span> site c:/hugo0.<span class="number">56.2</span>/Blog</span><br><span class="line">Congratulations! Your <span class="keyword">new</span> Hugo site <span class="keyword">is</span> created <span class="keyword">in</span> c:\hugo0.<span class="number">56.2</span>\Blog.                     #表示新建成功</span><br><span class="line"></span><br><span class="line">Just a few more steps <span class="keyword">and</span> you<span class="symbol">'re</span> ready <span class="keyword">to</span> go:</span><br><span class="line"></span><br><span class="line"><span class="number">1</span>. Download a theme into the same-named folder.</span><br><span class="line">   Choose a theme from https://themes.gohugo.io/ <span class="keyword">or</span></span><br><span class="line">   create your own <span class="keyword">with</span> the <span class="string">"hugo new theme &lt;THEMENAME&gt;"</span> command.</span><br><span class="line"><span class="number">2</span>. Perhaps you want <span class="keyword">to</span> add some content. You can add single files</span><br><span class="line">   <span class="keyword">with</span> <span class="string">"hugo new &lt;SECTIONNAME&gt;\&lt;FILENAME&gt;.&lt;FORMAT&gt;"</span>.</span><br><span class="line"><span class="number">3</span>. Start the built-<span class="keyword">in</span> live server via <span class="string">"hugo server"</span>.</span><br><span class="line"></span><br><span class="line">Visit https://gohugo.io/ <span class="keyword">for</span> quickstart guide <span class="keyword">and</span> full documentation.</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2019/08/22/IF7ABRXdm3tZ5yN.jpg" alt></p><h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>选用该<a href="https://github.com/digitalcraftsman/hugo-icarus-theme" rel="external nofollow noopener noreferrer" target="_blank">hugo-icarus-theme</a>主题</p><p>进入themes文件夹，下载主题：</p><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">c</span>:\hugo0.<span class="number">56.2</span>&gt;cd Blog</span><br><span class="line"></span><br><span class="line"><span class="attribute">c</span>:\hugo0.<span class="number">56.2</span>\Blog&gt;cd themes                                                   #进入该文件夹</span><br><span class="line"></span><br><span class="line"><span class="attribute">c</span>:\hugo0.<span class="number">56.2</span>\Blog\themes&gt;git clone <span class="attribute">https</span>:<span class="comment">//github.com/digitalcraftsman/hugo-icarus-theme.git        #下载主题</span></span><br><span class="line">Cloning into <span class="string">'hugo-icarus-theme'</span>...</span><br><span class="line"><span class="attribute">remote</span>: Enumerating <span class="attribute">objects</span>: <span class="number">1041</span>, done.</span><br><span class="line"><span class="attribute">remote</span>: Total <span class="number">1041</span> (delta <span class="number">0</span>), reused <span class="number">0</span> (delta <span class="number">0</span>), pack-reused <span class="number">1041</span></span><br><span class="line">Receiving <span class="attribute">objects</span>: <span class="number">100%</span> (<span class="number">1041</span>/<span class="number">1041</span>), <span class="number">2.34</span> MiB | <span class="number">5.00</span> KiB/s, done.</span><br><span class="line">Resolving <span class="attribute">deltas</span>: <span class="number">100%</span> (<span class="number">670</span>/<span class="number">670</span>), done.</span><br></pre></td></tr></table></figure><p>点击进入icarus主题文件夹下的exampleSite文件夹将<code>config.toml</code>的内容复制到Blog根目录下覆盖原有<code>config.toml</code>，修改<code>config.toml</code>头部文件，theme、themesDir的配置，其他的配置可以之后慢慢设置。</p><p><img src="https://i.loli.net/2019/08/22/5egcoPUWLDwXH7V.jpg" alt>                                  </p><p>回到Blog根目录，输入<code>hugo server</code> </p><p>本地运行成功后，在浏览器上输入<code>http://localhost:1313/</code>查看如下：</p><p><img src="https://i.loli.net/2019/08/22/EzdvbUaKkQGY1iw.jpg" alt></p><hr><p>参考教程：</p><p><a href="https://baijiahao.baidu.com/s?id=1630800288039248525&amp;wfr=spider&amp;for=pc" rel="external nofollow noopener noreferrer" target="_blank">https://baijiahao.baidu.com/s?id=1630800288039248525&amp;wfr=spider&amp;for=pc</a></p><p><a href="https://zilongshanren.com/post/move-from-hexo-to-hugo/" rel="external nofollow noopener noreferrer" target="_blank">https://zilongshanren.com/post/move-from-hexo-to-hugo/</a></p><p><a href="https://juejin.im/post/5cefc5c351882520724c7cf5" rel="external nofollow noopener noreferrer" target="_blank">https://juejin.im/post/5cefc5c351882520724c7cf5</a>    </p><p><a href="https://github.com/nusr/blog/blob/master/config.toml" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/nusr/blog/blob/master/config.toml</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+      <category term="Hugo" scheme="https://www.iamzmj.top/categories/Hugo/"/>
+    
+    
+      <category term="Hugo" scheme="https://www.iamzmj.top/tags/Hugo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo nest添加标签云</title>
     <link href="https://www.iamzmj.top/posts/449f6cd5.html"/>
     <id>https://www.iamzmj.top/posts/449f6cd5.html</id>
@@ -230,9 +255,9 @@
       <category term="PicUploader" scheme="https://www.iamzmj.top/categories/PicUploader/"/>
     
     
-      <category term="PicUploader" scheme="https://www.iamzmj.top/tags/PicUploader/"/>
-    
       <category term="图床" scheme="https://www.iamzmj.top/tags/figurebed/"/>
+    
+      <category term="PicUploader" scheme="https://www.iamzmj.top/tags/PicUploader/"/>
     
   </entry>
   
@@ -542,35 +567,6 @@
       <category term="Hexo" scheme="https://www.iamzmj.top/tags/Hexo/"/>
     
       <category term="nest" scheme="https://www.iamzmj.top/tags/nest/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Picgo GitHub自建图床</title>
-    <link href="https://www.iamzmj.top/posts/77f24ba4.html"/>
-    <id>https://www.iamzmj.top/posts/77f24ba4.html</id>
-    <published>2019-07-27T04:35:59.000Z</published>
-    <updated>2019-07-29T01:08:53.407Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="自建原因"><a href="#自建原因" class="headerlink" title="自建原因"></a>自建原因</h1><p>对于写博客的人来说，图裂是很让人然烦恼的一件事情。后来想到了自建图床，将所有图片上传云，并通过外联https连接用于博客或Markdownd的编写。正好自己用Hexo+Github搭建了博客，就想着用Github来做图片的云存储空间，电脑端使用Picgo传图软件。既使用Picgo+Github的方式自建图床。</p><h1 id="GIthub仓库创建及获取token"><a href="#GIthub仓库创建及获取token" class="headerlink" title="GIthub仓库创建及获取token"></a>GIthub仓库创建及获取token</h1><p>1.注册Github,新建仓库(此处略)。</p><p>2.新建仓库后，点击sitting—Developer settings—Personal access tokens—Generate new  token—选择相关设置—按Generate   token提交生成token码。</p><p><img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/%E9%80%89%E6%8B%A9Generate%20token.png" alt></p><p><img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/%E9%80%89%E6%8B%A9Generate%20token2.png" alt></p><h1 id="Picgo下载安装及设置"><a href="#Picgo下载安装及设置" class="headerlink" title="Picgo下载安装及设置"></a>Picgo下载安装及设置</h1><p>1.开打<a href="Picgo+Github自建图床功能">Picgo</a>项目站点，下拉页面选择自己对应系统的软件版本。我这边选择下载Windows版本。</p><p>2.打开Picgo，选择Github图床进行如下设置：</p><p><img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/gihub%E5%9B%BE%E5%BA%8A%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE.png" alt></p><p><img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/picgo-2.0.gif" alt></p><p>设置完成后，就可开始图片上传，动图gif（需要先下载到本地在上传）同时粘贴板也会自动粘贴上。</p><p>上传成功后，软件既根据选择的外联格式生成对应连接,直接黏贴到想要的地方。我这边选择了Markdown外联格式。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-      <category term="Picgo" scheme="https://www.iamzmj.top/categories/Picgo/"/>
-    
-    
-      <category term="图床" scheme="https://www.iamzmj.top/tags/figurebed/"/>
-    
-      <category term="GitHub" scheme="https://www.iamzmj.top/tags/GitHub/"/>
-    
-      <category term="Picgo" scheme="https://www.iamzmj.top/tags/Picgo/"/>
     
   </entry>
   
