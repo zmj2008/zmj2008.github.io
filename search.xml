@@ -32,9 +32,9 @@
         <category>ssh-key</category>
       </categories>
       <tags>
+        <tag>Windows</tag>
         <tag>ssh-key</tag>
         <tag>多账号</tag>
-        <tag>Windows</tag>
         <tag>Git</tag>
       </tags>
   </entry>
@@ -159,19 +159,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Win10系统优化1:手动优化篇]]></title>
-    <url>%2Fposts%2F50153a61.html</url>
-    <content type="text"><![CDATA[引言最近对自己的本基本电脑重新安装了WIN10系统后，在操作系统上选择了参加Windows预览体验计划，直接跳到下一版本并安装了最新的更新。虽然系统已更新到最新，但还是需要对其进行一些必要的优化，才能使自己使用起来更加流畅。 本次介绍系统优化第一步手动优化。 手动优化—设置优化点击桌面左下角Win图标，点击设置按钮进入设置主界面。 系统设置 点击系统—点击通知和操作—关闭通知 设备设置 点击设备—自动播放—关闭自动播放 点击设备—USB—关闭USB设备提示通知，避免USB电涌问题 网络和Internet设置 点击网络和internet—状态—网络和共享中心—更改高级共享设置——启用共享文件夹/启用无密码共享 点击网络和internet—代理—关闭代理 个性化设置 点击个性化—点击主题—点击右侧桌面图标—勾选图标 点击个性化—点击开始—关闭偶尔在“开始”菜单中显示建议 点击个性化—点击开始—点击选择哪些文件显示在“开始”菜单栏上—除设置全部关闭 点击个性化—点击任务栏—选择设置任务栏已满时合并 点击个性化—点击任务栏—点击打开或关闭系统图标 应用设置 点击应用—点击离线地图—关闭地图更新 点击应用—点击可使用网站打开应用—关闭关联应用 游戏设置 点击游戏—点击游戏栏—关闭游戏视频录制功能 隐私设置 点击隐私—点击常规—关闭常规里的所有内容 点击隐私—诊断和反馈—关闭诊断数据 点击隐私—诊断和反馈—点击活动历史记录 更新和安全设置 点击更新和安全—点击传递优化—关闭传递优化 手动优化—控制面板优化点击控制面版—切换成大图标方便查看 Internet选项设置 点击Internet选项—点击常规—标签页—进行如下设置 点击Internet选项—点击常规—浏览历史记录设置—进行如下设置 点击Internet选项—点击隐私—关闭弹窗阻止程序 点击Internet选项—点击高级—勾选允许运行或按照软件，即使签名无效，避免安装插件时弹出提示框 点击Internet选项—点击高级—取消勾选默认IE浏览器检测 自带防火墙设置 点击Windows Defender防火墙—点击左侧启用或关闭Windows Defender防火墙—关闭防火墙 安全维护设置 点击安全和维护—点击左侧更改用户账户控制设置—关闭用户控制提示 程序和功能设置 点击程序和功能—点击左侧启用或关闭Windows功能—开启SMB1.0服务 电源选项设置 点击电源选项—点击左侧选择电源按钮的功能—点击当前不可用设置—勾选休眠 文件夹选项设置 点击文件夹资源管理器选项—点击查看—勾选以下内容 系统高级设置 点击系统—高级系统设置—高级—性能设置—视觉效果—按个人设置自定义设置 点击系统—高级系统设置—高级—性能设置—高级—虚拟内存设置如下 疑难解答设置 点击疑难解答—点击左侧更改设置—关闭计算机维护，疑难解答，故障排除 手动优化—服务项优化右键桌面我的电脑—点击管理—点击服务和应用程序—点击服务 禁用程序兼容性助手找到Program Compatibility Assistant Service 并禁用，避免弹出程序是否正确安装的提示窗口 禁用超级预读找到SysMain 并禁用，避免弹出程序是否正确安装的提示窗口 手动优化—策略组优化WIN+R 打开运行对话框，输入gpedit.msc，直接运行组策略 启用“关闭加载性能通知”，防止打开IE浏览器状态栏提示关闭加载项来提高浏览器运行速度的提示。启用“自动激活新安装的加载项”，比如迅雷下载加载项等等可自动激活。禁用“打开建议网站”，无用的收藏夹网址建议禁止。 （计算机配置里的设置同用户配置里的设置一样，此处省略） 启用“阻止IE首次运行向导设置” （计算机配置里的设置同用户配置里的设置一样，此处省略） 启用“阻止订阅网页源和网页快讯” （计算机配置里的设置同用户配置里的设置一样，此处省略） 禁用“快速关机优化” 启用“允许管理员忽略设备安装限制策略” 启用“设备驱动程序的代码签名” 手动优化—其它设置设置快速访问栏 关闭磁盘索引设置右键点击C盘—选择属性—常规—设置如下 隐藏小娜，任务视图，人脉回到桌面，取消前面对应的勾选即可。 整理磁贴调整一下开始屏幕，删除自己认为无用的箭头磁贴，按照自己的喜好增加删除调整磁贴既可。]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>系统</tag>
-        <tag>优化</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Win10系统优化2:软件辅助篇]]></title>
     <url>%2Fposts%2Fe177ee84.html</url>
     <content type="text"><![CDATA[引言最近对自己的本基本电脑重新安装了WIN10系统后，在操作系统上选择了参加Windows预览体验计划，直接跳到下一版本并安装了最新的更新。虽然系统已更新到最新，但还是需要对其进行一些必要的优化，才能使自己使用起来更加流畅。 本次介绍系统优化第二步软件辅助优化。 软媒美化大师优化下载软媒美化大师单文件版3.7.0.0 系统外观—桌面设置 软媒设置大师优化下载软媒设置大师单文件版3.7.2.0 系统设置—资源管理器 系统设置—多媒体优化设置 系统设置—错误报告 系统设置—开关机设置 右键菜单—新建菜单 删除无用右键菜单 右键菜单—发送到菜单 删除无用右键菜单 右键菜单—添加右键菜单项目 添加上获得管理员所有权这个功能 DISM++优化下载 DISM++ 启动项管理—关闭开机磁盘检测。关闭开机启动OneDrive 系统优化设置如下 DISM++清理 软媒清理大师清理下载软媒清理大师 一键清理 深度清理 系统瘦身 添加摄像头补丁下载摄像头补丁]]></content>
@@ -179,9 +166,22 @@
         <category>Windows</category>
       </categories>
       <tags>
-        <tag>Windows</tag>
         <tag>系统</tag>
         <tag>优化</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Win10系统优化1:手动优化篇]]></title>
+    <url>%2Fposts%2F50153a61.html</url>
+    <content type="text"><![CDATA[引言最近对自己的本基本电脑重新安装了WIN10系统后，在操作系统上选择了参加Windows预览体验计划，直接跳到下一版本并安装了最新的更新。虽然系统已更新到最新，但还是需要对其进行一些必要的优化，才能使自己使用起来更加流畅。 本次介绍系统优化第一步手动优化。 手动优化—设置优化点击桌面左下角Win图标，点击设置按钮进入设置主界面。 系统设置 点击系统—点击通知和操作—关闭通知 设备设置 点击设备—自动播放—关闭自动播放 点击设备—USB—关闭USB设备提示通知，避免USB电涌问题 网络和Internet设置 点击网络和internet—状态—网络和共享中心—更改高级共享设置——启用共享文件夹/启用无密码共享 点击网络和internet—代理—关闭代理 个性化设置 点击个性化—点击主题—点击右侧桌面图标—勾选图标 点击个性化—点击开始—关闭偶尔在“开始”菜单中显示建议 点击个性化—点击开始—点击选择哪些文件显示在“开始”菜单栏上—除设置全部关闭 点击个性化—点击任务栏—选择设置任务栏已满时合并 点击个性化—点击任务栏—点击打开或关闭系统图标 应用设置 点击应用—点击离线地图—关闭地图更新 点击应用—点击可使用网站打开应用—关闭关联应用 游戏设置 点击游戏—点击游戏栏—关闭游戏视频录制功能 隐私设置 点击隐私—点击常规—关闭常规里的所有内容 点击隐私—诊断和反馈—关闭诊断数据 点击隐私—诊断和反馈—点击活动历史记录 更新和安全设置 点击更新和安全—点击传递优化—关闭传递优化 手动优化—控制面板优化点击控制面版—切换成大图标方便查看 Internet选项设置 点击Internet选项—点击常规—标签页—进行如下设置 点击Internet选项—点击常规—浏览历史记录设置—进行如下设置 点击Internet选项—点击隐私—关闭弹窗阻止程序 点击Internet选项—点击高级—勾选允许运行或按照软件，即使签名无效，避免安装插件时弹出提示框 点击Internet选项—点击高级—取消勾选默认IE浏览器检测 自带防火墙设置 点击Windows Defender防火墙—点击左侧启用或关闭Windows Defender防火墙—关闭防火墙 安全维护设置 点击安全和维护—点击左侧更改用户账户控制设置—关闭用户控制提示 程序和功能设置 点击程序和功能—点击左侧启用或关闭Windows功能—开启SMB1.0服务 电源选项设置 点击电源选项—点击左侧选择电源按钮的功能—点击当前不可用设置—勾选休眠 文件夹选项设置 点击文件夹资源管理器选项—点击查看—勾选以下内容 系统高级设置 点击系统—高级系统设置—高级—性能设置—视觉效果—按个人设置自定义设置 点击系统—高级系统设置—高级—性能设置—高级—虚拟内存设置如下 疑难解答设置 点击疑难解答—点击左侧更改设置—关闭计算机维护，疑难解答，故障排除 手动优化—服务项优化右键桌面我的电脑—点击管理—点击服务和应用程序—点击服务 禁用程序兼容性助手找到Program Compatibility Assistant Service 并禁用，避免弹出程序是否正确安装的提示窗口 禁用超级预读找到SysMain 并禁用，避免弹出程序是否正确安装的提示窗口 手动优化—策略组优化WIN+R 打开运行对话框，输入gpedit.msc，直接运行组策略 启用“关闭加载性能通知”，防止打开IE浏览器状态栏提示关闭加载项来提高浏览器运行速度的提示。启用“自动激活新安装的加载项”，比如迅雷下载加载项等等可自动激活。禁用“打开建议网站”，无用的收藏夹网址建议禁止。 （计算机配置里的设置同用户配置里的设置一样，此处省略） 启用“阻止IE首次运行向导设置” （计算机配置里的设置同用户配置里的设置一样，此处省略） 启用“阻止订阅网页源和网页快讯” （计算机配置里的设置同用户配置里的设置一样，此处省略） 禁用“快速关机优化” 启用“允许管理员忽略设备安装限制策略” 启用“设备驱动程序的代码签名” 手动优化—其它设置设置快速访问栏 关闭磁盘索引设置右键点击C盘—选择属性—常规—设置如下 隐藏小娜，任务视图，人脉回到桌面，取消前面对应的勾选即可。 整理磁贴调整一下开始屏幕，删除自己认为无用的箭头磁贴，按照自己的喜好增加删除调整磁贴既可。]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>系统</tag>
+        <tag>优化</tag>
+        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
@@ -189,9 +189,10 @@
     <url>%2Fposts%2F5ff886d0.html</url>
     <content type="text"><![CDATA[[TOC] 行内代码12`这是行内代码``this is inline code` 这是行内代码 this is inline code 新建标题12345# 一级标题 #快捷按键 Ctrl+1## 二级标题 #快捷按键 Ctrl+2### 三级标题 #快捷按键 Ctrl+3#### 四级标题 #快捷按键 Ctrl+4##### 五级标题 #快捷按键 Ctrl+5 一级标题二级标题三级标题四级标题五级标题 改变字体12345*字体倾斜* #快捷按键 Ctrl+I**字体加粗** #快捷按键 Ctrl+B***字体加粗*** #快捷按键 Ctrl+B + Ctrl+I&lt;u&gt;字体加下划线&lt;/u&gt; #快捷按键 Ctrl+U~~删除字体~~ #快捷按键 Alt+Shift+5 字体倾斜 字体加粗 字体倾斜加粗 字体加下划线 删除字体 插入图片123# 图片链接![图片描述](图片路径 "title")![图片描述](图片路径) 插入链接12345678910# 自动链接&lt;https://www.mallai.top&gt;# 参考式链接[标记]:链接地址 "标题"# 只显示文本的超链接[文本](链接地址)# 链接访问: command + 单击 https://http://zhanmuji.lofter.com/ lofter 插入分割綫12***--- 插入代码块1`文本` # 单行 文本 插入引用123456789101112131415161718#连续引用&gt;引用文本1&gt;引用文本2&gt;引用文本3#带空格引用&gt;引用文本1&gt;&gt;引用文本3#嵌套引用*&gt;&gt;&gt;引用文本1&gt;&gt;引用文本2&gt;引用文本3#引用其他元素*&gt;#####引用五级标题&gt;```python```引用代码块 引用文本1 引用文本2 引用文本3 引用文本1 引用文本3 插入有序列表1使用数字和一个英文句点表示有序列表。 注意：英文句点后面一定要有一个空格，起到缩进的作用。 有序列表 有序列表 插入无序列表1使用 *，+，- 表示无序列表。 注意：符号后面一定要有一个空格，起到缩进的作用。 *号生列表 +号產生列表 -号產生列表 插入表格12345678910# 基本格式, -|-|-|默认居左对齐 #快捷方式 Ctrl+T学号|姓名|分数-|-|-| 小明|男|75小红|女|79# 指定表格单元格对齐方式冒号在左边表示左对齐，右边表示有对齐，两边都有表示居中。:-|:-:|-: 学号 姓名 分数 小明 男 75 小红 女 79 插入表情1:表情英文 #例如 :smile 插入注脚1[^注脚名字]:注脚文本 创建Latex数学公式1行间公式: $$公式$$ #快捷方式 Crtl+T 数学符号 1234小写希腊字母: \alpha \theta \pi \beta \phi \lambda \omega \xi \eta \epsilon \delta空格和换行:\quad \\ 12关系运算符:\times = \neq \ne \leq \le \geq \ge &gt; \sim \simeq \subset \subseteq \in \notin \propto 12其他符号:... \dots; ... \cdots \vdots \ddots \forall \exists 指数和下标 12指数: a^&#123;指数项&#125;下标: a_&#123;下标项&#125; 平方根运算 12平方根: \sqrt&#123;开根号项&#125;n次方根: \sqrt[n]&#123;开根号项&#125; 分数运算符 12\frac&#123;分子&#125;&#123;分母&#125;\frac&#123;1&#125;&#123;x&#125; 向量运算 123单个向量: \vec a从A到B向量: \overrightarrow&#123;AB&#125;反向从A到B: \overleftarrow&#123;AB&#125; 水平大括号 1\underbrace&#123;表达式&#125;_&#123;底部数据&#125; --&gt; \underbrace&#123;a + b + \cdots + z&#125;_&#123;26&#125; 水平线 12上水平线: \overline&#123;m+n&#125;下水平线: \underline&#123;m+n&#125; 创建Flow流程图1234创建Flow流程图 ```flow + 回车语法：流程图语法分为两个部分: 前面部分用来定义流程图元素，后面部分用来连接流程图元素，指定流程图的执行走向tag=&gt;type: content:&gt;url 连接元素 连接流程图直接用-&gt;来连接两个元素，几点说明如下： 使用 -&gt; 来连接两个元素 对于condition类型，有yes和no两个分支，如示例中的cond(yes)和cond(no) 每个元素可以制定分支走向，默认向下，也可以用right指向右边，如示例中sub1(right) 1234567891011121314151617st=&gt;start: 开始e=&gt;end: 结束c1=&gt;condition: 条件A? #操作、执行说明c2=&gt;condition: 条件B?c3=&gt;condition: 条件C?io=&gt;inputoutput: 输入输出De1=&gt;operation: mallAI:&gt;https://www.mallai.tope2=&gt;subroutine: 子文件st-&gt;c1(no)-&gt;ec1(yes,right)-&gt;c2c2(no)-&gt;ec2(yes,right)-&gt;c3c3(no)-&gt;ec3(yes,right)-&gt;ioio-&gt;e1e1-&gt;e2e2(left)-&gt;e tag 流程图元素, 在第二段连接元素时会用到。名称可以任意,一般为流程的英文缩写和数字的组合。 type 确定标签类型, =&gt;后面表示类型。由于标签的名称可以任意指定，所以要依赖type来确定标签的类型, 标签的类型有6种: start end operation subroutine condition inputoutput content 流程图文本框中描述内容, :后面表示内容, 中英文均可。特别注意，冒号与文本之间一定要有个空格 标签 描述 url 一个连接，与框框中的文本相绑定，:&gt;后面就是对应的 url 链接，点击文本时可以通过链接跳转到 url 指定页面 创建mermaid流程图1创建: ```mermaid + 回车 声明流程图，可以声明上下结构, 下上结构，左右结构，右左结构 TB - top bottom BT - bottom top RL - right left LR - left right TD - same as TB 1234567891011121314#连接形式A --&gt; B # 箭头A --- B # 无箭头实线A -- text -- B # AB连线中添加注释A --&gt; |text|B # AB连线中添加注释A-.-&gt;B # 虚线箭头A -. text .- B # 添加注释的虚线箭头A ==&gt; B # 加粗箭头A == text ==&gt; B # 加注释加粗的箭头#节点形式graph LR id # 默认为正方形，id为元素内文本 id[text] # id表示流程图元素唯一标识用于连接，text为元素内文本 节点和形状 描述 id 默认为正方形，id为元素内文本 id[text] 正方形 id(text) 圆角正方形 id((text)) 圆形 id&gt;text] 半方框 id{text} 条件判断框 12345678910111213graph LR A[A] --&gt; B(Bib) B --&gt; E&#123;E&#125; E -- hello ---F&#123;F&#125; F --&gt;|yes|M F --&gt;|no|N A --&gt; C((circle)) C --&gt; D&gt;D] D --&gt; |NICE|H(H) H ==&gt; I d --&gt; I f --&gt; d D --&gt; f 创建mermaid时序图1创建: ```mermaid +回车 消息链接样式 1[Actor][Arrow][Actor]:Message text 类型 描述 -&gt; 无箭头实线: Solid line without arrow –&gt; 无箭头虚线: Dotted line without arrow -&gt;&gt; 有箭头实线: Solid line with arrowhead –&gt;&gt; 有箭头虚线: Dotted line with arrowhead -x 实线末端带x: Solid line with a cross at the end (async) –x 虚线末端带x: Dotted line with a cross at the end (async) 123456789sequenceDiagram participant John participant Alice John -&gt;&gt; Alice: hello Alice Alice -&gt;&gt; John: hello John Note right of John: Right Text of John Note left of Alice: Left Text of Alice Note over Alice: Over Text of Alice Note over John: Over Text of John 创建mermaid甘特图1创建: ```mermaid +回车 声明甘特图 12345678910111213gantt # 标题 title 标题 # 时间格式 dateFormat YYYY-MM-DD # 任务模块 section 任务标题1 # 具体任务和时间 task1 :a1, 2014-01-01, 30d task2 :after a1 , 20d section 任务标题2 task1 :2014-01-12 , 12d task2 : 24d 123456789101112131415161718192021222324252627gantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2014-01-06,2014-01-08 Active task :active, des2, 2014-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2014-01-06,24h Implement parser and jison :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d section Documentation Describe gantt syntax :active, a1, after des1, 3d Add gantt diagram to demo page :after a1 , 20h Add another diagram to demo page :doc1, after a1 , 48h section Last section Describe gantt syntax :after doc1, 3d Add gantt diagram to demo page :20h Add another diagram to demo page :48h]]></content>
       <categories>
-        <category>Typora</category>
+        <category>Markdown</category>
       </categories>
       <tags>
+        <tag>Typora</tag>
         <tag>Markdown</tag>
       </tags>
   </entry>
