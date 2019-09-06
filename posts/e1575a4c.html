@@ -97,19 +97,29 @@
 
 
 
-  <meta name="description" content="引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。  这次主要介绍 NexT 7.2.0 主题底部添加运行时间设置。 底部添加运行时间找到 \themes\next\layout\_partials\下面的fo">
-<meta name="keywords" content="Hexo,nest">
+# next theme   head.swig
+
+
+# hiker theme
+
+ <% if (page.keywords){ %>
+    <meta name="keywords" content="<%- page.keywords %>">
+  <% } else if (theme.keywords){ %>
+    <meta name="keywords" content="<%- theme.keywords %>">
+</%></%>
+  <meta name="description" content="Hexo相关优化技巧，持续更新">
+<meta name="keywords" content="Hexo,Hexo优化,底部时间">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo nest添加底部运行时间设置">
 <meta property="og:url" content="https://www.iamzmj.top/posts/e1575a4c.html">
 <meta property="og:site_name" content="zhanminjie">
-<meta property="og:description" content="引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。  这次主要介绍 NexT 7.2.0 主题底部添加运行时间设置。 底部添加运行时间找到 \themes\next\layout\_partials\下面的fo">
+<meta property="og:description" content="Hexo相关优化技巧，持续更新">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/12345.png">
-<meta property="og:updated_time" content="2019-08-22T04:40:03.388Z">
+<meta property="og:updated_time" content="2019-09-06T02:11:50.923Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo nest添加底部运行时间设置">
-<meta name="twitter:description" content="引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。  这次主要介绍 NexT 7.2.0 主题底部添加运行时间设置。 底部添加运行时间找到 \themes\next\layout\_partials\下面的fo">
+<meta name="twitter:description" content="Hexo相关优化技巧，持续更新">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/12345.png">
 
 
@@ -471,7 +481,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-22 12:40:03" itemprop="dateModified" datetime="2019-08-22T12:40:03+08:00">2019-08-22</time>
+                <time title="修改时间：2019-09-06 10:11:50" itemprop="dateModified" datetime="2019-09-06T10:11:50+08:00">2019-09-06</time>
               </span>
             
           
@@ -528,6 +538,8 @@
 
           
 
+          
+            <div class="post-description">Hexo相关优化技巧，持续更新</div>
           
 
         </div>

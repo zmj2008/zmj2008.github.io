@@ -97,13 +97,23 @@
 
 
 
-  <meta name="description" content="Hugo是一个用Go编写的静态HTML和CSS网站生成器。它针对速度，易用性和可配置性进行了优化。Hugo获取包含内容和模板的目录，并将它们呈现为完整的HTML网站。 Hugo依赖Markdown文件和元数据的前端内容，您可以从任何目录运行Hugo。这适用于您没有特权帐户的共享主机和其他系统。Hugo在几分之一秒内呈现了一个中等规模的典型网站。一个好的经验法则是每个内容呈现大约1毫秒。Hugo">
-<meta name="keywords" content="Hugo">
+# next theme   head.swig
+
+
+# hiker theme
+
+ <% if (page.keywords){ %>
+    <meta name="keywords" content="<%- page.keywords %>">
+  <% } else if (theme.keywords){ %>
+    <meta name="keywords" content="<%- theme.keywords %>">
+</%></%>
+  <meta name="description" content="Hexo框架搭建博客">
+<meta name="keywords" content="Hugo,Hugo搭建,博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hugo安装和部署到码云">
 <meta property="og:url" content="https://www.iamzmj.top/posts/d5c577fc.html">
 <meta property="og:site_name" content="zhanminjie">
-<meta property="og:description" content="Hugo是一个用Go编写的静态HTML和CSS网站生成器。它针对速度，易用性和可配置性进行了优化。Hugo获取包含内容和模板的目录，并将它们呈现为完整的HTML网站。 Hugo依赖Markdown文件和元数据的前端内容，您可以从任何目录运行Hugo。这适用于您没有特权帐户的共享主机和其他系统。Hugo在几分之一秒内呈现了一个中等规模的典型网站。一个好的经验法则是每个内容呈现大约1毫秒。Hugo">
+<meta property="og:description" content="Hexo框架搭建博客">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/08/22/vbItmrTBUC81yLQ.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/08/22/nIQhbLrjWT3OuN7.jpg">
@@ -114,10 +124,10 @@
 <meta property="og:image" content="https://i.loli.net/2019/08/25/gRHQPkjBUwrMa1E.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/08/25/tiUSzH49Ek2Y7cN.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/08/25/gBhdIoCL8kW3XnY.jpg">
-<meta property="og:updated_time" content="2019-08-25T09:01:35.072Z">
+<meta property="og:updated_time" content="2019-09-06T02:17:54.169Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hugo安装和部署到码云">
-<meta name="twitter:description" content="Hugo是一个用Go编写的静态HTML和CSS网站生成器。它针对速度，易用性和可配置性进行了优化。Hugo获取包含内容和模板的目录，并将它们呈现为完整的HTML网站。 Hugo依赖Markdown文件和元数据的前端内容，您可以从任何目录运行Hugo。这适用于您没有特权帐户的共享主机和其他系统。Hugo在几分之一秒内呈现了一个中等规模的典型网站。一个好的经验法则是每个内容呈现大约1毫秒。Hugo">
+<meta name="twitter:description" content="Hexo框架搭建博客">
 <meta name="twitter:image" content="https://i.loli.net/2019/08/22/vbItmrTBUC81yLQ.jpg">
 
 
@@ -479,7 +489,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-25 17:01:35" itemprop="dateModified" datetime="2019-08-25T17:01:35+08:00">2019-08-25</time>
+                <time title="修改时间：2019-09-06 10:17:54" itemprop="dateModified" datetime="2019-09-06T10:17:54+08:00">2019-09-06</time>
               </span>
             
           
@@ -536,6 +546,8 @@
 
           
 
+          
+            <div class="post-description">Hexo框架搭建博客</div>
           
 
         </div>

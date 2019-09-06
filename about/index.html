@@ -97,6 +97,16 @@
 
 
 
+# next theme   head.swig
+
+
+# hiker theme
+
+ <% if (page.keywords){ %>
+    <meta name="keywords" content="<%- page.keywords %>">
+  <% } else if (theme.keywords){ %>
+    <meta name="keywords" content="<%- theme.keywords %>">
+</%></%>
   <meta name="description" content="曾经少年             爱吃 爱玩  爱闹 爱幻想            ~~偶尔摸鱼划水~~            一直做个靠谱的人            选择尝试 继续奔跑">
 <meta property="og:type" content="website">
 <meta property="og:title" content="关于我">

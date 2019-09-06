@@ -97,6 +97,16 @@
 
 
 
+# next theme   head.swig
+
+
+# hiker theme
+
+ <% if (page.keywords){ %>
+    <meta name="keywords" content="<%- page.keywords %>">
+  <% } else if (theme.keywords){ %>
+    <meta name="keywords" content="<%- theme.keywords %>">
+</%></%>
   <meta property="og:type" content="website">
 <meta property="og:title" content="zhanminjie">
 <meta property="og:url" content="https://www.iamzmj.top/tags/modification/index.html">

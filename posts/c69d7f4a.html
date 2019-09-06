@@ -97,23 +97,33 @@
 
 
 
-  <meta name="description" content="前言种子和磁力链接是现在使用最为广泛的资源下载形式了，但是资源找到了，如何顺畅地下载下来也是个问题。qBittorrent 是一款开源免费的种子和磁力链接下载工具，支持 Windows、Mac 和 Linux，且功能非常强大。由于国内大部分用户并没有公网 IP，直接使用可能会有个很现实的问题——下载没速度！本文介绍如何提高qBittorrent 下载速度。  添加Tracker以提速qBittor">
-<meta name="keywords" content="qBittorrent">
+# next theme   head.swig
+
+
+# hiker theme
+
+ <% if (page.keywords){ %>
+    <meta name="keywords" content="<%- page.keywords %>">
+  <% } else if (theme.keywords){ %>
+    <meta name="keywords" content="<%- theme.keywords %>">
+</%></%>
+  <meta name="description" content="qBittorrent提速技巧">
+<meta name="keywords" content="qBittorrent,qBittorrent加速,Tracker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="qBittorrent添加Tracker提速">
 <meta property="og:url" content="https://www.iamzmj.top/posts/c69d7f4a.html">
 <meta property="og:site_name" content="zhanminjie">
-<meta property="og:description" content="前言种子和磁力链接是现在使用最为广泛的资源下载形式了，但是资源找到了，如何顺畅地下载下来也是个问题。qBittorrent 是一款开源免费的种子和磁力链接下载工具，支持 Windows、Mac 和 Linux，且功能非常强大。由于国内大部分用户并没有公网 IP，直接使用可能会有个很现实的问题——下载没速度！本文介绍如何提高qBittorrent 下载速度。  添加Tracker以提速qBittor">
+<meta property="og:description" content="qBittorrent提速技巧">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/08/16/yIOshcjrQD89HK6.png">
 <meta property="og:image" content="https://i.loli.net/2019/08/15/P9i8bMVzoAQtH5Y.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/08/15/eaXLqf1gvz4IKi2.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/08/15/J2ySXChDU9piMTx.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/08/15/OR8Xm9VMdrpwgeu.jpg">
-<meta property="og:updated_time" content="2019-08-16T04:19:35.769Z">
+<meta property="og:updated_time" content="2019-09-06T02:22:44.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="qBittorrent添加Tracker提速">
-<meta name="twitter:description" content="前言种子和磁力链接是现在使用最为广泛的资源下载形式了，但是资源找到了，如何顺畅地下载下来也是个问题。qBittorrent 是一款开源免费的种子和磁力链接下载工具，支持 Windows、Mac 和 Linux，且功能非常强大。由于国内大部分用户并没有公网 IP，直接使用可能会有个很现实的问题——下载没速度！本文介绍如何提高qBittorrent 下载速度。  添加Tracker以提速qBittor">
+<meta name="twitter:description" content="qBittorrent提速技巧">
 <meta name="twitter:image" content="https://i.loli.net/2019/08/16/yIOshcjrQD89HK6.png">
 
 
@@ -460,13 +470,23 @@
                 
               
 
-              <time title="创建时间：2019-08-16 06:01:57 / 修改时间：12:19:35" itemprop="dateCreated datePublished" datetime="2019-08-16T06:01:57+08:00">2019-08-16</time>
+              <time title="创建时间：2019-08-16 06:01:57" itemprop="dateCreated datePublished" datetime="2019-08-16T06:01:57+08:00">2019-08-16</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-06 10:22:44" itemprop="dateModified" datetime="2019-09-06T10:22:44+08:00">2019-09-06</time>
+              </span>
             
           
 
@@ -522,6 +542,8 @@
 
           
 
+          
+            <div class="post-description">qBittorrent提速技巧</div>
           
 
         </div>
