@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[windows10安装openssl环境并命令行调用openssl]]></title>
+    <url>%2Fposts%2Fac409ae6.html</url>
+    <content type="text"><![CDATA[在计算机网络上，OpenSSL是一个开放源代码的软件库包，应用程序可以使用这个包来进行安全通信，避免窃听，同时确认另一端连接者的身份。这个包广泛被应用在互联网的网页服务器上。 下载安装windows平台openssl密钥生成工具 执行安装目录bin下的”openssl.exe”，执行后弹出命令窗口如下 生成私钥，命令行输入 1genrsa -out rsa_private_key.pem 1024 在bin目录下多了一个rsa_private_key.pem文件，将这个文件通过文本编辑器打开，将看到你所需要的私钥，使用时记得把—BEGIN PRIVATE KEY—，—END PRIVATE KEY—字样删掉。 生成公钥，命令行输入 1rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem 在bin目录下多了一个rsa_public_key.pem文件，将这个文件通过文本编辑器打开，将看到你所需要的公钥，使用时记得把—BEGIN PRIVATE KEY—，—END PRIVATE KEY—字样删掉。 RSA私钥转换成 PKCS8 格式，命令行输入 1pkcs8 -topk8 -inform PEM -in rsa_private_key.pem -outform PEM -nocrypt 回车，key直接显示在窗口中 12345678910111213141516-----BEGIN PRIVATE KEY-----MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBALaGPKpNJmgH6oV3tO19bPty3U52ELXQilxRvcXuIQbqWkteK86FUi4W7eM+eK+ldVuuJt3YVsBeSPh72HIFatdzxqbE5oXq7vyuWUj9fi3ldD3i0obN0v52qKBL6gNQqRThQjbRqaf2uix4BORP5DCALVanQKU4QUaL6Tnsy9MPAgMBAAECgYEApFlc2K+dTIEMP9+Y71tHvWYhNZwD0eKUIyqLKWURIgv0//YslcngRJXq3/qJawceFE5MuucovhBnvi6tp4WPPCk0UA1gsEPYN9CC4M7DFy2NV+thY+PLZ5pv/mcNiO/eNMIVoibQK1luNIyH3bKbCQHofkAyk5Ji8/TEfyVphmkCQQDj8HPXEtSe9RtbCkXyrx0Piq+4kF79+ALQJwREisgJLTtABgrOeWkse03gQHp64LgTJG0BgaBQZwsm++hwttONAkEAzP6GhuelN4zElPSJskWApRjQOCTBKUf/5e6g5WH284SO9tjjL4Kb8OetN4XmOijEcsWk7p6cEugVEnBjT4asCwJAa8fOLrujuEo0FjdkXd25wxiUAJSbpkF4qw5X8UUiU1yE8MAqqfk05yii6U/z2liaEcselCDEOmCPIG7rOSjqHQJBALuz/6h9aYog6kveUksbWv1RaC9QcFKFa+q1gzwmZMJ8SY/77qKtPG7tJG2nvLTaaW8STMB2GUEyo0DcCgNitBsCQCbNHgqw/cE//p/qLEuZgLZRBM6xOrsuLYU7ODXc3xL9H48l2iGt3mSnjLkEuW+OjaLMNKRLIujc/0AMhDYfL3w=-----END PRIVATE KEY----- –后续持续更新–]]></content>
+      <categories>
+        <category>openssl</category>
+      </categories>
+      <tags>
+        <tag>openssl</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[阿里云之云盾]]></title>
     <url>%2Fposts%2F24ecca15.html</url>
     <content type="text"><![CDATA[阿里云盾介绍为响应2018年6月《中华人民共和国网络安全法》政策的正式实施，提高全民网络安全意识。 阿里云盾功能1、网络防护 网络防护:默认开通，可升级至DDoSa高防IP，主要面向产品 ECS、SLB。监测方式：时实。 2、提醒功能 默认开通，主要面向产品：ECS。监测方式：实时。内容包括：安全规则删除，异地登录，暴力破解，云资源的创建删除提醒。提醒方式：短信、邮件、旺旺（持续更新要看文档）。 3、安全体检 默认不开通，内容包括：WEB漏洞监测，系统漏洞监测，网页挂码监测等。 阿里云盾特点1、免费开通（DDoS基础防护） •无需购买昂贵设备 •无需专业安全团队 •拥有ECS即可免费开通云盾服务 2、简单易用（WEB菜单式选择） 3、专业团队 •完善的监控体系和安全团队，20年安全经验 常见网络攻击类 网络防护_DDoS攻击防护DDoS攻击是什么DDoS攻击：分布式拒绝服务攻击。 DDoS攻击目的：让既定目标，无法提供正常服务。防御难度很大。 DDoS防护功能： 攻击流量的发现，牵引和自动处理 有效抵御基于网络层、传输层及应用层的DDoS攻击。包括但不限于：SYN Flood / UDP Flood / ICMP Flood /ACK Flood/DNS Query Flood / NTP Reply Flood,但不支持防护CC攻击。 攻击分析全自动监测。精准识别攻击，受到该攻击不会影响用户访问速度，妙级开启防护，基础DDoS防护免费（ECS、SLB、EIP、NAT）。 可管理。自动进行异常流量抓包，支持攻击事件、攻击流量的管理统计。 DDoS攻击防护原理 主机防护_安骑士安骑士架构及功能 安骑士特点1、轻量化资源占用 普通状态：安骑士插件占用约1%CPU及50MB内存 峰值状态：安骑士插件占用不超过10%CPU和80MB内存，如果占用资源超过峰值，插件停止工作。 2、实时告警 控制台集中管控，短信实时报警黑客攻击行为及高危漏洞风险。 3、支持非阿里云服务器 腾讯云、青云、AWS、UCloud Web防护—Web应用防火墙（WAF）应用防火墙（WAF）是什么应用防火墙（WAF）功能1、常见Web攻击防护 SQL注入、XSS跨站、Webshell上传、后门隔离保护、命令注入、非法HTTP协议请求、常见Web服务器漏洞攻击、核心文件非授权访问、路径穿越、扫描防护等。 0day补丁定期及时更新。 2、CC恶意攻击防护 对单一来源IP访问频率进行控制。 针对海量慢速请求攻击，根据统计响应码及URL请求分布，异常Referer及User-Agent特征识别，结合网站精准防护规则进行综合性防护。 3、虚拟补丁 在Web应用漏洞补丁发布和修复之前，通过调整Web防护策略实现快速防护。 4、攻击事件管理 支持攻击事件、攻击流量、攻击规模的集中管理统计 应用防火墙（WAF）特点1、配置简单 工作在用户端和网站之间，只需修改DNS记录 2、强大的Web防御功能 内置千条防护规则，每周有规则的新增和优化；Web 0day漏洞补丁修复，24小时内防护，全球同步；专业攻防团队进行漏洞研究；捕获0day漏洞生成防护规则。 3、检测块、防护稳 一毫秒内检测攻击并防护生效，防护无延迟。新的防护规则一分钟内全球同步，全年稳定在线可用。 内容安全—（阿里绿网）内容安全功能 站点监测 OSS违规监测服务 内容监测API 内容安全特点 1、性价比高 节省90%的人力成本，支持妙级返回结果，达到99%以上准确率。 2、接入成本低 一次接入即可提供音视频、图片、文字等形式的内容监测，覆盖恐暴、鉴黄、涉政、广告等风险防范。 3、灵活服务方式 与OSS、ECS等云产品无缝对接，还可通过API方式同用户审核系统集成。]]></content>
@@ -57,9 +68,9 @@
         <category>ssh-key</category>
       </categories>
       <tags>
-        <tag>Windows</tag>
         <tag>ssh-key</tag>
         <tag>多账号</tag>
+        <tag>Windows</tag>
         <tag>Git</tag>
       </tags>
   </entry>
@@ -191,9 +202,9 @@
         <category>Windows</category>
       </categories>
       <tags>
+        <tag>Windows</tag>
         <tag>系统</tag>
         <tag>优化</tag>
-        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
@@ -204,9 +215,9 @@
         <category>Windows</category>
       </categories>
       <tags>
+        <tag>Windows</tag>
         <tag>系统</tag>
         <tag>优化</tag>
-        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
@@ -293,9 +304,9 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>aplayer</tag>
         <tag>Hexo</tag>
         <tag>nest</tag>
+        <tag>aplayer</tag>
       </tags>
   </entry>
   <entry>
