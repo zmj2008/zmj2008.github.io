@@ -1869,7 +1869,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2e4aff;
+  background: #1c5b8b;
 }
 .feed-link,
 .chat {
@@ -3054,7 +3054,7 @@ ul.breadcrumb li+li:last-child {
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
 body {
-  background: url("https://source.unsplash.com/random/1600x900");
+  background: url("https://i.loli.net/2019/10/05/e8dKYVtJLIQFSuA.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -3062,10 +3062,10 @@ body {
 }
 .main-inner {
   background: #98fb98;
-  opacity: 1;
+  opacity: 0.9;
 }
 .header-inner {
-  opacity: 1;
+  opacity: 0.9;
 }
 code {
   color: #c7254e;
