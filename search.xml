@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[PicUploader图床工具设置]]></title>
+    <url>%2Fposts%2Fcb6668a4.html</url>
+    <content type="text"><![CDATA[操作系统环境：Win10 需提前安装 git 然后创建文件夹，使用git命令下载 PicUploader 源代码 1git clone https://github.com/xiebruce/PicUploader.git 安装 phpstudy2018 于E盘（自选），把整个 PicUploader文件夹放置于E:\phpStudy\PHPTutorial\WWW目录下，进入E:\phpStudy\PHPTutorial\Apache\conf目录，找到vhosts.conf文件并打开，在原有代码下空一行，添加如下代码： 1234567&lt;VirtualHost *:80&gt; DocumentRoot "E:\phpStudy\PHPTutorial\WWW\PicUploader" ServerName api.picuploader.com DirectoryIndex dashboard.php ErrorLog "logs/api.picuploader.com-error.log" CustomLog "logs/api.picuploader.com-access.log" common&lt;/VirtualHost&gt; 打开phpStudy,切换至最新版php+Apache，重启后运行状态里Apache亮绿灯即可。 并保证PHP扩展中已开启php_fileinfo、php_curl、php_gd2、php_exif四个扩展。要使用网页版查看记录还需要开启php_pdo_sqlite和php_pdo_mysql 找到C:\Windows\System32\drivers\etc中的hosts文件，添加一条语句并保存。 1127.0.0.1 api.picuploader.com 打开浏览器，并输入http://api.picuploader.com如果一切正常可进入如下PicUploader Web界面 1http://api.picuploader.com 未完待续 参考博客：https://www.xiebruce.top/17.html]]></content>
+      <categories>
+        <category>PicUploader</category>
+      </categories>
+      <tags>
+        <tag>PicUploader</tag>
+        <tag>图床</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[手机如何登陆Google应用商店]]></title>
+    <url>%2Fposts%2F34057798.html</url>
+    <content type="text"><![CDATA[引言因为谷歌在国内的退出，导致很多人的Android手机上无法安装上Google play store。那是否有什么简单的方法能让手机安装上Google play store 呢？方法还是有的，大致介绍如下。 安装在PC机的安卓模拟器上安装Google空间。 雷电安卓模拟器 Google空间 雷电模拟器上安装Google空间 添加Google账户 账户添加绑定后既可以访问Googleplay应用商店。在自己的手机上也是如此的操作。 相对繁琐的是谷歌账号注册需科学上网，这里分享一个科学上网软件。 是不是发现原来访问Google play 应用商店是一件非常简单的事情！]]></content>
+      <categories>
+        <category>GooglePlay</category>
+      </categories>
+      <tags>
+        <tag>GooglePlay</tag>
+        <tag>手机</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo nest添加Live2d看板动画效果]]></title>
+    <url>%2Fposts%2F896b141d.html</url>
+    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 为增添页面趣味性，这次主要介绍 NesT 7.2.0 添加Live2d看板动画效果。 添加Live2d看板动画看板动画 站点根目录下载插件，安装成功后，你可以在你的站点根文件夹/node_modules/底下找到live2d-widget这个文件夹。 1npm install --save hexo-helper-live2d 安装你想要的live2d动画人物，这里选择 live2d-widget-model-haruto 1npm install live2d-widget-model-haruto 在站点根目录下_config.yml添加如下代码 123456789101112131415161718192021222324#live2d看板动画live2d: enable: true scriptFrom: local pluginRootPath: live2dw/ pluginJsPath: lib/ pluginModelPath: assets/ tagMode: false log: false model: use: live2d-widget-model-haruto display: superSample: 2 width: 150 height: 300 position: right hOffset: 100 vOffset: -100 mobile: show: true scale: 0.5react: opacityDefault: 0.7 opacityOnHover: 0.2 hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>nest</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo nest添加雪花飘落效果]]></title>
+    <url>%2Fposts%2Fc5826913.html</url>
+    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 为了增加博客站点的趣味性，这次主要介绍 NexT 7.2.0 在PC端下添加雪花飘落的效果。 添加雪花飘落效果在\themes\next\source\js\src目录下新建一个snow.js文件，复制粘贴一下代码。 样式一是六边形的雪片，样式二是小圆点雪花，选择自己喜欢的样式即可。 123456789101112131415161718192021222324252627282930313233343536373839404142/*样式一*/(function($)&#123; $.fn.snow = function(options)&#123; var $flake = $('&lt;div id="snowbox" /&gt;').css(&#123;'position': 'absolute','z-index':'9999', 'top': '-50px'&#125;).html('&amp;#10052;'), documentHeight = $(document).height(), documentWidth = $(document).width(), defaults = &#123; minSize : 10, maxSize : 20, newOn : 1000, flakeColor : "#AFDAEF" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */ &#125;, options = $.extend(&#123;&#125;, defaults, options); var interval= setInterval( function()&#123; var startPositionLeft = Math.random() * documentWidth - 100, startOpacity = 0.5 + Math.random(), sizeFlake = options.minSize + Math.random() * options.maxSize, endPositionTop = documentHeight - 200, endPositionLeft = startPositionLeft - 500 + Math.random() * 500, durationFall = documentHeight * 10 + Math.random() * 5000; $flake.clone().appendTo('body').css(&#123; left: startPositionLeft, opacity: startOpacity, 'font-size': sizeFlake, color: options.flakeColor &#125;).animate(&#123; top: endPositionTop, left: endPositionLeft, opacity: 0.2 &#125;,durationFall,'linear',function()&#123; $(this).remove() &#125;); &#125;, options.newOn); &#125;;&#125;)(jQuery);$(function()&#123; $.fn.snow(&#123; minSize: 5, /* 定义雪花最小尺寸 */ maxSize: 50,/* 定义雪花最大尺寸 */ newOn: 300 /* 定义密集程度，数字越小越密集 */ &#125;);&#125;); 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128/*样式二*//* 控制下雪 */function snowFall(snow) &#123; /* 可配置属性 */ snow = snow || &#123;&#125;; this.maxFlake = snow.maxFlake || 200; /* 最多片数 */ this.flakeSize = snow.flakeSize || 10; /* 雪花形状 */ this.fallSpeed = snow.fallSpeed || 1; /* 坠落速度 */&#125;/* 兼容写法 */requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame || function(callback) &#123; setTimeout(callback, 1000 / 60); &#125;;cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame || window.webkitCancelAnimationFrame || window.msCancelAnimationFrame || window.oCancelAnimationFrame;/* 开始下雪 */snowFall.prototype.start = function()&#123; /* 创建画布 */ snowCanvas.apply(this); /* 创建雪花形状 */ createFlakes.apply(this); /* 画雪 */ drawSnow.apply(this)&#125;/* 创建画布 */function snowCanvas() &#123; /* 添加Dom结点 */ var snowcanvas = document.createElement("canvas"); snowcanvas.id = "snowfall"; snowcanvas.width = window.innerWidth; snowcanvas.height = document.body.clientHeight; snowcanvas.setAttribute("style", "position:absolute; top: 0; left: 0; z-index: 1; pointer-events: none;"); document.getElementsByTagName("body")[0].appendChild(snowcanvas); this.canvas = snowcanvas; this.ctx = snowcanvas.getContext("2d"); /* 窗口大小改变的处理 */ window.onresize = function() &#123; snowcanvas.width = window.innerWidth; /* snowcanvas.height = window.innerHeight */ &#125;&#125;/* 雪运动对象 */function flakeMove(canvasWidth, canvasHeight, flakeSize, fallSpeed) &#123; this.x = Math.floor(Math.random() * canvasWidth); /* x坐标 */ this.y = Math.floor(Math.random() * canvasHeight); /* y坐标 */ this.size = Math.random() * flakeSize + 2; /* 形状 */ this.maxSize = flakeSize; /* 最大形状 */ this.speed = Math.random() * 1 + fallSpeed; /* 坠落速度 */ this.fallSpeed = fallSpeed; /* 坠落速度 */ this.velY = this.speed; /* Y方向速度 */ this.velX = 0; /* X方向速度 */ this.stepSize = Math.random() / 30; /* 步长 */ this.step = 0 /* 步数 */&#125;flakeMove.prototype.update = function() &#123; var x = this.x, y = this.y; /* 左右摆动(余弦) */ this.velX *= 0.98; if (this.velY &lt;= this.speed) &#123; this.velY = this.speed &#125; this.velX += Math.cos(this.step += .05) * this.stepSize; this.y += this.velY; this.x += this.velX; /* 飞出边界的处理 */ if (this.x &gt;= canvas.width || this.x &lt;= 0 || this.y &gt;= canvas.height || this.y &lt;= 0) &#123; this.reset(canvas.width, canvas.height) &#125;&#125;;/* 飞出边界-放置最顶端继续坠落 */flakeMove.prototype.reset = function(width, height) &#123; this.x = Math.floor(Math.random() * width); this.y = 0; this.size = Math.random() * this.maxSize + 2; this.speed = Math.random() * 1 + this.fallSpeed; this.velY = this.speed; this.velX = 0;&#125;;// 渲染雪花-随机形状（此处可修改雪花颜色！！！）flakeMove.prototype.render = function(ctx) &#123; var snowFlake = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size); snowFlake.addColorStop(0, "rgba(255, 255, 255, 0.9)"); /* 此处是雪花颜色，默认是白色 */ snowFlake.addColorStop(.5, "rgba(255, 255, 255, 0.5)"); /* 若要改为其他颜色，请自行查 */ snowFlake.addColorStop(1, "rgba(255, 255, 255, 0)"); /* 找16进制的RGB 颜色代码。 */ ctx.save(); ctx.fillStyle = snowFlake; ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fill(); ctx.restore();&#125;;/* 创建雪花-定义形状 */function createFlakes() &#123; var maxFlake = this.maxFlake, flakes = this.flakes = [], canvas = this.canvas; for (var i = 0; i &lt; maxFlake; i++) &#123; flakes.push(new flakeMove(canvas.width, canvas.height, this.flakeSize, this.fallSpeed)) &#125;&#125;/* 画雪 */function drawSnow() &#123; var maxFlake = this.maxFlake, flakes = this.flakes; ctx = this.ctx, canvas = this.canvas, that = this; /* 清空雪花 */ ctx.clearRect(0, 0, canvas.width, canvas.height); for (var e = 0; e &lt; maxFlake; e++) &#123; flakes[e].update(); flakes[e].render(ctx); &#125; /* 一帧一帧的画 */ this.loop = requestAnimationFrame(function() &#123; drawSnow.apply(that); &#125;);&#125;/* 调用及控制方法 */var snow = new snowFall(&#123;maxFlake:60&#125;);snow.start(); 然后在\themes\next\layout\_layout.swig文件里的&lt;body&gt;&lt;/body&gt;内部进行引用：`` 1234567&lt;!-- 雪花特效 --&gt;&lt;script type="text/javascript"&gt; var windowWidth = $(window).width(); if (windowWidth &gt; 480) &#123; document.write('&lt;script type="text/javascript" src="/js/src/snow.js"&gt;&lt;\/script&gt;'); &#125;&lt;/script&gt; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。 参考文章: https://blog.csdn.net/stormdony/article/details/86001618]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>nest</tag>
+        <tag>雪花</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo nest添加底部运行时间设置]]></title>
+    <url>%2Fposts%2Fe1575a4c.html</url>
+    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 主题底部添加运行时间设置。 底部添加运行时间找到 \themes\next\layout\_partials\下面的footer.swig文件，底部添加以下代码： 12345678910111213141516171819&lt;div class="run_time" style=" text-align:center;"&gt; &lt;span id="timeDate"&gt;载入天数...&lt;/span&gt;&lt;span id="times"&gt;载入时分秒...&lt;/span&gt; &lt;script&gt; var now = new Date(); function createtime() &#123; var grt= new Date("07/23/2019 10:00:00");//此处修改你的建站时间或者网站上线时间 now.setTime(now.getTime()+250); days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); if(String(hnum).length ==1 )&#123;hnum = "0" + hnum;&#125; minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); mnum = Math.floor(minutes); if(String(mnum).length ==1 )&#123;mnum = "0" + mnum;&#125; seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); snum = Math.round(seconds); if(String(snum).length ==1 )&#123;snum = "0" + snum;&#125; document.getElementById("timeDate").innerHTML = "(*^_^*)本站已运行 "+dnum+" 天 "; #可自行修改中文 document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; &#125; setInterval("createtime()",250); &lt;/script&gt;&lt;/div&gt; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>nest</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[5G移动通信技术简介(二)]]></title>
     <url>%2Fposts%2Fbc8dfb1d.html</url>
     <content type="text"><![CDATA[第五代移动通信技术（英语：5th generation mobile networks或5th generation wireless systems、5th-Generation，简称5G或5G技术）是最新一代蜂窝移动通信技术，也是即4G（LTE-A、WiMax）、3G（UMTS、LTE）和2G（GSM）系统之后的延伸。5G的性能目标是高数据速率、减少延迟、节省能源、降低成本、提高系统容量和大规模设备连接。Release-15中的5G规范的第一阶段是为了适应早期的商业部署。Release-16的第二阶段将于2020年4月完成。 下面简单对5G移动通信技术作基本介绍：]]></content>
@@ -72,11 +133,6 @@
         <tag>阿里云</tag>
         <tag>ESS</tag>
       </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>%2Fposts%2F0.html</url>
-    <content type="text"><![CDATA[title: 读书计划2019toc: truecategories: 书单tags: 书单 计划 2019top: trueabbrlink: 10f46d57date: 2019-07-30 11:05:05 读书是一剂良药读书读来读去，读的都不是未来，而是过去。人为何要钟情于阅读？ 有些人，经历一些生活的打击，会怨恨，愤慨，绝望。而还有一些人，经历一些生活的打击，反而学会了宽恕，淡忘，释然。后者多半内心平静。从前有人说，现在静不下来读书了。另一人说，搞错了，不是静下来读书，是读书让你静下来。读书到底有没有用，我想说某种程度上没有用，但它能让人平静。平静这种心情， 在这样躁动的年代，书是一种精神药物。摆在书架上，它就像是一颗颗药丸，各有不同的功效，治各种不同的精神创伤。 读书计划2019职场管理类 小强升职记 - 邹鑫 搞定 - [美]戴维·艾伦 专业主义 - 大前研一 非暴力沟通 - [美] 马歇尔·卢森堡 原则 - [美]瑞·达利欧 每周工作4小时 - 蒂莫西·费里斯 高效演讲-胡维 把时间当作朋友-李笑来 经济类 穷爸爸富爸爸 - [美] 罗伯特·清崎 小狗钱钱 - [德] 博多·舍费尔 魔鬼经济学 - [美] 史蒂芬·列维特 互联网类 人人都是产品经理 - 苏杰 人人都是产品经理2.0 - 苏杰 新零售的未来 - 翁怡诺 重新定义公司 - [美]埃里克·施密特 参与感_小米口碑营销内部手册 从零开始做运营进阶篇-张亮 生活技能类 斯坦福完美睡眠法 - 西野精致 如何阅读一本书 - [美]莫提默·J.艾德勒 学会提问 - (美)尼尔.布朗 美国纽约摄影学院摄影教材（上） 美国纽约摄影学院摄影教材（下） 社会人文 激荡十年 - 吴晓波 激荡三十年 - 吴晓波 大败局 - 吴晓波 今日简史 - 尤瓦尔·赫拉利 未来简史 - 尤瓦尔·赫拉利 事实 - 汉斯·罗斯林 乌合之众 - (法)古斯塔夫.勒庞 巨婴国 - 武志红 显微镜下的大明 - 马伯庸 万万没想到 - 万维钢 洗澡 - 杨绛 小说 三体1-地球往事 - 刘慈欣 三体2-黑暗森林 - 刘慈欣 三体3-死神永生 -刘慈欣w 流浪地球 - 刘慈欣 长安十二时辰 古董局中局1- 武则天明堂玉佛头失窃案 古董局中局2- 清明上河图 古董局中局3- 掠宝清单 古董局中局4- 大结局 历史 空王冠 玫瑰战争与都铎王朝的崛起 易中天 品三国 易中天 风流南宋]]></content>
   </entry>
   <entry>
     <title><![CDATA[windows10命令行调用openssl]]></title>
@@ -223,70 +279,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[手机如何登陆Google应用商店]]></title>
-    <url>%2Fposts%2F34057798.html</url>
-    <content type="text"><![CDATA[引言因为谷歌在国内的退出，导致很多人的Android手机上无法安装上Google play store。那是否有什么简单的方法能让手机安装上Google play store 呢？方法还是有的，大致介绍如下。 安装在PC机的安卓模拟器上安装Google空间。 雷电安卓模拟器 Google空间 雷电模拟器上安装Google空间 添加Google账户 账户添加绑定后既可以访问Googleplay应用商店。在自己的手机上也是如此的操作。 相对繁琐的是谷歌账号注册需科学上网，这里分享一个科学上网软件。 是不是发现原来访问Google play 应用商店是一件非常简单的事情！]]></content>
-      <categories>
-        <category>GooglePlay</category>
-      </categories>
-      <tags>
-        <tag>GooglePlay</tag>
-        <tag>手机</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[PicUploader图床工具设置]]></title>
-    <url>%2Fposts%2Fcb6668a4.html</url>
-    <content type="text"><![CDATA[操作系统环境：Win10 需提前安装 git 然后创建文件夹，使用git命令下载 PicUploader 源代码 1git clone https://github.com/xiebruce/PicUploader.git 安装 phpstudy2018 于E盘（自选），把整个 PicUploader文件夹放置于E:\phpStudy\PHPTutorial\WWW目录下，进入E:\phpStudy\PHPTutorial\Apache\conf目录，找到vhosts.conf文件并打开，在原有代码下空一行，添加如下代码： 1234567&lt;VirtualHost *:80&gt; DocumentRoot "E:\phpStudy\PHPTutorial\WWW\PicUploader" ServerName api.picuploader.com DirectoryIndex dashboard.php ErrorLog "logs/api.picuploader.com-error.log" CustomLog "logs/api.picuploader.com-access.log" common&lt;/VirtualHost&gt; 打开phpStudy,切换至最新版php+Apache，重启后运行状态里Apache亮绿灯即可。 并保证PHP扩展中已开启php_fileinfo、php_curl、php_gd2、php_exif四个扩展。要使用网页版查看记录还需要开启php_pdo_sqlite和php_pdo_mysql 找到C:\Windows\System32\drivers\etc中的hosts文件，添加一条语句并保存。 1127.0.0.1 api.picuploader.com 打开浏览器，并输入http://api.picuploader.com如果一切正常可进入如下PicUploader Web界面 1http://api.picuploader.com 未完待续 参考博客：https://www.xiebruce.top/17.html]]></content>
-      <categories>
-        <category>PicUploader</category>
-      </categories>
-      <tags>
-        <tag>PicUploader</tag>
-        <tag>图床</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hexo nest添加Live2d看板动画效果]]></title>
-    <url>%2Fposts%2F896b141d.html</url>
-    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 为增添页面趣味性，这次主要介绍 NesT 7.2.0 添加Live2d看板动画效果。 添加Live2d看板动画看板动画 站点根目录下载插件，安装成功后，你可以在你的站点根文件夹/node_modules/底下找到live2d-widget这个文件夹。 1npm install --save hexo-helper-live2d 安装你想要的live2d动画人物，这里选择 live2d-widget-model-haruto 1npm install live2d-widget-model-haruto 在站点根目录下_config.yml添加如下代码 123456789101112131415161718192021222324#live2d看板动画live2d: enable: true scriptFrom: local pluginRootPath: live2dw/ pluginJsPath: lib/ pluginModelPath: assets/ tagMode: false log: false model: use: live2d-widget-model-haruto display: superSample: 2 width: 150 height: 300 position: right hOffset: 100 vOffset: -100 mobile: show: true scale: 0.5react: opacityDefault: 0.7 opacityOnHover: 0.2 hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>nest</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hexo nest添加底部运行时间设置]]></title>
-    <url>%2Fposts%2Fe1575a4c.html</url>
-    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 主题底部添加运行时间设置。 底部添加运行时间找到 \themes\next\layout\_partials\下面的footer.swig文件，底部添加以下代码： 12345678910111213141516171819&lt;div class="run_time" style=" text-align:center;"&gt; &lt;span id="timeDate"&gt;载入天数...&lt;/span&gt;&lt;span id="times"&gt;载入时分秒...&lt;/span&gt; &lt;script&gt; var now = new Date(); function createtime() &#123; var grt= new Date("07/23/2019 10:00:00");//此处修改你的建站时间或者网站上线时间 now.setTime(now.getTime()+250); days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); if(String(hnum).length ==1 )&#123;hnum = "0" + hnum;&#125; minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); mnum = Math.floor(minutes); if(String(mnum).length ==1 )&#123;mnum = "0" + mnum;&#125; seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); snum = Math.round(seconds); if(String(snum).length ==1 )&#123;snum = "0" + snum;&#125; document.getElementById("timeDate").innerHTML = "(*^_^*)本站已运行 "+dnum+" 天 "; #可自行修改中文 document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; &#125; setInterval("createtime()",250); &lt;/script&gt;&lt;/div&gt; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>nest</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hexo nest添加雪花飘落效果]]></title>
-    <url>%2Fposts%2Fc5826913.html</url>
-    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 为了增加博客站点的趣味性，这次主要介绍 NexT 7.2.0 在PC端下添加雪花飘落的效果。 添加雪花飘落效果在\themes\next\source\js\src目录下新建一个snow.js文件，复制粘贴一下代码。 样式一是六边形的雪片，样式二是小圆点雪花，选择自己喜欢的样式即可。 123456789101112131415161718192021222324252627282930313233343536373839404142/*样式一*/(function($)&#123; $.fn.snow = function(options)&#123; var $flake = $('&lt;div id="snowbox" /&gt;').css(&#123;'position': 'absolute','z-index':'9999', 'top': '-50px'&#125;).html('&amp;#10052;'), documentHeight = $(document).height(), documentWidth = $(document).width(), defaults = &#123; minSize : 10, maxSize : 20, newOn : 1000, flakeColor : "#AFDAEF" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */ &#125;, options = $.extend(&#123;&#125;, defaults, options); var interval= setInterval( function()&#123; var startPositionLeft = Math.random() * documentWidth - 100, startOpacity = 0.5 + Math.random(), sizeFlake = options.minSize + Math.random() * options.maxSize, endPositionTop = documentHeight - 200, endPositionLeft = startPositionLeft - 500 + Math.random() * 500, durationFall = documentHeight * 10 + Math.random() * 5000; $flake.clone().appendTo('body').css(&#123; left: startPositionLeft, opacity: startOpacity, 'font-size': sizeFlake, color: options.flakeColor &#125;).animate(&#123; top: endPositionTop, left: endPositionLeft, opacity: 0.2 &#125;,durationFall,'linear',function()&#123; $(this).remove() &#125;); &#125;, options.newOn); &#125;;&#125;)(jQuery);$(function()&#123; $.fn.snow(&#123; minSize: 5, /* 定义雪花最小尺寸 */ maxSize: 50,/* 定义雪花最大尺寸 */ newOn: 300 /* 定义密集程度，数字越小越密集 */ &#125;);&#125;); 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128/*样式二*//* 控制下雪 */function snowFall(snow) &#123; /* 可配置属性 */ snow = snow || &#123;&#125;; this.maxFlake = snow.maxFlake || 200; /* 最多片数 */ this.flakeSize = snow.flakeSize || 10; /* 雪花形状 */ this.fallSpeed = snow.fallSpeed || 1; /* 坠落速度 */&#125;/* 兼容写法 */requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame || function(callback) &#123; setTimeout(callback, 1000 / 60); &#125;;cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame || window.webkitCancelAnimationFrame || window.msCancelAnimationFrame || window.oCancelAnimationFrame;/* 开始下雪 */snowFall.prototype.start = function()&#123; /* 创建画布 */ snowCanvas.apply(this); /* 创建雪花形状 */ createFlakes.apply(this); /* 画雪 */ drawSnow.apply(this)&#125;/* 创建画布 */function snowCanvas() &#123; /* 添加Dom结点 */ var snowcanvas = document.createElement("canvas"); snowcanvas.id = "snowfall"; snowcanvas.width = window.innerWidth; snowcanvas.height = document.body.clientHeight; snowcanvas.setAttribute("style", "position:absolute; top: 0; left: 0; z-index: 1; pointer-events: none;"); document.getElementsByTagName("body")[0].appendChild(snowcanvas); this.canvas = snowcanvas; this.ctx = snowcanvas.getContext("2d"); /* 窗口大小改变的处理 */ window.onresize = function() &#123; snowcanvas.width = window.innerWidth; /* snowcanvas.height = window.innerHeight */ &#125;&#125;/* 雪运动对象 */function flakeMove(canvasWidth, canvasHeight, flakeSize, fallSpeed) &#123; this.x = Math.floor(Math.random() * canvasWidth); /* x坐标 */ this.y = Math.floor(Math.random() * canvasHeight); /* y坐标 */ this.size = Math.random() * flakeSize + 2; /* 形状 */ this.maxSize = flakeSize; /* 最大形状 */ this.speed = Math.random() * 1 + fallSpeed; /* 坠落速度 */ this.fallSpeed = fallSpeed; /* 坠落速度 */ this.velY = this.speed; /* Y方向速度 */ this.velX = 0; /* X方向速度 */ this.stepSize = Math.random() / 30; /* 步长 */ this.step = 0 /* 步数 */&#125;flakeMove.prototype.update = function() &#123; var x = this.x, y = this.y; /* 左右摆动(余弦) */ this.velX *= 0.98; if (this.velY &lt;= this.speed) &#123; this.velY = this.speed &#125; this.velX += Math.cos(this.step += .05) * this.stepSize; this.y += this.velY; this.x += this.velX; /* 飞出边界的处理 */ if (this.x &gt;= canvas.width || this.x &lt;= 0 || this.y &gt;= canvas.height || this.y &lt;= 0) &#123; this.reset(canvas.width, canvas.height) &#125;&#125;;/* 飞出边界-放置最顶端继续坠落 */flakeMove.prototype.reset = function(width, height) &#123; this.x = Math.floor(Math.random() * width); this.y = 0; this.size = Math.random() * this.maxSize + 2; this.speed = Math.random() * 1 + this.fallSpeed; this.velY = this.speed; this.velX = 0;&#125;;// 渲染雪花-随机形状（此处可修改雪花颜色！！！）flakeMove.prototype.render = function(ctx) &#123; var snowFlake = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size); snowFlake.addColorStop(0, "rgba(255, 255, 255, 0.9)"); /* 此处是雪花颜色，默认是白色 */ snowFlake.addColorStop(.5, "rgba(255, 255, 255, 0.5)"); /* 若要改为其他颜色，请自行查 */ snowFlake.addColorStop(1, "rgba(255, 255, 255, 0)"); /* 找16进制的RGB 颜色代码。 */ ctx.save(); ctx.fillStyle = snowFlake; ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fill(); ctx.restore();&#125;;/* 创建雪花-定义形状 */function createFlakes() &#123; var maxFlake = this.maxFlake, flakes = this.flakes = [], canvas = this.canvas; for (var i = 0; i &lt; maxFlake; i++) &#123; flakes.push(new flakeMove(canvas.width, canvas.height, this.flakeSize, this.fallSpeed)) &#125;&#125;/* 画雪 */function drawSnow() &#123; var maxFlake = this.maxFlake, flakes = this.flakes; ctx = this.ctx, canvas = this.canvas, that = this; /* 清空雪花 */ ctx.clearRect(0, 0, canvas.width, canvas.height); for (var e = 0; e &lt; maxFlake; e++) &#123; flakes[e].update(); flakes[e].render(ctx); &#125; /* 一帧一帧的画 */ this.loop = requestAnimationFrame(function() &#123; drawSnow.apply(that); &#125;);&#125;/* 调用及控制方法 */var snow = new snowFall(&#123;maxFlake:60&#125;);snow.start(); 然后在\themes\next\layout\_layout.swig文件里的&lt;body&gt;&lt;/body&gt;内部进行引用：`` 1234567&lt;!-- 雪花特效 --&gt;&lt;script type="text/javascript"&gt; var windowWidth = $(window).width(); if (windowWidth &gt; 480) &#123; document.write('&lt;script type="text/javascript" src="/js/src/snow.js"&gt;&lt;\/script&gt;'); &#125;&lt;/script&gt; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。 参考文章: https://blog.csdn.net/stormdony/article/details/86001618]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>nest</tag>
-        <tag>雪花</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Win10系统优化2:软件辅助篇]]></title>
-    <url>%2Fposts%2Fe177ee84.html</url>
-    <content type="text"><![CDATA[引言最近对自己的本基本电脑重新安装了WIN10系统后，在操作系统上选择了参加Windows预览体验计划，直接跳到下一版本并安装了最新的更新。虽然系统已更新到最新，但还是需要对其进行一些必要的优化，才能使自己使用起来更加流畅。 本次介绍系统优化第二步软件辅助优化。 软媒美化大师优化下载软媒美化大师单文件版3.7.0.0 系统外观—桌面设置 软媒设置大师优化下载软媒设置大师单文件版3.7.2.0 系统设置—资源管理器 系统设置—多媒体优化设置 系统设置—错误报告 系统设置—开关机设置 右键菜单—新建菜单 删除无用右键菜单 右键菜单—发送到菜单 删除无用右键菜单 右键菜单—添加右键菜单项目 添加上获得管理员所有权这个功能 DISM++优化下载 DISM++ 启动项管理—关闭开机磁盘检测。关闭开机启动OneDrive 系统优化设置如下 DISM++清理 软媒清理大师清理下载软媒清理大师 一键清理 深度清理 系统瘦身 添加摄像头补丁下载摄像头补丁]]></content>
+    <title><![CDATA[Win10系统优化1:手动优化篇]]></title>
+    <url>%2Fposts%2F50153a61.html</url>
+    <content type="text"><![CDATA[引言最近对自己的本基本电脑重新安装了WIN10系统后，在操作系统上选择了参加Windows预览体验计划，直接跳到下一版本并安装了最新的更新。虽然系统已更新到最新，但还是需要对其进行一些必要的优化，才能使自己使用起来更加流畅。 本次介绍系统优化第一步手动优化。 手动优化—设置优化点击桌面左下角Win图标，点击设置按钮进入设置主界面。 系统设置 点击系统—点击通知和操作—关闭通知 设备设置 点击设备—自动播放—关闭自动播放 点击设备—USB—关闭USB设备提示通知，避免USB电涌问题 网络和Internet设置 点击网络和internet—状态—网络和共享中心—更改高级共享设置——启用共享文件夹/启用无密码共享 点击网络和internet—代理—关闭代理 个性化设置 点击个性化—点击主题—点击右侧桌面图标—勾选图标 点击个性化—点击开始—关闭偶尔在“开始”菜单中显示建议 点击个性化—点击开始—点击选择哪些文件显示在“开始”菜单栏上—除设置全部关闭 点击个性化—点击任务栏—选择设置任务栏已满时合并 点击个性化—点击任务栏—点击打开或关闭系统图标 应用设置 点击应用—点击离线地图—关闭地图更新 点击应用—点击可使用网站打开应用—关闭关联应用 游戏设置 点击游戏—点击游戏栏—关闭游戏视频录制功能 隐私设置 点击隐私—点击常规—关闭常规里的所有内容 点击隐私—诊断和反馈—关闭诊断数据 点击隐私—诊断和反馈—点击活动历史记录 更新和安全设置 点击更新和安全—点击传递优化—关闭传递优化 手动优化—控制面板优化点击控制面版—切换成大图标方便查看 Internet选项设置 点击Internet选项—点击常规—标签页—进行如下设置 点击Internet选项—点击常规—浏览历史记录设置—进行如下设置 点击Internet选项—点击隐私—关闭弹窗阻止程序 点击Internet选项—点击高级—勾选允许运行或按照软件，即使签名无效，避免安装插件时弹出提示框 点击Internet选项—点击高级—取消勾选默认IE浏览器检测 自带防火墙设置 点击Windows Defender防火墙—点击左侧启用或关闭Windows Defender防火墙—关闭防火墙 安全维护设置 点击安全和维护—点击左侧更改用户账户控制设置—关闭用户控制提示 程序和功能设置 点击程序和功能—点击左侧启用或关闭Windows功能—开启SMB1.0服务 电源选项设置 点击电源选项—点击左侧选择电源按钮的功能—点击当前不可用设置—勾选休眠 文件夹选项设置 点击文件夹资源管理器选项—点击查看—勾选以下内容 系统高级设置 点击系统—高级系统设置—高级—性能设置—视觉效果—按个人设置自定义设置 点击系统—高级系统设置—高级—性能设置—高级—虚拟内存设置如下 疑难解答设置 点击疑难解答—点击左侧更改设置—关闭计算机维护，疑难解答，故障排除 手动优化—服务项优化右键桌面我的电脑—点击管理—点击服务和应用程序—点击服务 禁用程序兼容性助手找到Program Compatibility Assistant Service 并禁用，避免弹出程序是否正确安装的提示窗口 禁用超级预读找到SysMain 并禁用，避免弹出程序是否正确安装的提示窗口 手动优化—策略组优化WIN+R 打开运行对话框，输入gpedit.msc，直接运行组策略 启用“关闭加载性能通知”，防止打开IE浏览器状态栏提示关闭加载项来提高浏览器运行速度的提示。启用“自动激活新安装的加载项”，比如迅雷下载加载项等等可自动激活。禁用“打开建议网站”，无用的收藏夹网址建议禁止。 （计算机配置里的设置同用户配置里的设置一样，此处省略） 启用“阻止IE首次运行向导设置” （计算机配置里的设置同用户配置里的设置一样，此处省略） 启用“阻止订阅网页源和网页快讯” （计算机配置里的设置同用户配置里的设置一样，此处省略） 禁用“快速关机优化” 启用“允许管理员忽略设备安装限制策略” 启用“设备驱动程序的代码签名” 手动优化—其它设置设置快速访问栏 关闭磁盘索引设置右键点击C盘—选择属性—常规—设置如下 隐藏小娜，任务视图，人脉回到桌面，取消前面对应的勾选即可。 整理磁贴调整一下开始屏幕，删除自己认为无用的箭头磁贴，按照自己的喜好增加删除调整磁贴既可。]]></content>
       <categories>
         <category>Windows</category>
       </categories>
@@ -297,9 +292,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Win10系统优化1:手动优化篇]]></title>
-    <url>%2Fposts%2F50153a61.html</url>
-    <content type="text"><![CDATA[引言最近对自己的本基本电脑重新安装了WIN10系统后，在操作系统上选择了参加Windows预览体验计划，直接跳到下一版本并安装了最新的更新。虽然系统已更新到最新，但还是需要对其进行一些必要的优化，才能使自己使用起来更加流畅。 本次介绍系统优化第一步手动优化。 手动优化—设置优化点击桌面左下角Win图标，点击设置按钮进入设置主界面。 系统设置 点击系统—点击通知和操作—关闭通知 设备设置 点击设备—自动播放—关闭自动播放 点击设备—USB—关闭USB设备提示通知，避免USB电涌问题 网络和Internet设置 点击网络和internet—状态—网络和共享中心—更改高级共享设置——启用共享文件夹/启用无密码共享 点击网络和internet—代理—关闭代理 个性化设置 点击个性化—点击主题—点击右侧桌面图标—勾选图标 点击个性化—点击开始—关闭偶尔在“开始”菜单中显示建议 点击个性化—点击开始—点击选择哪些文件显示在“开始”菜单栏上—除设置全部关闭 点击个性化—点击任务栏—选择设置任务栏已满时合并 点击个性化—点击任务栏—点击打开或关闭系统图标 应用设置 点击应用—点击离线地图—关闭地图更新 点击应用—点击可使用网站打开应用—关闭关联应用 游戏设置 点击游戏—点击游戏栏—关闭游戏视频录制功能 隐私设置 点击隐私—点击常规—关闭常规里的所有内容 点击隐私—诊断和反馈—关闭诊断数据 点击隐私—诊断和反馈—点击活动历史记录 更新和安全设置 点击更新和安全—点击传递优化—关闭传递优化 手动优化—控制面板优化点击控制面版—切换成大图标方便查看 Internet选项设置 点击Internet选项—点击常规—标签页—进行如下设置 点击Internet选项—点击常规—浏览历史记录设置—进行如下设置 点击Internet选项—点击隐私—关闭弹窗阻止程序 点击Internet选项—点击高级—勾选允许运行或按照软件，即使签名无效，避免安装插件时弹出提示框 点击Internet选项—点击高级—取消勾选默认IE浏览器检测 自带防火墙设置 点击Windows Defender防火墙—点击左侧启用或关闭Windows Defender防火墙—关闭防火墙 安全维护设置 点击安全和维护—点击左侧更改用户账户控制设置—关闭用户控制提示 程序和功能设置 点击程序和功能—点击左侧启用或关闭Windows功能—开启SMB1.0服务 电源选项设置 点击电源选项—点击左侧选择电源按钮的功能—点击当前不可用设置—勾选休眠 文件夹选项设置 点击文件夹资源管理器选项—点击查看—勾选以下内容 系统高级设置 点击系统—高级系统设置—高级—性能设置—视觉效果—按个人设置自定义设置 点击系统—高级系统设置—高级—性能设置—高级—虚拟内存设置如下 疑难解答设置 点击疑难解答—点击左侧更改设置—关闭计算机维护，疑难解答，故障排除 手动优化—服务项优化右键桌面我的电脑—点击管理—点击服务和应用程序—点击服务 禁用程序兼容性助手找到Program Compatibility Assistant Service 并禁用，避免弹出程序是否正确安装的提示窗口 禁用超级预读找到SysMain 并禁用，避免弹出程序是否正确安装的提示窗口 手动优化—策略组优化WIN+R 打开运行对话框，输入gpedit.msc，直接运行组策略 启用“关闭加载性能通知”，防止打开IE浏览器状态栏提示关闭加载项来提高浏览器运行速度的提示。启用“自动激活新安装的加载项”，比如迅雷下载加载项等等可自动激活。禁用“打开建议网站”，无用的收藏夹网址建议禁止。 （计算机配置里的设置同用户配置里的设置一样，此处省略） 启用“阻止IE首次运行向导设置” （计算机配置里的设置同用户配置里的设置一样，此处省略） 启用“阻止订阅网页源和网页快讯” （计算机配置里的设置同用户配置里的设置一样，此处省略） 禁用“快速关机优化” 启用“允许管理员忽略设备安装限制策略” 启用“设备驱动程序的代码签名” 手动优化—其它设置设置快速访问栏 关闭磁盘索引设置右键点击C盘—选择属性—常规—设置如下 隐藏小娜，任务视图，人脉回到桌面，取消前面对应的勾选即可。 整理磁贴调整一下开始屏幕，删除自己认为无用的箭头磁贴，按照自己的喜好增加删除调整磁贴既可。]]></content>
+    <title><![CDATA[Win10系统优化2:软件辅助篇]]></title>
+    <url>%2Fposts%2Fe177ee84.html</url>
+    <content type="text"><![CDATA[引言最近对自己的本基本电脑重新安装了WIN10系统后，在操作系统上选择了参加Windows预览体验计划，直接跳到下一版本并安装了最新的更新。虽然系统已更新到最新，但还是需要对其进行一些必要的优化，才能使自己使用起来更加流畅。 本次介绍系统优化第二步软件辅助优化。 软媒美化大师优化下载软媒美化大师单文件版3.7.0.0 系统外观—桌面设置 软媒设置大师优化下载软媒设置大师单文件版3.7.2.0 系统设置—资源管理器 系统设置—多媒体优化设置 系统设置—错误报告 系统设置—开关机设置 右键菜单—新建菜单 删除无用右键菜单 右键菜单—发送到菜单 删除无用右键菜单 右键菜单—添加右键菜单项目 添加上获得管理员所有权这个功能 DISM++优化下载 DISM++ 启动项管理—关闭开机磁盘检测。关闭开机启动OneDrive 系统优化设置如下 DISM++清理 软媒清理大师清理下载软媒清理大师 一键清理 深度清理 系统瘦身 添加摄像头补丁下载摄像头补丁]]></content>
       <categories>
         <category>Windows</category>
       </categories>
@@ -330,9 +325,9 @@
       </categories>
       <tags>
         <tag>Typora</tag>
-        <tag>修改</tag>
-        <tag>Markdown</tag>
         <tag>颜色</tag>
+        <tag>Markdown</tag>
+        <tag>修改</tag>
       </tags>
   </entry>
   <entry>
@@ -381,8 +376,8 @@
       </categories>
       <tags>
         <tag>Typora</tag>
-        <tag>修改</tag>
         <tag>Markdown</tag>
+        <tag>修改</tag>
       </tags>
   </entry>
   <entry>
@@ -393,9 +388,9 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>aplayer</tag>
         <tag>Hexo</tag>
         <tag>nest</tag>
+        <tag>aplayer</tag>
       </tags>
   </entry>
   <entry>
