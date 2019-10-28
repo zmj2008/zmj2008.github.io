@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[读书计划2019]]></title>
+    <url>%2Fposts%2F10f46d57.html</url>
+    <content type="text"><![CDATA[读书是一剂良药读书读来读去，读的都不是未来，而是过去。人为何要钟情于阅读？ 有些人，经历一些生活的打击，会怨恨，愤慨，绝望。而还有一些人，经历一些生活的打击，反而学会了宽恕，淡忘，释然。后者多半内心平静。从前有人说，现在静不下来读书了。另一人说，搞错了，不是静下来读书，是读书让你静下来。读书到底有没有用，我想说某种程度上没有用，但它能让人平静。平静这种心情， 在这样躁动的年代，书是一种精神药物。摆在书架上，它就像是一颗颗药丸，各有不同的功效，治各种不同的精神创伤。 读书计划2019职场管理类 小强升职记 - 邹鑫 搞定 - [美]戴维·艾伦 专业主义 - 大前研一 非暴力沟通 - [美] 马歇尔·卢森堡 原则 - [美]瑞·达利欧 每周工作4小时 - 蒂莫西·费里斯 高效演讲-胡维 把时间当作朋友-李笑来 经济类 穷爸爸富爸爸 - [美] 罗伯特·清崎 小狗钱钱 - [德] 博多·舍费尔 魔鬼经济学 - [美] 史蒂芬·列维特 互联网类 人人都是产品经理 - 苏杰 人人都是产品经理2.0 - 苏杰 新零售的未来 - 翁怡诺 重新定义公司 - [美]埃里克·施密特 参与感_小米口碑营销内部手册 从零开始做运营进阶篇-张亮 生活技能类 斯坦福完美睡眠法 - 西野精致 如何阅读一本书 - [美]莫提默·J.艾德勒 学会提问 - (美)尼尔.布朗 美国纽约摄影学院摄影教材（上） 美国纽约摄影学院摄影教材（下） 社会人文 激荡十年 - 吴晓波 激荡三十年 - 吴晓波 大败局 - 吴晓波 今日简史 - 尤瓦尔·赫拉利 未来简史 - 尤瓦尔·赫拉利 事实 - 汉斯·罗斯林 乌合之众 - (法)古斯塔夫.勒庞 巨婴国 - 武志红 显微镜下的大明 - 马伯庸 万万没想到 - 万维钢 洗澡 - 杨绛 小说 三体1-地球往事 - 刘慈欣 三体2-黑暗森林 - 刘慈欣 三体3-死神永生 -刘慈欣w 流浪地球 - 刘慈欣 长安十二时辰 古董局中局1- 武则天明堂玉佛头失窃案 古董局中局2- 清明上河图 古董局中局3- 掠宝清单 古董局中局4- 大结局 历史 空王冠 玫瑰战争与都铎王朝的崛起 易中天 品三国 易中天 风流南宋]]></content>
+      <categories>
+        <category>书单</category>
+      </categories>
+      <tags>
+        <tag>书单</tag>
+        <tag>计划</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[PicUploader图床工具设置]]></title>
     <url>%2Fposts%2Fcb6668a4.html</url>
     <content type="text"><![CDATA[操作系统环境：Win10 需提前安装 git 然后创建文件夹，使用git命令下载 PicUploader 源代码 1git clone https://github.com/xiebruce/PicUploader.git 安装 phpstudy2018 于E盘（自选），把整个 PicUploader文件夹放置于E:\phpStudy\PHPTutorial\WWW目录下，进入E:\phpStudy\PHPTutorial\Apache\conf目录，找到vhosts.conf文件并打开，在原有代码下空一行，添加如下代码： 1234567&lt;VirtualHost *:80&gt; DocumentRoot "E:\phpStudy\PHPTutorial\WWW\PicUploader" ServerName api.picuploader.com DirectoryIndex dashboard.php ErrorLog "logs/api.picuploader.com-error.log" CustomLog "logs/api.picuploader.com-access.log" common&lt;/VirtualHost&gt; 打开phpStudy,切换至最新版php+Apache，重启后运行状态里Apache亮绿灯即可。 并保证PHP扩展中已开启php_fileinfo、php_curl、php_gd2、php_exif四个扩展。要使用网页版查看记录还需要开启php_pdo_sqlite和php_pdo_mysql 找到C:\Windows\System32\drivers\etc中的hosts文件，添加一条语句并保存。 1127.0.0.1 api.picuploader.com 打开浏览器，并输入http://api.picuploader.com如果一切正常可进入如下PicUploader Web界面 1http://api.picuploader.com 未完待续 参考博客：https://www.xiebruce.top/17.html]]></content>
@@ -22,6 +34,18 @@
       <tags>
         <tag>GooglePlay</tag>
         <tag>手机</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo nest添加底部运行时间设置]]></title>
+    <url>%2Fposts%2Fe1575a4c.html</url>
+    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 主题底部添加运行时间设置。 底部添加运行时间找到 \themes\next\layout\_partials\下面的footer.swig文件，底部添加以下代码： 12345678910111213141516171819&lt;div class="run_time" style=" text-align:center;"&gt; &lt;span id="timeDate"&gt;载入天数...&lt;/span&gt;&lt;span id="times"&gt;载入时分秒...&lt;/span&gt; &lt;script&gt; var now = new Date(); function createtime() &#123; var grt= new Date("07/23/2019 10:00:00");//此处修改你的建站时间或者网站上线时间 now.setTime(now.getTime()+250); days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); if(String(hnum).length ==1 )&#123;hnum = "0" + hnum;&#125; minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); mnum = Math.floor(minutes); if(String(mnum).length ==1 )&#123;mnum = "0" + mnum;&#125; seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); snum = Math.round(seconds); if(String(snum).length ==1 )&#123;snum = "0" + snum;&#125; document.getElementById("timeDate").innerHTML = "(*^_^*)本站已运行 "+dnum+" 天 "; #可自行修改中文 document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; &#125; setInterval("createtime()",250); &lt;/script&gt;&lt;/div&gt; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>nest</tag>
       </tags>
   </entry>
   <entry>
@@ -47,18 +71,6 @@
         <tag>Hexo</tag>
         <tag>nest</tag>
         <tag>雪花</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hexo nest添加底部运行时间设置]]></title>
-    <url>%2Fposts%2Fe1575a4c.html</url>
-    <content type="text"><![CDATA[引言Hexo是一个快速、简洁且高效的博客框架，能够快速生成静态页面，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站，支持 GitHub Flavored Markdown 的所有功能，同时还拥有强大的插件系统。 这次主要介绍 NexT 7.2.0 主题底部添加运行时间设置。 底部添加运行时间找到 \themes\next\layout\_partials\下面的footer.swig文件，底部添加以下代码： 12345678910111213141516171819&lt;div class="run_time" style=" text-align:center;"&gt; &lt;span id="timeDate"&gt;载入天数...&lt;/span&gt;&lt;span id="times"&gt;载入时分秒...&lt;/span&gt; &lt;script&gt; var now = new Date(); function createtime() &#123; var grt= new Date("07/23/2019 10:00:00");//此处修改你的建站时间或者网站上线时间 now.setTime(now.getTime()+250); days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); if(String(hnum).length ==1 )&#123;hnum = "0" + hnum;&#125; minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); mnum = Math.floor(minutes); if(String(mnum).length ==1 )&#123;mnum = "0" + mnum;&#125; seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); snum = Math.round(seconds); if(String(snum).length ==1 )&#123;snum = "0" + snum;&#125; document.getElementById("timeDate").innerHTML = "(*^_^*)本站已运行 "+dnum+" 天 "; #可自行修改中文 document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; &#125; setInterval("createtime()",250); &lt;/script&gt;&lt;/div&gt; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 即可本地预览效果。]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>nest</tag>
       </tags>
   </entry>
   <entry>
