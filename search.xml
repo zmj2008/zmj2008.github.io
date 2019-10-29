@@ -153,8 +153,8 @@
         <category>PicUploader</category>
       </categories>
       <tags>
-        <tag>PicUploader</tag>
         <tag>图床</tag>
+        <tag>PicUploader</tag>
       </tags>
   </entry>
   <entry>
@@ -225,9 +225,9 @@
         <category>ssh-key</category>
       </categories>
       <tags>
-        <tag>Windows</tag>
         <tag>ssh-key</tag>
         <tag>多账号</tag>
+        <tag>Windows</tag>
         <tag>Git</tag>
       </tags>
   </entry>
@@ -298,9 +298,9 @@
         <category>Windows</category>
       </categories>
       <tags>
+        <tag>Windows</tag>
         <tag>系统</tag>
         <tag>优化</tag>
-        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
@@ -311,9 +311,9 @@
         <category>Windows</category>
       </categories>
       <tags>
+        <tag>Windows</tag>
         <tag>系统</tag>
         <tag>优化</tag>
-        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
@@ -375,8 +375,8 @@
       </categories>
       <tags>
         <tag>GitHub</tag>
-        <tag>图床</tag>
         <tag>Picgo</tag>
+        <tag>图床</tag>
       </tags>
   </entry>
   <entry>
@@ -400,9 +400,9 @@
         <category>Hexo</category>
       </categories>
       <tags>
+        <tag>aplayer</tag>
         <tag>Hexo</tag>
         <tag>nest</tag>
-        <tag>aplayer</tag>
       </tags>
   </entry>
   <entry>
