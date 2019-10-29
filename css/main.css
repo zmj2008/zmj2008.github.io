@@ -1869,7 +1869,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #74707f;
+  background: #c69ec8;
 }
 .feed-link,
 .chat {
@@ -3054,7 +3054,7 @@ ul.breadcrumb li+li:last-child {
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
 body {
-  background: url("https://i.loli.net/2019/10/05/e8dKYVtJLIQFSuA.jpg");
+  background: url("https://raw.githubusercontent.com/zhanminjie/mybigimage/master/p2568085362.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
