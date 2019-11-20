@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Win10下IE浏览器图标无法删除的解决办法]]></title>
+    <url>%2Fposts%2Fed3f23a1.html</url>
+    <content type="text"><![CDATA[为自学MySQL,在Win10电脑上安装SQLyog软件，安装完毕时突然发现电脑桌面自动添加了IE浏览器的图标，而且该图标无法直接右键删除。 我去【控制面板】-【程序卸载】里面也没有找到安装IE浏览器（之前一直没有遇到过这种情况） ，那该如何是好呢？通过百度后，我将相关的解决办法记录与此，以便日后出现同类问题可以及时的解决。 Win+R,输入“regedit”,进入注册表编辑器, 进入如下目录 计算\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace 找到{00010203-0001-0305-102938475600}字典目录 删除{00010203-0001-0305-102938475600}字典目录 这时再返回电脑桌面，发现原先的IE图标已经被删除，问题成功解决！]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>IE浏览器</tag>
+        <tag>系统优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MySQL学习笔记一：MySQL8.0安装及启动]]></title>
+    <url>%2Fposts%2Fca03e1e5.html</url>
+    <content type="text"><![CDATA[MySQL介绍MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下产品。MySQL 是最流行的关系型数据库管理系统之一，在 WEB 应用方面，MySQL是最好的 RDBMS (Relational Database Management System，关系数据库管理系统) 应用软件之一。 其特点在于：开源、免费、成本低；性能高、移随性好；体积小、便于安装。 目前MySQL已推出8.0版本。 数据库概念1、数据库好处 可以持久化数据到本地 结构化查询 2、数据库常见概念 DB (Data Base)，存储数据的仓库 DBMS (Data Base Management System) 数据库管理系统，DB是通过DBMS创建和操作的容器。 SQL（Strucure Query Language）结构化查询语言，专门用来同数据库通信的语言。 其特点： DBMS都支持SQL 简单易学 是一种强有力的语言。 3、MySQL存储数据的特点 1、将数据放到表中，再将表放到数据库中。 2、一个数据库中可以有多个表，每个表都有一个名字，每张表具有唯一的表名，用来标识自己。 3、表具有一些特性，这些特性定义了数据在表中如何存储。 Win10下安装MySQL8.0下载MySQL8.0添加环境变量Windows下安装数据库，将下载的的压缩包解压， 文件位于：C:\mysql-8.0.18-winx64 然后去配置环境变量，点击电脑-&gt;属性-&gt;高级系统配置-&gt;环境变量；先对系统变量进行设置 新建配置文件打开mysql-8.0.16-winx64文件，在当前目录下，新建一个名为my.ini的文件，然后打开该文件，将下列代码加入到该文件中； 12345678910111213141516171819202122232425[mysqld]# 设置3306端口port=3306# 设置mysql的安装目录basedir=C:\mysql-8.0.18-winx64# 设置mysql数据库的数据的存放目录datadir=C:\mysql-8.0.18-winx64\Database# 允许最大连接数max_connections=200# 允许连接失败的次数。这是为了防止有人从该主机试图攻击数据库系统max_connect_errors=10# 服务端使用的字符集默认为UTF8character-set-server=utf8# 创建新表时将使用的默认存储引擎default-storage-engine=INNODB# 默认使用“mysql_native_password”插件认证default_authentication_plugin=mysql_native_password[mysql]# 设置mysql客户端默认字符集default-character-set=utf8[client]# 设置mysql客户端连接服务端时默认使用的端口port=3306default-character-set=utf8 命令行登录进入C:\mysql-8.0.18-winx64\bin 目录,以管理员身份打开第一个CMD窗口， 1C:\WINDOWS\system32&gt;CD C:\mysql-8.0.18-winx64\bin 此时mysql服务为关闭状态。 然后在–skip-gant-tables状态下开启mysq服务 ,以下命令可以使得root首次免密登录 1mysqld --console --skip-grant-tables --shared-memory 进入C:\mysql-8.0.18-winx64\bin 目录,以管理员身份打开第二个CMD窗口， 该窗口使用mysql -uroot -p回车登录即可 至此数据库安装成功 修改初始登陆密码：先重载授权表，再执行修改密码语句: – 重载授权表 1FLUSH PRIVILEGES; – 修改密码(版本不同，修改的语句不同) 1ALTER USER 'root'@'localhost' IDENTIFIED BY 'qq886991985' 关闭两个CMD窗口，重新进入C:\mysql-8.0.18-winx64\bin 目录,以管理员身份打开CMD窗口，开启mysql服务， 输入 mysql -uroot -p，再输入修改后的密码 qq886991985便可登录成功。 121、cd C:\mysql-8.0.18-winx64\bin2、mysql -u root -p Navicat Premium 12 登录MySQLNavicat Premium 12+注册机 简单连接配置即可连接使用，使用界面如下： 服务的启动和停止方式一：net start 服务名 / net stop 服务名 方式二: 计算机—右击—管理—服务 登录和退出登录：MySQL 【-h 主机名 -p 端口号】-u 用户名 -p密码 退出：exit 或者 ctrl +C]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+        <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Win10中使用Hyper-V安装Ubuntu18.04并SSH远程]]></title>
+    <url>%2Fposts%2Fb9259de4.html</url>
+    <content type="text"><![CDATA[安装Hyper-V 首先安装Hyper-V：打开Win10控制面板–程序–启用或关闭Windows功能–选择Hyper-V勾选上（全部）–然后点击确定进行安装 。 等待安装完毕后重启电脑，安装即可生效。 快速创建虚拟机提前下载Ubuntu操作系统镜像文件。 最后点击创建虚拟机，进入以下界面并点击链接 点击启动 进入到下面页面后选择Install Ubuntu，进行Ubuntu系统安装： 进入安装界面后，选择中文（简体），然后继续： 键盘布局选择默认就好，然后继续： 选择正常安装，其他选项暂不勾选，避免安装速度过慢，然后继续： 由于是在虚拟机里面，选择第一项就好，然后选择现在安装开始安装系统： 点击中国所在位置，选择时区，然后继续： 设置用户信息及登陆信息，然后继续： 等待安装完成： 进入主界面，打开终端安装net-tools(可以通过ifconfig查询主机IP) 1sudo apt install net-tools 查看 ubuntu 的 ssh 服务是否启动 1ps -e | grp ssh 出现以下提示，表示Openssh-Server已安装。 若未出现以上提示则需要安装openssh-server,方ssh软件远程操作 1sudo apt-get install openssh-server 设置防火墙允许22端口被访问 1sudo ufw allow 22 查询主机IP Win+R 调用命令提示符CMD Ping 虚拟机主机地址+端口 并回车 1telnet 172.31.84.77 22 出现如下提示表示 地址端口可以ping通。 安装远程登陆软件推荐MobaXterm 安装完毕后，进行相关登录设置 至此SSH远程登陆成功]]></content>
+      <categories>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>Hyper-V</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[读书计划2019]]></title>
     <url>%2Fposts%2F10f46d57.html</url>
     <content type="text"><![CDATA[读书是一剂良药读书读来读去，读的都不是未来，而是过去。人为何要钟情于阅读？ 有些人，经历一些生活的打击，会怨恨，愤慨，绝望。而还有一些人，经历一些生活的打击，反而学会了宽恕，淡忘，释然。后者多半内心平静。从前有人说，现在静不下来读书了。另一人说，搞错了，不是静下来读书，是读书让你静下来。读书到底有没有用，我想说某种程度上没有用，但它能让人平静。平静这种心情， 在这样躁动的年代，书是一种精神药物。摆在书架上，它就像是一颗颗药丸，各有不同的功效，治各种不同的精神创伤。 读书计划2019职场管理类 小强升职记 - 邹鑫 搞定 - [美]戴维·艾伦 专业主义 - 大前研一 非暴力沟通 - [美] 马歇尔·卢森堡 原则 - [美]瑞·达利欧 每周工作4小时 - 蒂莫西·费里斯 高效演讲-胡维 把时间当作朋友-李笑来 经济类 穷爸爸富爸爸 - [美] 罗伯特·清崎 小狗钱钱 - [德] 博多·舍费尔 魔鬼经济学 - [美] 史蒂芬·列维特 互联网类 人人都是产品经理 - 苏杰 人人都是产品经理2.0 - 苏杰 新零售的未来 - 翁怡诺 重新定义公司 - [美]埃里克·施密特 参与感_小米口碑营销内部手册 从零开始做运营进阶篇-张亮 生活技能类 斯坦福完美睡眠法 - 西野精致 如何阅读一本书 - [美]莫提默·J.艾德勒 学会提问 - (美)尼尔.布朗 美国纽约摄影学院摄影教材（上） 美国纽约摄影学院摄影教材（下） 社会人文 激荡十年 - 吴晓波 激荡三十年 - 吴晓波 大败局 - 吴晓波 今日简史 - 尤瓦尔·赫拉利 未来简史 - 尤瓦尔·赫拉利 事实 - 汉斯·罗斯林 乌合之众 - (法)古斯塔夫.勒庞 巨婴国 - 武志红 显微镜下的大明 - 马伯庸 万万没想到 - 万维钢 洗澡 - 杨绛 小说 三体1-地球往事 - 刘慈欣 三体2-黑暗森林 - 刘慈欣 三体3-死神永生 -刘慈欣w 流浪地球 - 刘慈欣 长安十二时辰 古董局中局1- 武则天明堂玉佛头失窃案 古董局中局2- 清明上河图 古董局中局3- 掠宝清单 古董局中局4- 大结局 历史 空王冠 玫瑰战争与都铎王朝的崛起 易中天 品三国 易中天 风流南宋]]></content>
@@ -215,6 +251,20 @@
       <tags>
         <tag>GooglePlay</tag>
         <tag>手机</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Win10下Git多账号同一电脑多个ssh-key的管理]]></title>
+    <url>%2Fposts%2F1526b943.html</url>
+    <content type="text"><![CDATA[有时候在电脑上，需要同时管理多个代码托管平台，在推送不同平台时，需要使用不同 的SSH进行链接，如何进行多个SSH的创建和管理一时间让我有些头痛。查询百度后，解决办法大致如下： 本次要在一台电脑上同时管理Github和码云，由于是多SSH管理，需要在局部环境下创建2个SSH。 云码注册的邮箱是：zhanminie@hotmail.com Github注册的邮箱是：qq435271761@hotmail.com 管理员模式打开Git Bash，输入git config --global --list 查看自己电脑主机是否对Git进行了相关的全局设置: 1git config --global --list 如果存在，先删除全局变量，例如： 12git config --global --unset user.name "13588245977"git config --global --unset user.email "zhanminjie@hotmail.com" 12git config --global --unset user.name "zmj2008"`git config --global --unset user.email "qq435271761@hotmail.com" 新建两个SSH 1234git config --global user.name "zmj2008"git config --global user.email "qq435271761@hotmail.com"ssh-keygen -t rsa -C qq435271761@hotmail.com 执行命令 创建github对应的sshkey，将其命名为id_rsa 123git config --global user.name "13588245977"git config --global user.email "zhanminjie@hotmail.com"ssh-keygen -t rsa -C zhanminjie@hotmail.com 执行命令创建云码对应的sshkey，将其命名为id_rsa_gitee 创建成功示意图如下： 123456789101112131415161718192021C:\Users\Mayjor_Zmj&gt;ssh-keygen -t rsa -C zhanminjie@hotmail.comGenerating public/private rsa key pair.Enter file in which to save the key (C:\Users\Mayjor_Zmj/.ssh/id_rsa): id_rsa_giteeEnter passphrase (empty for no passphrase):Enter same passphrase again:Your identification has been saved in id_rsa_github.Your public key has been saved in id_rsa_github.pub.The key fingerprint is:SHA256:TmR4BCxLZX1JVRB/dtI9B1JVL18Y+PiEruvFs/MOUSE zhanminjie@hotmail.comThe key's randomart image is:+---[RSA 2048]----+| o+o...oE**.+|| o..o. o .+ *o|| . o. +. +*.X|| . + o.o*=|| S ..o .|| o .... || . .= || ...+ || .o..+o |+----[SHA256]-----+ 此时在系统sysem32中会将生成id_ rsa,id_rsa.pub(公钥); id_rsa_gitee,id_rsa_gitee.pub(公钥) 四个文件，将其放到C:\Users\Mayjor_Zmj\ .ssh 文件夹下 把云码和github对应的公钥绑定到对应网站到服务器 将新建SS加入 SSH agent当中 ssh-agent bashssh-add ~/.ssh/github_id_rsassh-add ~/.ssh/gitlab_id_rsa_gitee 在C:\Users\Mayjor_Zmj\ .ssh 文件夹下新建config.txt文本文件对两SSH进行配置 在.ssh目录下创建config文本文件并完成相关配置(最核心的地方) 每个账号单独配置一个Host，每个Host要取一个别名，每个Host主要配置HostName和IdentityFile两个属性即可 Host的名字可以取为自己喜欢的名字，不过这个会影响git相关命令，例如：Host mygithub 这样定义的话，命令如下，即git@后面紧跟的名字改为mygithubgit clone git@github:PopFisher/AndroidRotateAnim.git HostName 这个是真实的域名地址IdentityFile 这里是id_rsa的地址PreferredAuthentications 配置登录时用什么权限认证–可设为publickey,password publickey,keyboard-interactive等User 配置使用用户名 12345678910111213# githubHost github.comHostName github.comPreferredAuthentications publickeyIdentityFile ~/.ssh/id_rsaUser zmj2008 # smartgitHost gitee.comHostName gitee.comPreferredAuthentications publickeyIdentityFile ~/.ssh/id_rsa_giteeUser 13588245977 设置玩完成后，输入ssh -T git@github.com/ssh -T git@gitee.com进行测试，查看配置是否成功。 测试1成功： 123Mayjor_Zmj@DESKTOP-CVQMHBH MINGW64 ~/Desktop$ ssh -T git@github.comHi zmj2008! You've successfully authenticated, but GitHub does not provide shell access #出现该句表示成功 测试2未成功： 123Mayjor_Zmj@DESKTOP-CVQMHBH MINGW64 ~/Desktop$ ssh -T git@gitee.comgit@gitee.com: Permission denied (publickey). #测试未成功，未有权限 若发生上述情况，处理的解决办法是先输入eval ssh-agent -s 再输入ssh-add ~/.ssh/id_rsa_github就解决了。 1234567Mayjor_Zmj@DESKTOP-CVQMHBH MINGW64 ~/Desktop$ eval `ssh-agent -s`Agent pid 1749Mayjor_Zmj@DESKTOP-CVQMHBH MINGW64 ~/Desktop$ ssh-add ~/.ssh/id_rsa_giteeIdentity added: /c/Users/Mayjor_Zmj/.ssh/id_rsa_gitee(zhanminjie@hotmail.com) 测试2成功： 123Mayjor_Zmj@DESKTOP-CVQMHBH MINGW64 ~/Desktop$ ssh -T git@gitee.comHi zhanminjie! You've successfully authenticated, but GITEE.COM does not provide shell access. 这样两个SSH在局部变量下创建成功。Github和码云既可以分别进行管理了。]]></content>
+      <categories>
+        <category>ssh-key</category>
+      </categories>
+      <tags>
+        <tag>ssh-key</tag>
+        <tag>多账号</tag>
+        <tag>Windows</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
