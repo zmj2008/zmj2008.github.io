@@ -111,10 +111,12 @@
 <meta property="og:image" content="https://i.loli.net/2019/11/07/uLMYeVqdUDAOnJz.png">
 <meta property="og:image" content="https://i.loli.net/2019/11/07/A8uXO3FvPstGHe4.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/11/07/tyXTJFYHqWxw8QK.jpg">
-<meta property="og:image" content="https://i.loli.net/2019/11/07/Wast8zOv4LZEqCD.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/11/20/7PKQDUm4EwN3yYx.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/11/20/yV9DU6riTIexkAR.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/11/07/FnWYrTy1NzDwbJa.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/11/20/iQKk5Prn4j2DFMq.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/11/08/8gROWhnuQKBALmx.jpg">
-<meta property="og:updated_time" content="2019-11-10T02:37:45.203Z">
+<meta property="og:updated_time" content="2019-11-19T18:01:20.020Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL学习笔记一：MySQL8.0安装及启动">
 <meta name="twitter:description" content="MySQL介绍MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下产品。MySQL 是最流行的关系型数据库管理系统之一，在 WEB 应用方面，MySQL是最好的 RDBMS (Relational Database Management System，关系数据库管理系统) 应用软件之一。 其特点在于：开源、免费、成本低；性能高、移随性好；体积小、便">
@@ -260,7 +262,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">49</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">48</span></a>
 
   </li>
         
@@ -278,7 +280,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">20</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">19</span></a>
 
   </li>
         
@@ -479,7 +481,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-11-10 10:37:45" itemprop="dateModified" datetime="2019-11-10T10:37:45+08:00">2019-11-10</time>
+                <time title="修改时间：2019-11-20 02:01:20" itemprop="dateModified" datetime="2019-11-20T02:01:20+08:00">2019-11-20</time>
               </span>
             
           
@@ -587,34 +589,33 @@
 <h2 id="新建配置文件"><a href="#新建配置文件" class="headerlink" title="新建配置文件"></a>新建配置文件</h2><p>打开mysql-8.0.16-winx64文件，在当前目录下，新建一个名为my.ini的文件，然后打开该文件，将下列代码加入到该文件中； </p>
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="section">[mysqld]</span></span><br><span class="line"><span class="comment"># 设置3306端口</span></span><br><span class="line"><span class="attr">port</span>=<span class="number">3306</span></span><br><span class="line"><span class="comment"># 设置mysql的安装目录</span></span><br><span class="line"><span class="attr">basedir</span>=C:\mysql-<span class="number">8.0</span>.<span class="number">18</span>-winx64</span><br><span class="line"><span class="comment"># 设置mysql数据库的数据的存放目录</span></span><br><span class="line"><span class="attr">datadir</span>=C:\mysql-<span class="number">8.0</span>.<span class="number">18</span>-winx64\Database</span><br><span class="line"><span class="comment"># 允许最大连接数</span></span><br><span class="line"><span class="attr">max_connections</span>=<span class="number">200</span></span><br><span class="line"><span class="comment"># 允许连接失败的次数。这是为了防止有人从该主机试图攻击数据库系统</span></span><br><span class="line"><span class="attr">max_connect_errors</span>=<span class="number">10</span></span><br><span class="line"><span class="comment"># 服务端使用的字符集默认为UTF8</span></span><br><span class="line"><span class="attr">character-set-server</span>=utf8</span><br><span class="line"><span class="comment"># 创建新表时将使用的默认存储引擎</span></span><br><span class="line"><span class="attr">default-storage-engine</span>=INNODB</span><br><span class="line"><span class="comment"># 默认使用“mysql_native_password”插件认证</span></span><br><span class="line"><span class="attr">default_authentication_plugin</span>=mysql_native_password</span><br><span class="line"><span class="section">[mysql]</span></span><br><span class="line"><span class="comment"># 设置mysql客户端默认字符集</span></span><br><span class="line"><span class="attr">default-character-set</span>=utf8</span><br><span class="line"><span class="section">[client]</span></span><br><span class="line"><span class="comment"># 设置mysql客户端连接服务端时默认使用的端口</span></span><br><span class="line"><span class="attr">port</span>=<span class="number">3306</span></span><br><span class="line"><span class="attr">default-character-set</span>=utf8</span><br></pre></td></tr></table></figure>
 
-<h2 id="命令行登录"><a href="#命令行登录" class="headerlink" title="命令行登录"></a>命令行登录</h2><p>进入C:\mysql-8.0.18-winx64\bin 目录,以管理员身份打开<font color="red">第一个</font>CMD窗口，</p>
+<h2 id="命令行登录"><a href="#命令行登录" class="headerlink" title="命令行登录"></a>命令行登录</h2><p>进入C:\mysql-8.0.18-winx64\bin 目录,以管理员身份打开CMD窗口，</p>
 <figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:<span class="symbol">\W</span>INDOWS<span class="symbol">\s</span>ystem32&gt;CD C:<span class="symbol">\m</span>ysql-8.0.18-winx64<span class="symbol">\b</span>in</span><br></pre></td></tr></table></figure>
 
-<p>此时mysql服务为关闭状态。</p>
-<p>然后在–skip-gant-tables状态下<font color="red">开启mysq服务</font> ,以下命令可以使得root首次免密登录</p>
-<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">mysqld</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">console</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">skip</span><span class="literal">-</span><span class="comment">grant</span><span class="literal">-</span><span class="comment">tables</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">shared</span><span class="literal">-</span><span class="comment">memory</span></span><br></pre></td></tr></table></figure>
+<p> <strong>MySQL服务安装</strong>， 执行mysqld install命令当出现Service successfully installed时表示mysql服务安装完成 ，</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld <span class="comment">--install</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://i.loli.net/2019/11/07/Wast8zOv4LZEqCD.jpg" width="800" height="高度" align="center">
+<p>注意：mysqld –install [服务名]</p>
+<p>后面的服务名可以不写，默认的名字为 mysql。当然，如果你的电脑上需要安装多个MySQL服务，就可以用不同的名字区分了，比如 mysql5 和 mysql8。</p>
+<p><img src="https://i.loli.net/2019/11/20/7PKQDUm4EwN3yYx.jpg" alt></p>
+<p> <strong>MySQL服初始化</strong>， 在MySQL安装目录的 bin 目录下执行命令： </p>
+<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">mysqld</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">initialize</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">console</span></span><br></pre></td></tr></table></figure>
 
-<p>进入C:\mysql-8.0.18-winx64\bin 目录,以管理员身份打开<font color="red">第二个</font>CMD窗口，</p>
-<p>该窗口使用<code>mysql -uroot -p</code>回车登录即可 </p>
+<p> 执行完成后，会打印 root 用户的初始默认密码，比如： </p>
+<img src="https://i.loli.net/2019/11/20/yV9DU6riTIexkAR.jpg" width="800">
+
+<p>注意！执行输出结果里面有一段： [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: Ng* jbnKGd2!其中root@localhost:后面的“Ng*jbnKGd2!”就是初始密码（不含首位空格）。在没有更改密码前，需要记住这个密码，后续登录需要用到。要是手贱，关快了，或者没记住，那也没事，删掉初始化的 datadir 目录，再执行一遍初始化命令，又会重新生成的。当然，也可以使用安全工具，强制改密码，用什么方法，自己随意。</p>
+<p><strong>启动MySQL的服务</strong>，通过命令net start mysql启动</p>
+<p>进入D:\Program Files\mysql-8.0.11-winx64\bin路径下，执行mysql -u root -p命令，然后输入之前保存的密码，我这里是Ng*jbnKGd2_! </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1、<span class="selector-tag">cd</span> <span class="selector-tag">C</span>:\<span class="selector-tag">mysql-8</span><span class="selector-class">.0</span><span class="selector-class">.18-winx64</span>\<span class="selector-tag">bin</span></span><br><span class="line">2、<span class="selector-tag">mysql</span> <span class="selector-tag">-u</span> <span class="selector-tag">root</span> <span class="selector-tag">-p</span></span><br></pre></td></tr></table></figure>
+
 <img src="https://i.loli.net/2019/11/07/FnWYrTy1NzDwbJa.jpg" width="800" height="高度" align="center">
 
 <p>至此数据库安装成功</p>
-<h2 id="修改初始登陆密码："><a href="#修改初始登陆密码：" class="headerlink" title="修改初始登陆密码："></a>修改初始登陆密码：</h2><p>先重载授权表，再执行修改密码语句:</p>
-<blockquote>
-<p>– 重载授权表 </p>
-</blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FLUSH</span> <span class="keyword">PRIVILEGES</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="修改初始登陆密码："><a href="#修改初始登陆密码：" class="headerlink" title="修改初始登陆密码："></a>修改初始登陆密码：</h2><p> 修改用户密码，在MySQL中执行命令： </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> <span class="string">'root'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">WITH</span> mysql_native_password <span class="keyword">BY</span> <span class="string">'qq886991985'</span>;</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>– 修改密码(版本不同，修改的语句不同)</p>
-</blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> <span class="string">'root'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'qq886991985'</span></span><br></pre></td></tr></table></figure>
-
-<p>关闭两个CMD窗口，重新进入C:\mysql-8.0.18-winx64\bin 目录,以管理员身份打开CMD窗口，开启mysql服务，</p>
-<p>输入 <code>mysql -uroot -p</code>，再输入修改后的密码 <code>qq886991985</code>便可登录成功。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1、<span class="selector-tag">cd</span> <span class="selector-tag">C</span>:\<span class="selector-tag">mysql-8</span><span class="selector-class">.0</span><span class="selector-class">.18-winx64</span>\<span class="selector-tag">bin</span></span><br><span class="line">2、<span class="selector-tag">mysql</span> <span class="selector-tag">-u</span> <span class="selector-tag">root</span> <span class="selector-tag">-p</span></span><br></pre></td></tr></table></figure>
+<img src="https://i.loli.net/2019/11/20/iQKk5Prn4j2DFMq.jpg" width="800" height="高度" align="center">
 
 <h1 id="Navicat-Premium-12-登录MySQL"><a href="#Navicat-Premium-12-登录MySQL" class="headerlink" title="Navicat Premium 12  登录MySQL"></a>Navicat Premium 12  登录MySQL</h1><p><a href="https://www.lanzous.com/i77rnkj" rel="external nofollow noopener noreferrer" target="_blank">Navicat Premium 12+注册机</a>  简单连接配置即可连接使用，使用界面如下：</p>
 <img src="https://i.loli.net/2019/11/08/8gROWhnuQKBALmx.jpg" width="800" height="高度" align="center">
@@ -723,8 +724,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/ed3f23a1.html" rel="prev" title="Win10下IE浏览器图标无法删除的解决办法">
-                Win10下IE浏览器图标无法删除的解决办法 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/2a4d6fbc.html" rel="prev" title="MySQL学习笔记二：DQL查询语言">
+                MySQL学习笔记二：DQL查询语言 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -857,9 +858,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -972,9 +971,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">49</span>
+                    <span class="site-state-item-count">48</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1103,7 +1100,7 @@
         <div class="widget-wrap">
             <div id="myCanvasContainer" class="widget tagcloud">
                 <canvas width="200" height="250" id="resCanvas" style="width=100%">
-                  <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/5G/">5G</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Discord/">Discord</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ECS/">ECS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ESS/">ESS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GooglePlay/">GooglePlay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hugo/">Hugo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hyper-V/">Hyper-V</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IE浏览器/">IE浏览器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OSS/">OSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PicUploader/">PicUploader</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Picgo/">Picgo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SLB/">SLB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/">Typora</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPC/">VPC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Word/">Word</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aplayer/">aplayer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/myQR/">myQR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nest/">nest</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openssl/">openssl</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/qBittorrent/">qBittorrent</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh-key/">ssh-key</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tagcloud/">tagcloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/booklist/">书单</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二维码/">二维码</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云盾/">云盾</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/optimize/">优化</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/modification/">修改</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/figurebed/">图床</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/多账号/">多账号</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cellphone/">手机</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库/">数据库</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动通信/">移动通信</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system/">系统</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/系统优化/">系统优化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video/">视频</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plan/">计划</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/资源/">资源</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/通信技术/">通信技术</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/阿里云/">阿里云</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/snowflake/">雪花</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/colour/">颜色</a><span class="tag-list-count">1</span></li></ul>
+                  <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/5G/">5G</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Discord/">Discord</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ECS/">ECS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ESS/">ESS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GooglePlay/">GooglePlay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hugo/">Hugo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hyper-V/">Hyper-V</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IE浏览器/">IE浏览器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OSS/">OSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PicUploader/">PicUploader</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Picgo/">Picgo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SLB/">SLB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/">Typora</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPC/">VPC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Word/">Word</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aplayer/">aplayer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/myQR/">myQR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nest/">nest</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openssl/">openssl</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/qBittorrent/">qBittorrent</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh-key/">ssh-key</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tagcloud/">tagcloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/booklist/">书单</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二维码/">二维码</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云盾/">云盾</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/optimize/">优化</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/modification/">修改</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/figurebed/">图床</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/多账号/">多账号</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cellphone/">手机</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库/">数据库</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动通信/">移动通信</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system/">系统</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/系统优化/">系统优化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video/">视频</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plan/">计划</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/通信技术/">通信技术</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/阿里云/">阿里云</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/snowflake/">雪花</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/colour/">颜色</a><span class="tag-list-count">1</span></li></ul>
                 </canvas>
             </div>
         </div>
