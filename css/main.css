@@ -1869,7 +1869,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f0ffff;
+  background: #6e2fe0;
 }
 .feed-link,
 .chat {
@@ -3054,7 +3054,7 @@ ul.breadcrumb li+li:last-child {
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
 body {
-  background: url("https://i.loli.net/2019/10/29/koCyDPAI74FxdhX.jpg");
+  background: url("https://source.unsplash.com/daily/1600x900");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
