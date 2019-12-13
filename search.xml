@@ -13,6 +13,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Hexo博客部署到腾讯云服务器]]></title>
+    <url>%2Fposts%2Fe1764d0e.html</url>
+    <content type="text"><![CDATA[原先将Hexo部署到 github 和 coding 上的，访问速度较慢，于是购买了低配腾讯云服务器对原先博客进行重新部署。只要通过三步即可成功部署： 1.云服务器端 git 的配置 2.配置Nginx 3.本地端 hexo 的设置更改 云服务器重装系统并远程登陆** 确保是干净的操作系统，没有安装过其它环境带的Apache/Nginx/php/MySQL（已有环境不可安装）。 安装宝塔Linux面板7.0.2安装命令如下： 1yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh 宝塔面板登陆： 根据安装完成的提示（登陆地址，账号，密码），登陆宝塔管理面板我的如下： Bt-Panel: http://111.229.17.211:8888/0e1fb823。 安装配置建站环境宝塔面板安装Nginx软件商店选择建站安装环境，本次选择推荐选项安装 Nginx (主要用到这个) Mysql php Pure-Ftpd phpMyAdmin 云服务器端配置git下载 git （下载到 /usr/local/src 目录下） 12cd /usr/local/src wget http://ftp.ntu.edu.tw/software/scm/git/git-2.9.5.tar.gz 解压到当前目录 1tar -zvxf git-2.9.5.tar.gz 编译 12cd git-2.9.5make all prefix=/usr/local/git 安装 git 到 /usr/local/git 目录下 1make install prefix=/usr/local/git 配置 git 环境变量 1echo 'export PATH=$PATH:/usr/local/git/bin' &gt;&gt; /etc/bashrc 使 git 环境变量生效 1source /etc/bashrc 验证安装完成 1git --version 宝塔面板文件管理查看git已安装 云服务器创建git 仓库1.创建hexo的仓库 git仓库用于存放博客网站资源。在 home/git的目录下，创建一个名为hexo的仓库。如果没有 home/git目录，需要先创建，然后修改目录的所有权和用户权限。 12345mkdir /home/git/chown -R $USER:$USER /home/git/chmod -R 755 /home/git/cd /home/git/git init --bare hexo.git 2.创建git hooks 在 /home/git/hexo.git下，有一个自动生成的 hooks文件夹，我们创建一个新的 git钩子 post-receive，用于自动部署。 1vim /home/git/hexo.git/hooks/post-receive 将以下代码写到post-receive 12#!/bin/bash git --work-tree=/home/hexo --git-dir=/home/git/hexo.git checkout -f 宝塔面板文件夹系统内查看如下： 修改文件权限，使得其可执行 1chmod +x /home/git/hexo.git/hooks/post-receive 3.创建博客保存目录hexo 123mkdir /home/hexo/ chown -R $USER:$USER /home/hexo/chmod -R 755 /home/hexo/ 宝塔面板配置 Nginx添加网络，选择之前服务器上创建的根目录 填写1年期免费SSL 证书,可以在腾讯SSL 证书-域名型免费版申请并下载（Nginx的，因为我安装的是这个服务） hexo站点配置文件修改1.打开hexo站点配置文件_config.yml，修改如下： 123456789# Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy: - type: git repo: tencent: root@111.229.17.211:/home/git/hexo branch: master message: blog update - type: baidu_url_submitter 服务器上部署123hexo cleanhexo generatehexo deploy hexo deploy 期间需要输入云服务器登陆密码。静态文件已部署到服务器中。 参考博客：https://blog.csdn.net/jiejiemcu/article/details/102081674]]></content>
+      <categories>
+        <category>腾讯云</category>
+      </categories>
+      <tags>
+        <tag>Hexo部署</tag>
+        <tag>云服务器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Win10下IE浏览器图标无法删除的解决办法]]></title>
     <url>%2Fposts%2Fed3f23a1.html</url>
     <content type="text"><![CDATA[为自学MySQL,在Win10电脑上安装SQLyog软件，安装完毕时突然发现电脑桌面自动添加了IE浏览器的图标，而且该图标无法直接右键删除。 我去【控制面板】-【程序卸载】里面也没有找到安装IE浏览器（之前一直没有遇到过这种情况） ，那该如何是好呢？通过百度后，我将相关的解决办法记录与此，以便日后出现同类问题可以及时的解决。 Win+R,输入“regedit”,进入注册表编辑器, 进入如下目录 计算\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace 找到{00010203-0001-0305-102938475600}字典目录 删除{00010203-0001-0305-102938475600}字典目录 这时再返回电脑桌面，发现原先的IE图标已经被删除，问题成功解决！]]></content>
@@ -192,18 +204,6 @@
         <tag>Hexo</tag>
         <tag>nest</tag>
         <tag>雪花</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[PicUploader图床工具设置]]></title>
-    <url>%2Fposts%2Fcb6668a4.html</url>
-    <content type="text"><![CDATA[操作系统环境：Win10 需提前安装 git 然后创建文件夹，使用git命令下载 PicUploader 源代码 1git clone https://github.com/xiebruce/PicUploader.git 安装 phpstudy2018 于E盘（自选），把整个 PicUploader文件夹放置于E:\phpStudy\PHPTutorial\WWW目录下，进入E:\phpStudy\PHPTutorial\Apache\conf目录，找到vhosts.conf文件并打开，在原有代码下空一行，添加如下代码： 1234567&lt;VirtualHost *:80&gt; DocumentRoot "E:\phpStudy\PHPTutorial\WWW\PicUploader" ServerName api.picuploader.com DirectoryIndex dashboard.php ErrorLog "logs/api.picuploader.com-error.log" CustomLog "logs/api.picuploader.com-access.log" common&lt;/VirtualHost&gt; 打开phpStudy,切换至最新版php+Apache，重启后运行状态里Apache亮绿灯即可。 并保证PHP扩展中已开启php_fileinfo、php_curl、php_gd2、php_exif四个扩展。要使用网页版查看记录还需要开启php_pdo_sqlite和php_pdo_mysql 找到C:\Windows\System32\drivers\etc中的hosts文件，添加一条语句并保存。 1127.0.0.1 api.picuploader.com 打开浏览器，并输入http://api.picuploader.com如果一切正常可进入如下PicUploader Web界面 1http://api.picuploader.com 未完待续 参考博客：https://www.xiebruce.top/17.html]]></content>
-      <categories>
-        <category>PicUploader</category>
-      </categories>
-      <tags>
-        <tag>图床</tag>
-        <tag>PicUploader</tag>
       </tags>
   </entry>
   <entry>
@@ -449,9 +449,9 @@
         <category>Hexo</category>
       </categories>
       <tags>
+        <tag>aplayer</tag>
         <tag>Hexo</tag>
         <tag>nest</tag>
-        <tag>aplayer</tag>
       </tags>
   </entry>
   <entry>
