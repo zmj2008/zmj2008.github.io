@@ -115,7 +115,8 @@
 <meta property="og:image" content="https://i.loli.net/2019/12/13/6ynSjxNTq5dbB7r.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/12/13/Gs5A1FM2wbB7CSi.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/12/13/Du98SX7TBIxCmYE.jpg">
-<meta property="og:updated_time" content="2019-12-13T13:02:12.224Z">
+<meta property="og:image" content="https://i.loli.net/2019/12/17/nNJbSIGVlFCuH3g.jpg">
+<meta property="og:updated_time" content="2019-12-17T14:19:18.260Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客部署到腾讯云服务器">
 <meta name="twitter:description" content="原先将Hexo部署到 github 和 coding 上的，访问速度较慢，于是购买了低配腾讯云服务器对原先博客进行重新部署。只要通过三步即可成功部署： 1.云服务器端 git 的配置2.配置Nginx3.本地端 hexo 的设置更改 云服务器重装系统并远程登陆  确保是干净的操作系统，没有安装过其它环境带的Apache/Nginx/php/MySQL（已有环境不可安装）。 安装宝塔Linux面板">
@@ -480,7 +481,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-12-13 21:02:12" itemprop="dateModified" datetime="2019-12-13T21:02:12+08:00">2019-12-13</time>
+                <time title="修改时间：2019-12-17 22:19:18" itemprop="dateModified" datetime="2019-12-17T22:19:18+08:00">2019-12-17</time>
               </span>
             
           
@@ -640,8 +641,12 @@
 <p>hexo deploy     期间需要输入云服务器登陆密码。静态文件已部署到服务器中。</p>
 <img src="https://i.loli.net/2019/12/13/Du98SX7TBIxCmYE.jpg">
 
+<p>若 hexo deploy  出现以下内容：</p>
+<img src="https://i.loli.net/2019/12/17/nNJbSIGVlFCuH3g.jpg">
 
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf ~<span class="regexp">/.ssh/</span>known_hosts</span><br></pre></td></tr></table></figure>
 
+<p>重新ssh连接就可以了！</p>
 <p>参考博客：<a href="https://blog.csdn.net/jiejiemcu/article/details/102081674" rel="external nofollow noopener noreferrer" target="_blank">https://blog.csdn.net/jiejiemcu/article/details/102081674</a></p>
 
       

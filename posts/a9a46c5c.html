@@ -110,11 +110,11 @@
 <meta property="og:image" content="https://i.loli.net/2019/12/13/8aQSV9K7rU4LguN.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/12/13/we4smb3XBHKrVaI.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/12/13/BHR5MosPil9kpre.jpg">
-<meta property="og:image" content="http://111.229.17.211:3389/imgs/2019/12/d1fd043f36468d55.jpg">
-<meta property="og:image" content="http://111.229.17.211:3389/imgs/2019/12/340172058110c7d1.jpg">
-<meta property="og:image" content="http://111.229.17.211:3389/imgs/2019/12/d3df7f9878cf323c.png">
-<meta property="og:image" content="http://111.229.17.211:3389/imgs/2019/12/cfccb37e6058387c.jpg">
-<meta property="og:updated_time" content="2019-12-16T02:52:03.998Z">
+<meta property="og:image" content="https://i.loli.net/2019/12/17/ftG2ALsdEUDuN8V.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/12/17/Bok5fWud7NcXpUJ.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/12/17/hF3t1VGmwUTJERY.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/12/17/XM3dVFaIqnH2J4P.jpg">
+<meta property="og:updated_time" content="2019-12-17T15:24:42.249Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="宝塔面板安装ImgURL个人图床">
 <meta name="twitter:description" content="利用腾讯云的官方COSFS工具，把新建的COS存储桶挂载到腾讯云服务器上（操作系统为Centos7）。 再安装ImgURL搭建个人图床。 搭建环境：Centos7 系统，宝塔面板已安装。 建立存储登陆腾讯云控制台—选择对象存储—新建存储桶（我这边已创建完成）   创建完成后整理如下信息： 存储桶名称（bucket_name）：x04680126 替换成你自己的 存储桶APPID（bucket_a">
@@ -479,7 +479,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-12-16 10:52:03" itemprop="dateModified" datetime="2019-12-16T10:52:03+08:00">2019-12-16</time>
+                <time title="修改时间：2019-12-17 23:24:42" itemprop="dateModified" datetime="2019-12-17T23:24:42+08:00">2019-12-17</time>
               </span>
             
           
@@ -601,14 +601,14 @@
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">新建站点：<span class="string">http:</span><span class="comment">//111.229.17.211:3389/</span></span><br><span class="line"></span><br><span class="line">新建站点根目录：<span class="regexp">/usr/</span>ImgURL-test</span><br></pre></td></tr></table></figure>
 
 <p>软件商店 php安装 <code>fileinfo</code>和<code>imagemagick</code>扩展</p>
-<img src="http://111.229.17.211:3389/imgs/2019/12/d1fd043f36468d55.jpg">
+<img src="https://i.loli.net/2019/12/17/ftG2ALsdEUDuN8V.jpg" style="zoom:200%;">
 
 <p>下载地址:<a href="https://github.com/helloxz/imgurl" rel="external nofollow noopener noreferrer" target="_blank">ImgURL</a>，并解压。</p>
 <p>宝塔面板进入站点根目录/usr/ImgURL-test，全选解压后的子文件并上传。</p>
-<img src="http://111.229.17.211:3389/imgs/2019/12/340172058110c7d1.jpg">
+<img src="https://i.loli.net/2019/12/17/Bok5fWud7NcXpUJ.jpg">
 
 <p>浏览器输入 站点域名 <a href="http://111.229.17.211:3389/" rel="external nofollow noopener noreferrer" target="_blank">http://111.229.17.211:3389/</a>  并确保检测结果通过—按下一步安装完成。</p>
-<img src="http://111.229.17.211:3389/imgs/2019/12/d3df7f9878cf323c.png">
+<img src="https://i.loli.net/2019/12/17/hF3t1VGmwUTJERY.jpg">
 
 <h1 id="取消广告"><a href="#取消广告" class="headerlink" title="取消广告"></a>取消广告</h1><p>新版本安装完成后默认会添加俩个条广告，取消掉都非常简单只需编辑网站根目录下的 footer.php 文件，文件路径 \ application \ views \ user \ footer.php </p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span> = <span class="string">'https://libs.xiaoz.top/assets/imgurl.js'</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">如果只是想删除广告，那就删掉以上代码就OK了</span><br><span class="line"></span><br><span class="line">如果要改为自己的广告就替换为本地调用：</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span> = <span class="string">'/static/imgurl.js'</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">然后再修改js为自己的广告</span><br><span class="line">/static/imgurl.js</span><br></pre></td></tr></table></figure>
@@ -617,7 +617,7 @@
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#使用协议打赏二维码路径</span></span><br><span class="line"><span class="meta-keyword">/data/</span>pages/use.md</span><br><span class="line"><span class="meta">#使用协议广告图片路径</span></span><br><span class="line"><span class="meta-keyword">/application/</span>views<span class="meta-keyword">/user/</span>page.php</span><br></pre></td></tr></table></figure>
 
 <p>由于本次安装为社区版本，无法绑定腾讯COS等外部存储。</p>
-<img src="http://111.229.17.211:3389/imgs/2019/12/cfccb37e6058387c.jpg">
+<img src="https://i.loli.net/2019/12/17/XM3dVFaIqnH2J4P.jpg">
 
 <p>参考博客：</p>
 <p><a href="https://www.234du.com/1167.html" rel="external nofollow noopener noreferrer" target="_blank">https://www.234du.com/1167.html</a></p>
