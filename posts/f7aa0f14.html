@@ -124,7 +124,7 @@
 <meta property="og:image" content="http://111.229.17.211:3389/imgs/2019/12/7f96b656589c0df6.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/12/17/ydTwb5QmDaFtHMl.jpg">
 <meta property="og:image" content="http://111.229.17.211:3389/imgs/2019/12/7ac153d170a4607b.jpg">
-<meta property="og:updated_time" content="2019-12-18T03:09:52.448Z">
+<meta property="og:updated_time" content="2019-12-19T04:44:54.115Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="腾讯云宝塔面板部署Nextcloud">
 <meta name="twitter:description" content="nextcloud  是基于云技术的工程教育平台，利用云技术，提高工程教育过程中教学、实验与创新的效率与效果。每一位nextcloud的使用者都可以以教师或学生身份登录， 从而使得每个人都可以传授知识也可以学习知识，真正做到any time， any where的工程教育全新愿景。   宝塔面板安装远程登陆腾讯云服务器，Centos系统安装命令 ： 1yum install -y wget &amp;a">
@@ -489,7 +489,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-12-18 11:09:52" itemprop="dateModified" datetime="2019-12-18T11:09:52+08:00">2019-12-18</time>
+                <time title="修改时间：2019-12-19 12:44:54" itemprop="dateModified" datetime="2019-12-19T12:44:54+08:00">2019-12-19</time>
               </span>
             
           
@@ -668,6 +668,34 @@
 <p>最后附上完善的伪静态文件：</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#nextcloud一些关键目录的权限设置</span></span><br><span class="line">    <span class="attribute">location</span> <span class="regexp">~ ^/(data|config|\.ht|db_structure\.xml|README)</span> &#123;</span><br><span class="line">        <span class="attribute">deny</span> all;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">#静态资源重定向1</span></span><br><span class="line">    <span class="attribute">location</span> <span class="regexp">~* \/core\/(?:js\/oc\.js|preview\.png).*$</span> &#123;</span><br><span class="line">        <span class="attribute">rewrite</span><span class="regexp"> ^</span> /index.php <span class="literal">last</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">#webdav重定向</span></span><br><span class="line">    <span class="attribute">location</span> / &#123;</span><br><span class="line">        <span class="attribute">rewrite</span><span class="regexp"> ^/caldav(.*)$</span> /remote.php/caldav<span class="variable">$1</span> <span class="literal">redirect</span>;</span><br><span class="line">        <span class="attribute">rewrite</span><span class="regexp"> ^/carddav(.*)$</span> /remote.php/carddav<span class="variable">$1</span> <span class="literal">redirect</span>;</span><br><span class="line">        <span class="attribute">rewrite</span><span class="regexp"> ^/webdav(.*)$</span> /remote.php/webdav<span class="variable">$1</span> <span class="literal">redirect</span>;</span><br><span class="line">        <span class="attribute">rewrite</span><span class="regexp"> ^(/core/doc/[^\/]+/)$</span> <span class="variable">$1</span>/index.html;</span><br><span class="line"><span class="comment">#静态资源重定向2,支持使用acme脚本在申请证书时对域名的验证</span></span><br><span class="line">     <span class="attribute">if</span> (<span class="variable">$uri</span> !<span class="regexp">~* (?:\.(?:css|js|svg|gif|png|html|ttf|woff)$|^\/(?:remote|public|cron|status|ocs\/v1|ocs\/v2)\.php|^\/\.well-known\/acme-challenge\/.*$))</span>&#123;</span><br><span class="line">         <span class="attribute">rewrite</span><span class="regexp"> ^</span> /index.php <span class="literal">last</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">#静态资源重定向3</span></span><br><span class="line">    <span class="attribute">location</span> <span class="regexp">~* \.(?:png|html|ttf|ico|jpg|jpeg)$</span> &#123;</span><br><span class="line">        <span class="attribute">try_files</span> <span class="variable">$uri</span> /index.php<span class="variable">$uri</span><span class="variable">$is_args</span><span class="variable">$args</span>;</span><br><span class="line">        <span class="attribute">access_log</span> <span class="literal">off</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line"><span class="attribute">location</span> <span class="regexp">~ ^/(?:updater)(?:$|/)</span> &#123;</span><br><span class="line">        <span class="attribute">try_files</span> <span class="variable">$uri</span>/ =<span class="number">404</span>;</span><br><span class="line">        <span class="attribute">index</span> index.php;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">#caldav和#carddav</span></span><br><span class="line">    <span class="attribute">rewrite</span> /.well-known/carddav /remote.php/dav <span class="literal">permanent</span>;</span><br><span class="line">    <span class="attribute">rewrite</span> /.well-known/caldav /remote.php/dav <span class="literal">permanent</span>;</span><br></pre></td></tr></table></figure>
 
+<h1 id="文件夹文件无法删除解决方法"><a href="#文件夹文件无法删除解决方法" class="headerlink" title="文件夹文件无法删除解决方法"></a>文件夹文件无法删除解决方法</h1><p>现象</p>
+<p>删除目录或文件时提示：无法删除文件<strong>*或者”Error deleting file *</strong></p>
+<p>解决方法</p>
+<p>查看数据目录下nextcloud.log,可能有三种情况：</p>
+<p><strong>情况A</strong>   </p>
+<p>文件或目录被锁     关键词日志中检索  <font color="red">is locked</font></p>
+<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"reqId":"0DijSqEkfOg2iyh9VD8J","remoteAddr":"xx.xx.xx.xx","app":"webdav","message":"Exception: &#123;<span class="symbol">\"</span>Message<span class="symbol">\"</span>:<span class="symbol">\"</span>HTTP<span class="symbol">\\</span><span class="symbol">\/</span>1.1 423 <span class="symbol">\\</span><span class="symbol">\"</span>path<span class="symbol">\\</span><span class="symbol">\/</span>file.extension<span class="symbol">\\</span><span class="symbol">\"</span> is locked<span class="symbol">\"</span>,<span class="symbol">\"</span>Exception<span class="symbol">\"</span>:<span class="symbol">\"</span>OCA<span class="symbol">\\</span><span class="symbol">\\</span>DAV<span class="symbol">\\</span><span class="symbol">\\</span>Connector<span class="symbol">\\</span><span class="symbol">\\</span>Sabre<span class="symbol">\\</span><span class="symbol">\\</span>Exception<span class="symbol">\\</span><span class="symbol">\\</span>FileLocked<span class="symbol">\"</span>,<span class="symbol">\"</span>Code<span class="symbol">\"</span>:0,<span class="symbol">\"</span>Trace<span class="symbol">\"</span>:<span class="symbol">\"</span>#0</span><br></pre></td></tr></table></figure>
+
+<p>此时是因为文件或目录被锁，可按以下操作暂时解决问题：</p>
+<p>1)宝塔面板nextcloud根目录下修改config文件夹内的config.php文件</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'maintenance'</span> =&gt; <span class="keyword">false</span>,        #<span class="string">'maintenance'</span> 赋值 <span class="keyword">true</span>    进入维护模式</span><br></pre></td></tr></table></figure>
+
+<p>2)宝塔面板登陆nextcloud数据库，使用mysql命令行工具，执行语句</p>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> oc_file_locks <span class="keyword">WHERE</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>3)退出维护模式</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'maintenance'</span> =&gt; <span class="keyword">true</span>,        #<span class="string">'maintenance'</span> 赋值 <span class="keyword">false</span>     退出维护模式</span><br></pre></td></tr></table></figure>
+
+<p>4)确保cron正常运行。</p>
+<p><strong>情况B</strong>  <font color="red">Permission denied</font></p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">"reqId"</span>:<span class="string">"***"</span>,<span class="string">"level"</span>:<span class="number">3</span>,<span class="string">"time"</span>:<span class="string">"2018-04-28T16:19:53+00:00"</span>,<span class="string">"remoteAddr"</span>:<span class="string">"127.0.0.1"</span>,<span class="string">"user"</span>:<span class="string">"***"</span>,<span class="string">"app"</span>:<span class="string">"PHP"</span>,<span class="string">"method"</span>:<span class="string">"<span class="keyword">DELETE</span>"</span>,<span class="string">"url"</span>:<span class="string">"\/remote.php\/webdav\***"</span>,<span class="string">"message"</span>:<span class="string">"unlink(\/mnt\/***): Permission denied at ***/lib\/private\/Files\/Storage\/Local.php#112"</span>,<span class="string">"userAgent"</span>:<span class="string">"Mozilla\/5.0 ,"</span>manuscript from cmdgy.com, version<span class="string">":"</span><span class="number">13.0.1.1</span><span class="string">"&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>此时待删除的①文件、②目录、③目录中有文件 对于php进程无写入权限。</p>
+<p>使用chown -R修复数据目录的权限解决。</p>
+<p><strong>情况C</strong>  <font color="red">The first argument to copy() function cannot be a directory at，rename(<strong><em>files_trashbin/files/</em></strong>): Invalid cross-device link at / </font></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attr">"reqId"</span>:<span class="string">"***"</span>,<span class="attr">"level"</span>:<span class="number">3</span>,<span class="attr">"time"</span>:<span class="string">"2018-04-28T16:26:32+00:00"</span>,<span class="attr">"remoteAddr"</span>:<span class="string">"127.0.0.1"</span>,<span class="attr">"user"</span>:<span class="string">"***"</span>,<span class="attr">"app"</span>:<span class="string">"PHP"</span>,<span class="attr">"method"</span>:<span class="string">"DELETE"</span>,<span class="attr">"url"</span>:<span class="string">"\/remote.php\/webdav\***"</span>,<span class="attr">"message"</span>:<span class="string">"rename(): The first argument to copy() function cannot be a directory at ***/lib\/private\/Files\/Storage\/Local.php#270"</span>,<span class="attr">"userAgent"</span>:<span class="string">"Mozilla\/5.0 manuscript from cmdgy.com "</span>,<span class="attr">"version"</span>:<span class="string">"13.0.1.1"</span>&#125;</span><br><span class="line"></span><br><span class="line">&#123;<span class="attr">"reqId"</span>:<span class="string">"***"</span>,<span class="attr">"level"</span>:<span class="number">3</span>,<span class="attr">"time"</span>:<span class="string">"2018-04-28T16:26:32+00:00"</span>,<span class="attr">"remoteAddr"</span>:<span class="string">"127.0.0.1"</span>,<span class="attr">"user"</span>:<span class="string">"***"</span>,<span class="attr">"app"</span>:<span class="string">"PHP"</span>,<span class="attr">"method"</span>:<span class="string">"DELETE"</span>,<span class="attr">"url"</span>:<span class="string">"\/remote.php\/webdav\***"</span>,<span class="attr">"message"</span>:<span class="string">"rename(***files_trashbin\/files\/***): Invalid cross-device link at \/***\/lib\/private\/Files\/Storage\/Local.php#270"</span>,<span class="attr">"userAgent"</span>:<span class="string">"Mozilla\/5.0 manuscript from cmdgy.com"</span>,<span class="attr">"version"</span>:<span class="string">"13.0.1.1"</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此时需检查文件目录是否通过mount -bind方式挂载。</p>
 
       
     </div>
@@ -741,9 +769,9 @@
         
         <div class="post-tags">
           
-            <a href="/tags/宝塔面板/" rel="tag"><i class="fa fa-tag"></i> 宝塔面板</a>
-          
             <a href="/tags/腾讯云/" rel="tag"><i class="fa fa-tag"></i> 腾讯云</a>
+          
+            <a href="/tags/宝塔面板/" rel="tag"><i class="fa fa-tag"></i> 宝塔面板</a>
           
             <a href="/tags/Nextcloud/" rel="tag"><i class="fa fa-tag"></i> Nextcloud</a>
           
@@ -1138,7 +1166,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#宝塔面板安装"><span class="nav-number">1.</span> <span class="nav-text">宝塔面板安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署Nextcloud"><span class="nav-number">2.</span> <span class="nav-text">部署Nextcloud</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安全及设置告警解决"><span class="nav-number">3.</span> <span class="nav-text">安全及设置告警解决</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#宝塔面板安装"><span class="nav-number">1.</span> <span class="nav-text">宝塔面板安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署Nextcloud"><span class="nav-number">2.</span> <span class="nav-text">部署Nextcloud</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安全及设置告警解决"><span class="nav-number">3.</span> <span class="nav-text">安全及设置告警解决</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件夹文件无法删除解决方法"><span class="nav-number">4.</span> <span class="nav-text">文件夹文件无法删除解决方法</span></a></li></ol></div>
             
 
           </div>
@@ -1198,8 +1226,7 @@
 
 
 <div class="BbeiAn-info">
-   	浙ICP备 
-    <a target="_blank" href="http://www.beian.gov.cn/" style="color:#f72b07" rel="external nofollow noopener noreferrer">19050976号</a> <!--a标签中增加nofollow属性，避免爬虫出站。-->| 
+ 
 	<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602010614" style="color:#f72b07;text-decoration:none;padding-left:30px;background:url(http://111.229.17.211:3389/imgs/2019/12/a46fc5b15b3363ff.png) no-repeat left center" rel="external nofollow noopener noreferrer">浙公网安备 33010602010614号</a>	  <!--这里将图标作为了背景，以使得能和后面的文字在同一行-->
 </div>
 
