@@ -108,7 +108,7 @@
 <meta property="og:description" content="为自学MySQL,在Win10电脑上安装SQLyog软件，安装完毕时突然发现电脑桌面自动添加了IE浏览器的图标，而且该图标无法直接右键删除。 我去【控制面板】-【程序卸载】里面也没有找到安装IE浏览器（之前一直没有遇到过这种情况） ，那该如何是好呢？通过百度后，我将相关的解决办法记录与此，以便日后出现同类问题可以及时的解决。      Win+R,输入“regedit”,进入注册表编辑器, 进入">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/11/08/hHfRi4lUWrJc7Lx.jpg">
-<meta property="og:updated_time" content="2019-11-18T03:35:50.649Z">
+<meta property="og:updated_time" content="2019-12-29T09:43:06.767Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Win10下IE浏览器图标无法删除的解决办法">
 <meta name="twitter:description" content="为自学MySQL,在Win10电脑上安装SQLyog软件，安装完毕时突然发现电脑桌面自动添加了IE浏览器的图标，而且该图标无法直接右键删除。 我去【控制面板】-【程序卸载】里面也没有找到安装IE浏览器（之前一直没有遇到过这种情况） ，那该如何是好呢？通过百度后，我将相关的解决办法记录与此，以便日后出现同类问题可以及时的解决。      Win+R,输入“regedit”,进入注册表编辑器, 进入">
@@ -476,7 +476,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-11-18 11:35:50" itemprop="dateModified" datetime="2019-11-18T11:35:50+08:00">2019-11-18</time>
+                <time title="修改时间：2019-12-29 17:43:06" itemprop="dateModified" datetime="2019-12-29T17:43:06+08:00">2019-12-29</time>
               </span>
             
           
@@ -544,7 +544,8 @@
 
 <p>Win+R,输入“regedit”,进入注册表编辑器,</p>
 <p>进入如下目录</p>
-<p>计算\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace</p>
+<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">\H</span>KEY_LOCAL_MACHINE<span class="symbol">\S</span>OFTWARE<span class="symbol">\M</span>icrosoft<span class="symbol">\W</span>indows<span class="symbol">\C</span>urrentVersion<span class="symbol">\E</span>xplorer<span class="symbol">\D</span>esktop<span class="symbol">\N</span>ameSpace</span><br></pre></td></tr></table></figure>
+
 <p>找到{00010203-0001-0305-102938475600}字典目录  </p>
 <p>删除{00010203-0001-0305-102938475600}字典目录  </p>
 <p> 这时再返回电脑桌面，发现原先的IE图标已经被删除，问题成功解决！ </p>
