@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[腾讯云部署JupyterLab]]></title>
     <url>%2Fposts%2Ff5651246.html</url>
-    <content type="text"><![CDATA[1wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.3.1-Linux-x86_64.sh **执行Anaconda安装：** 1bash Anaconda3-5.3.1-Linux-x86_64.sh **安装过程提示1：** 直接回车 **安装过程提示2：** 输入yes+回车 **安装提示3：** Anaconda的安装位置默认会在执行用户的home目录下的anaconda3目录中，如果是要给服务器的全部用户安装的话，建议大家改成个公共的位置（如果安装时没有添加`-u`，目录如果存在会报错）。下面我是给改成安装在`/opt/anaconda3`下了。 其实安装位置可以在执行安装脚本的时候直接指定，像上面要指定安装到`/opt/anaconda3`目录下，可以这样修改执行内容：`bash bash Anaconda3-5.3.1-Linux-x86_64.sh -p /opt/anaconda3`，这一步安装目录就已经指定好了，直接回车了。 **安装提示4：** 修改.bashrc脚本将Anaconda目录添加到PATH中，输入yes+回车 **安装提示5：** 更新：安装2019版本的时候显示如下，输入yes+回车 **安装提示6：** 是否安装Microsoft VSCode，由于是在云服务器上部署的，输入no+回车 此时Anaconda安装完成！！ 直接输入`conda`应该会提示说没找到该命令，这时候执行下：`source ~/.bashrc`，之后就可以正常使用了 # Conda管理多个python 123conda upgrade condaconda update --allconda update anaconda 查看conda环境： 1conda info -e 12# 基于 python3.7 创建一个名为py38 的环境conda create --name py38 python=3.8 12# 基于 python2.7 创建一个名为py27 的环境conda create --name py27 python=2.7 123# 激活环境activate py3 # windowssource activate 环境名 # linux/mac 退出conda base环境 1conda deactivate 进入conda base 环境 1conda activate base # 安装Jupyter lab 1.在anaconda环境中安装Jupyter lab 1pip install jupyterlab 2生成配置文件 1jupyter notebook --generate-config 3.生成密码,创建哈希密码 123456ipythonfrom notebook.auth import passwdpasswd()# 输入你自己设置登录JupyterLab界面的密码，# 然后就会生产下面这样的密码，将它记下来，待会儿用'sha1:---------------------------------------------' 4.宝塔面板打开 root/.jupyter/jupter_notebook_config.py, 1234567891011121314151617c.NotebookApp.allow_root = Truec.NotebookApp.ip = '*'c.NotebookApp.open_browser = Falsec.NotebookApp.password = u'sha1:-------------------------------------------------'c.NotebookApp.port = 8081c.NotebookApp.allow_remote_access = Truec.NotebookApp.notebook_dir = u'/home/jupyterlab'#################################允许以root方式运行jupyterlab允许任意ip段访问默认运行时不启动浏览器，因为服务器默认只有终端嘛设置之前生产的哈希密码设置访问端口允许远程访问jupyter运行目录 到此，Jupyter lab已经安装成功了。 启动 Jupyter lab。 1jupyter lab --allow-root 然后你就可以在浏览器输入地址 # 安装Jupyter lab插件 安装Node.js 12345678curl -sL https://rpm.nodesource.com/setup_10.x | bash -yum install -y nodejs[root@localhost /]# node -vv10.9.0[root@localhost /]# npm -v6.2.0 安装 1npm install -g cnpm --registry=https://registry.npm.taobao.org 再打开终端，输入下面两条命令 12pip install jupyter_contrib_nbextensionsjupyter contrib nbextension install --user 安装完后，命令行输入jupyter lab --watch 进入Jupyter Lab界面。 点击 Settings --> Advanced Settings Editor ，将Extension Manager 里的enabled 的 false 改成 true（在右边的里面改），如下图： ![](https://i.loli.net/2019/12/29/itASfVMUYdqoj93.png) 现在，看向界面左侧应该就可以看到一个插件管理的图标，点击就可以看到刚才安装的插件，这个插件还有查询功能，我们可以很方便的安装卸载插件，上面是已安装的插件，下面是可以安装的插件，安装完成后可以直接更新。 ![](https://i.loli.net/2019/12/29/HsuITApo5wcxVS6.png) 如果你下载了字体插件，还可以更改字体大小和字体：Setting --> Jupyter Lab Theme ![](https://i.loli.net/2019/12/29/X4eJsDEd8rwIxqO.png) 如果你下载了字体插件，还可以更改字体大小和字体： ![](https://i.loli.net/2019/12/29/vstIo4puGmhrWnF.png) # 后台运行Jupyter lab **1.后台运行** 1nohup jupyter lab --ip=0.0.0.0 --no-browser --allow-root &gt; jupyter.log 2&gt;&amp;1 &amp; 用&让命令后台运行, 并把标准输出写入jupyter.log中 nohup表示no hang up, 就是不挂起, 于是这个命令执行后即使终端退出, 也不会停止运行. **2.后台终止** 12ps -a #查看进程pidkill -9 pid #终止进程 # 卸载Jupyter lab 命令行输入以下内容 12345678pip uninstall jupyter -ypip uninstall jupyter_core -ypip uninstall jupyter-client -ypip uninstall jupyter-console -ypip uninstall notebook -ypip uninstall qtconsole -ypip uninstall nbconvert -ypip uninstall nbformat -y 参考[Jupyterlab官方文档](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html)]]></content>
+    <content type="text"><![CDATA[Jupyter Lab 是一种 Web 应用，能让用户将说明文本、数学方程、代码和可视化内容全部组合到一个易于共享的文档中。 安装Anaconda将执行脚本获取到本地： 1wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.3.1-Linux-x86_64.sh 执行Anaconda安装： 1bash Anaconda3-5.3.1-Linux-x86_64.sh 安装过程提示1： 直接回车 安装过程提示2： 输入yes+回车 安装提示3： Anaconda的安装位置默认会在执行用户的home目录下的anaconda3目录中，如果是要给服务器的全部用户安装的话，建议大家改成个公共的位置（如果安装时没有添加-u，目录如果存在会报错）。下面我是给改成安装在/opt/anaconda3下了。 其实安装位置可以在执行安装脚本的时候直接指定，像上面要指定安装到/opt/anaconda3目录下，可以这样修改执行内容：bash bash Anaconda3-5.3.1-Linux-x86_64.sh -p /opt/anaconda3，这一步安装目录就已经指定好了，直接回车了。 安装提示4： 修改.bashrc脚本将Anaconda目录添加到PATH中，输入yes+回车 安装提示5： 更新：安装2019版本的时候显示如下，输入yes+回车 安装提示6： 是否安装Microsoft VSCode，由于是在云服务器上部署的，输入no+回车 此时Anaconda安装完成！！ 直接输入conda应该会提示说没找到该命令，这时候执行下：source ~/.bashrc，之后就可以正常使用了 Conda管理多个python123conda upgrade condaconda update --allconda update anaconda 查看conda环境： 1conda info -e 12# 基于 python3.7 创建一个名为py38 的环境conda create --name py38 python=3.8 12# 基于 python2.7 创建一个名为py27 的环境conda create --name py27 python=2.7 123# 激活环境activate py3 # windowssource activate 环境名 # linux/mac 退出conda base环境 1conda deactivate 进入conda base 环境 1conda activate base 安装Jupyter lab1.在anaconda环境中安装Jupyter lab 1pip install jupyterlab 2生成配置文件 1jupyter notebook --generate-config 3.生成密码,创建哈希密码 123456ipythonfrom notebook.auth import passwdpasswd()# 输入你自己设置登录JupyterLab界面的密码，# 然后就会生产下面这样的密码，将它记下来，待会儿用'sha1:---------------------------------------------' 4.宝塔面板打开 root/.jupyter/jupter_notebook_config.py, 1234567891011121314151617c.NotebookApp.allow_root = Truec.NotebookApp.ip = '*'c.NotebookApp.open_browser = Falsec.NotebookApp.password = u'sha1:-------------------------------------------------'c.NotebookApp.port = 8081c.NotebookApp.allow_remote_access = Truec.NotebookApp.notebook_dir = u'/home/jupyterlab'#################################允许以root方式运行jupyterlab允许任意ip段访问默认运行时不启动浏览器，因为服务器默认只有终端嘛设置之前生产的哈希密码设置访问端口允许远程访问jupyter运行目录 到此，Jupyter lab已经安装成功了。 启动 Jupyter lab。 1jupyter lab --allow-root 然后你就可以在浏览器输入地址 安装Jupyter lab插件安装Node.js 12345678curl -sL https://rpm.nodesource.com/setup_10.x | bash -yum install -y nodejs[root@localhost /]# node -vv10.9.0[root@localhost /]# npm -v6.2.0 安装插件 12pip install jupyter_contrib_nbextensionsjupyter contrib nbextension install --user 安装完后，命令行输入jupyter lab –watch 进入Jupyter Lab界面。点击 Settings –&gt; Advanced Settings Editor ，将Extension Manager 里的enabled 的 false 改成 true（在右边的里面改），如下图： 现在，看向界面左侧应该就可以看到一个插件管理的图标，点击就可以看到刚才安装的插件，这个插件还有查询功能，我们可以很方便的安装卸载插件，上面是已安装的插件，下面是可以安装的插件，安装完成后可以直接更新。 如果你下载了字体插件，还可以更改字体大小和字体：Setting –&gt; Jupyter Lab Theme 如果你下载了字体插件，还可以更改字体大小和字体： 后台运行Jupyter lab1.后台运行 1nohup jupyter lab --ip=0.0.0.0 --no-browser --allow-root &gt; jupyter.log 2&gt;&amp;1 &amp; 用&amp;让命令后台运行, 并把标准输出写入jupyter.log中 nohup表示no hang up, 就是不挂起, 于是这个命令执行后即使终端退出, 也不会停止运行. 2.后台终止 12ps -a #查看进程pidkill -9 pid #终止进程 卸载Jupyter lab命令行输入以下内容 12345678pip uninstall jupyter -ypip uninstall jupyter_core -ypip uninstall jupyter-client -ypip uninstall jupyter-console -ypip uninstall notebook -ypip uninstall qtconsole -ypip uninstall nbconvert -ypip uninstall nbformat -y 参考 Jupyterlab官方文档]]></content>
       <categories>
         <category>Jupyter</category>
       </categories>
@@ -326,9 +326,9 @@
         <category>ssh-key</category>
       </categories>
       <tags>
-        <tag>Windows</tag>
         <tag>ssh-key</tag>
         <tag>多账号</tag>
+        <tag>Windows</tag>
         <tag>Git</tag>
       </tags>
   </entry>
@@ -392,19 +392,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Win10系统优化1:手动优化篇]]></title>
-    <url>%2Fposts%2F50153a61.html</url>
-    <content type="text"><![CDATA[引言最近对自己的本基本电脑重新安装了WIN10系统后，在操作系统上选择了参加Windows预览体验计划，直接跳到下一版本并安装了最新的更新。虽然系统已更新到最新，但还是需要对其进行一些必要的优化，才能使自己使用起来更加流畅。 本次介绍系统优化第一步手动优化。 手动优化—设置优化点击桌面左下角Win图标，点击设置按钮进入设置主界面。 系统设置 点击系统—点击通知和操作—关闭通知 设备设置 点击设备—自动播放—关闭自动播放 点击设备—USB—关闭USB设备提示通知，避免USB电涌问题 网络和Internet设置 点击网络和internet—状态—网络和共享中心—更改高级共享设置——启用共享文件夹/启用无密码共享 点击网络和internet—代理—关闭代理 个性化设置 点击个性化—点击主题—点击右侧桌面图标—勾选图标 点击个性化—点击开始—关闭偶尔在“开始”菜单中显示建议 点击个性化—点击开始—点击选择哪些文件显示在“开始”菜单栏上—除设置全部关闭 点击个性化—点击任务栏—选择设置任务栏已满时合并 点击个性化—点击任务栏—点击打开或关闭系统图标 应用设置 点击应用—点击离线地图—关闭地图更新 点击应用—点击可使用网站打开应用—关闭关联应用 游戏设置 点击游戏—点击游戏栏—关闭游戏视频录制功能 隐私设置 点击隐私—点击常规—关闭常规里的所有内容 点击隐私—诊断和反馈—关闭诊断数据 点击隐私—诊断和反馈—点击活动历史记录 更新和安全设置 点击更新和安全—点击传递优化—关闭传递优化 手动优化—控制面板优化点击控制面版—切换成大图标方便查看 Internet选项设置 点击Internet选项—点击常规—标签页—进行如下设置 点击Internet选项—点击常规—浏览历史记录设置—进行如下设置 点击Internet选项—点击隐私—关闭弹窗阻止程序 点击Internet选项—点击高级—勾选允许运行或按照软件，即使签名无效，避免安装插件时弹出提示框 点击Internet选项—点击高级—取消勾选默认IE浏览器检测 自带防火墙设置 点击Windows Defender防火墙—点击左侧启用或关闭Windows Defender防火墙—关闭防火墙 安全维护设置 点击安全和维护—点击左侧更改用户账户控制设置—关闭用户控制提示 程序和功能设置 点击程序和功能—点击左侧启用或关闭Windows功能—开启SMB1.0服务 电源选项设置 点击电源选项—点击左侧选择电源按钮的功能—点击当前不可用设置—勾选休眠 文件夹选项设置 点击文件夹资源管理器选项—点击查看—勾选以下内容 系统高级设置 点击系统—高级系统设置—高级—性能设置—视觉效果—按个人设置自定义设置 点击系统—高级系统设置—高级—性能设置—高级—虚拟内存设置如下 疑难解答设置 点击疑难解答—点击左侧更改设置—关闭计算机维护，疑难解答，故障排除 手动优化—服务项优化右键桌面我的电脑—点击管理—点击服务和应用程序—点击服务 禁用程序兼容性助手找到Program Compatibility Assistant Service 并禁用，避免弹出程序是否正确安装的提示窗口 禁用超级预读找到SysMain 并禁用，避免弹出程序是否正确安装的提示窗口 手动优化—策略组优化WIN+R 打开运行对话框，输入gpedit.msc，直接运行组策略 启用“关闭加载性能通知”，防止打开IE浏览器状态栏提示关闭加载项来提高浏览器运行速度的提示。启用“自动激活新安装的加载项”，比如迅雷下载加载项等等可自动激活。禁用“打开建议网站”，无用的收藏夹网址建议禁止。 （计算机配置里的设置同用户配置里的设置一样，此处省略） 启用“阻止IE首次运行向导设置” （计算机配置里的设置同用户配置里的设置一样，此处省略） 启用“阻止订阅网页源和网页快讯” （计算机配置里的设置同用户配置里的设置一样，此处省略） 禁用“快速关机优化” 启用“允许管理员忽略设备安装限制策略” 启用“设备驱动程序的代码签名” 手动优化—其它设置设置快速访问栏 关闭磁盘索引设置右键点击C盘—选择属性—常规—设置如下 隐藏小娜，任务视图，人脉回到桌面，取消前面对应的勾选即可。 整理磁贴调整一下开始屏幕，删除自己认为无用的箭头磁贴，按照自己的喜好增加删除调整磁贴既可。]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-      <tags>
-        <tag>系统</tag>
-        <tag>优化</tag>
-        <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Win10系统优化2:软件辅助篇]]></title>
     <url>%2Fposts%2Fe177ee84.html</url>
     <content type="text"><![CDATA[引言最近对自己的本基本电脑重新安装了WIN10系统后，在操作系统上选择了参加Windows预览体验计划，直接跳到下一版本并安装了最新的更新。虽然系统已更新到最新，但还是需要对其进行一些必要的优化，才能使自己使用起来更加流畅。 本次介绍系统优化第二步软件辅助优化。 软媒美化大师优化下载软媒美化大师单文件版3.7.0.0 系统外观—桌面设置 软媒设置大师优化下载软媒设置大师单文件版3.7.2.0 系统设置—资源管理器 系统设置—多媒体优化设置 系统设置—错误报告 系统设置—开关机设置 右键菜单—新建菜单 删除无用右键菜单 右键菜单—发送到菜单 删除无用右键菜单 右键菜单—添加右键菜单项目 添加上获得管理员所有权这个功能 DISM++优化下载 DISM++ 启动项管理—关闭开机磁盘检测。关闭开机启动OneDrive 系统优化设置如下 DISM++清理 软媒清理大师清理下载软媒清理大师 一键清理 深度清理 系统瘦身 添加摄像头补丁下载摄像头补丁]]></content>
@@ -412,9 +399,22 @@
         <category>Windows</category>
       </categories>
       <tags>
+        <tag>Windows</tag>
         <tag>系统</tag>
         <tag>优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Win10系统优化1:手动优化篇]]></title>
+    <url>%2Fposts%2F50153a61.html</url>
+    <content type="text"><![CDATA[引言最近对自己的本基本电脑重新安装了WIN10系统后，在操作系统上选择了参加Windows预览体验计划，直接跳到下一版本并安装了最新的更新。虽然系统已更新到最新，但还是需要对其进行一些必要的优化，才能使自己使用起来更加流畅。 本次介绍系统优化第一步手动优化。 手动优化—设置优化点击桌面左下角Win图标，点击设置按钮进入设置主界面。 系统设置 点击系统—点击通知和操作—关闭通知 设备设置 点击设备—自动播放—关闭自动播放 点击设备—USB—关闭USB设备提示通知，避免USB电涌问题 网络和Internet设置 点击网络和internet—状态—网络和共享中心—更改高级共享设置——启用共享文件夹/启用无密码共享 点击网络和internet—代理—关闭代理 个性化设置 点击个性化—点击主题—点击右侧桌面图标—勾选图标 点击个性化—点击开始—关闭偶尔在“开始”菜单中显示建议 点击个性化—点击开始—点击选择哪些文件显示在“开始”菜单栏上—除设置全部关闭 点击个性化—点击任务栏—选择设置任务栏已满时合并 点击个性化—点击任务栏—点击打开或关闭系统图标 应用设置 点击应用—点击离线地图—关闭地图更新 点击应用—点击可使用网站打开应用—关闭关联应用 游戏设置 点击游戏—点击游戏栏—关闭游戏视频录制功能 隐私设置 点击隐私—点击常规—关闭常规里的所有内容 点击隐私—诊断和反馈—关闭诊断数据 点击隐私—诊断和反馈—点击活动历史记录 更新和安全设置 点击更新和安全—点击传递优化—关闭传递优化 手动优化—控制面板优化点击控制面版—切换成大图标方便查看 Internet选项设置 点击Internet选项—点击常规—标签页—进行如下设置 点击Internet选项—点击常规—浏览历史记录设置—进行如下设置 点击Internet选项—点击隐私—关闭弹窗阻止程序 点击Internet选项—点击高级—勾选允许运行或按照软件，即使签名无效，避免安装插件时弹出提示框 点击Internet选项—点击高级—取消勾选默认IE浏览器检测 自带防火墙设置 点击Windows Defender防火墙—点击左侧启用或关闭Windows Defender防火墙—关闭防火墙 安全维护设置 点击安全和维护—点击左侧更改用户账户控制设置—关闭用户控制提示 程序和功能设置 点击程序和功能—点击左侧启用或关闭Windows功能—开启SMB1.0服务 电源选项设置 点击电源选项—点击左侧选择电源按钮的功能—点击当前不可用设置—勾选休眠 文件夹选项设置 点击文件夹资源管理器选项—点击查看—勾选以下内容 系统高级设置 点击系统—高级系统设置—高级—性能设置—视觉效果—按个人设置自定义设置 点击系统—高级系统设置—高级—性能设置—高级—虚拟内存设置如下 疑难解答设置 点击疑难解答—点击左侧更改设置—关闭计算机维护，疑难解答，故障排除 手动优化—服务项优化右键桌面我的电脑—点击管理—点击服务和应用程序—点击服务 禁用程序兼容性助手找到Program Compatibility Assistant Service 并禁用，避免弹出程序是否正确安装的提示窗口 禁用超级预读找到SysMain 并禁用，避免弹出程序是否正确安装的提示窗口 手动优化—策略组优化WIN+R 打开运行对话框，输入gpedit.msc，直接运行组策略 启用“关闭加载性能通知”，防止打开IE浏览器状态栏提示关闭加载项来提高浏览器运行速度的提示。启用“自动激活新安装的加载项”，比如迅雷下载加载项等等可自动激活。禁用“打开建议网站”，无用的收藏夹网址建议禁止。 （计算机配置里的设置同用户配置里的设置一样，此处省略） 启用“阻止IE首次运行向导设置” （计算机配置里的设置同用户配置里的设置一样，此处省略） 启用“阻止订阅网页源和网页快讯” （计算机配置里的设置同用户配置里的设置一样，此处省略） 禁用“快速关机优化” 启用“允许管理员忽略设备安装限制策略” 启用“设备驱动程序的代码签名” 手动优化—其它设置设置快速访问栏 关闭磁盘索引设置右键点击C盘—选择属性—常规—设置如下 隐藏小娜，任务视图，人脉回到桌面，取消前面对应的勾选即可。 整理磁贴调整一下开始屏幕，删除自己认为无用的箭头磁贴，按照自己的喜好增加删除调整磁贴既可。]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
         <tag>Windows</tag>
+        <tag>系统</tag>
+        <tag>优化</tag>
       </tags>
   </entry>
   <entry>
