@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Nginx服务重启失败原因分析]]></title>
+    <url>%2Fposts%2F5e4c50a4.html</url>
+    <content type="text"><![CDATA[Nginx服务重启失败原因汇总Nginx是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务。由于意外重启腾讯云服务器，造成Nginx服务无法重启，云服务器上部署的一些应用瞬间无法访问了。。。于是进行原因排查。 无效的pid号远程登陆云服务器，重载Nginx 1nginx -s reload 提示：无效的pid号。 123[root@jupyter ~]# nginx: [error] invalid PID number "" in "/www/server/nginx/logs/nginx.pid"[root@jupyter ~]# 解决方法 查看配置文件，显示无问题。 123[root@jupyter ~]# nginx -tnginx: the configuration file /www/server/nginx/conf/nginx.conf syntax is oknginx: configuration file /www/server/nginx/conf/nginx.conf test is successful 首先找到nginx进程 pid 12[root@jupyter ~]# ps aux | grep "nginx: master" | grep -v pts | awk '&#123;print $2;&#125;'21968 将pid重新写入nginx.pid,需要注意的是 nginx.pid 的文件的路径，不同的配置，可能路径是不同的。 可以从之前的错误提示中找到路劲。 1echo `ps aux | grep "nginx: master" | grep -v pts | awk '&#123;print $2;&#125;'` &gt; /www/server/nginx/logs/nginx.pid 最后重启Nginx 1nginx -s reload 问题解决。 其它相关问题还未有碰到！]]></content>
+      <categories>
+        <category>Nginx</category>
+      </categories>
+      <tags>
+        <tag>Nginx</tag>
+        <tag>腾讯云</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[腾讯云部署JupyterLab]]></title>
     <url>%2Fposts%2Ff5651246.html</url>
-    <content type="text"><![CDATA[Jupyter Notebook 的本质是一个 Web 应用程序，便于创建和共享文学化程序文档，支持实时代码，数学方程，可视化和 markdown。 用途包括：数据清理和转换，数值模拟，统计建模，机器学习等等 。用户可以通过电子邮件，Dropbox，GitHub 和 Jupyter Notebook Viewer，将 Jupyter Notebook 分享给其他人。在其中，代码可以实时的生成图像，视频，LaTeX和JavaScript。而Jupyter Lab 是 Jupyter Notebook的升级版本， 安装Anaconda将执行脚本获取到本地： 1wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.3.1-Linux-x86_64.sh 执行Anaconda安装： 1bash Anaconda3-5.3.1-Linux-x86_64.sh 安装过程提示1： 直接回车 安装过程提示2： 输入yes+回车 安装提示3： Anaconda的安装位置默认会在执行用户的home目录下的anaconda3目录中，如果是要给服务器的全部用户安装的话，建议大家改成个公共的位置（如果安装时没有添加-u，目录如果存在会报错）。下面我是给改成安装在/opt/anaconda3下了。 其实安装位置可以在执行安装脚本的时候直接指定，像上面要指定安装到/opt/anaconda3目录下，可以这样修改执行内容：bash bash Anaconda3-5.3.1-Linux-x86_64.sh -p /opt/anaconda3，这一步安装目录就已经指定好了，直接回车了。 安装提示4： 修改.bashrc脚本将Anaconda目录添加到PATH中，输入yes+回车 安装提示5： 更新：安装2019版本的时候显示如下，输入yes+回车 安装提示6： 是否安装Microsoft VSCode，由于是在云服务器上部署的，输入no+回车 此时Anaconda安装完成！！ 直接输入conda应该会提示说没找到该命令，这时候执行下：source ~/.bashrc，之后就可以正常使用了 Conda管理多个python123conda upgrade condaconda update --allconda update anaconda 查看conda环境： 1conda info -e 12# 基于 python3.7 创建一个名为py38 的环境conda create --name py38 python=3.8 12# 基于 python2.7 创建一个名为py27 的环境conda create --name py27 python=2.7 123# 激活环境activate py3 # windowssource activate 环境名 # linux/mac 退出conda base环境 1conda deactivate 进入conda base 环境 1conda activate base 安装Jupyter lab1.在anaconda环境中安装Jupyter lab 1pip install jupyterlab 2生成配置文件 1jupyter notebook --generate-config 3.生成密码,创建哈希密码 123456ipythonfrom notebook.auth import passwdpasswd()# 输入你自己设置登录JupyterLab界面的密码，# 然后就会生产下面这样的密码，将它记下来，待会儿用'sha1:---------------------------------------------' 4.宝塔面板打开 root/.jupyter/jupter_notebook_config.py, 1234567891011121314151617c.NotebookApp.allow_root = Truec.NotebookApp.ip = '*'c.NotebookApp.open_browser = Falsec.NotebookApp.password = u'sha1:-------------------------------------------------'c.NotebookApp.port = 8081c.NotebookApp.allow_remote_access = Truec.NotebookApp.notebook_dir = u'/home/jupyterlab'#################################允许以root方式运行jupyterlab允许任意ip段访问默认运行时不启动浏览器，因为服务器默认只有终端嘛设置之前生产的哈希密码设置访问端口允许远程访问jupyter运行目录 到此，Jupyter lab已经安装成功了。 启动 Jupyter lab。 1jupyter lab --allow-root 然后你就可以在浏览器输入地址 安装Jupyter lab插件安装Node.js 12345678curl -sL https://rpm.nodesource.com/setup_10.x | bash -yum install -y nodejs[root@localhost /]# node -vv10.9.0[root@localhost /]# npm -v6.2.0 安装插件 12pip install jupyter_contrib_nbextensionsjupyter contrib nbextension install --user 安装完后，命令行输入jupyter lab –watch 进入Jupyter Lab界面。点击 Settings –&gt; Advanced Settings Editor ，将Extension Manager 里的enabled 的 false 改成 true（在右边的里面改），如下图： 现在，看向界面左侧应该就可以看到一个插件管理的图标，点击就可以看到刚才安装的插件，这个插件还有查询功能，我们可以很方便的安装卸载插件，上面是已安装的插件，下面是可以安装的插件，安装完成后可以直接更新。 如果你下载了字体插件，还可以更改字体大小和字体：Setting –&gt; Jupyter Lab Theme 如果你下载了字体插件，还可以更改字体大小和字体： 后台运行Jupyter lab1.后台运行 1nohup jupyter lab --ip=0.0.0.0 --no-browser --allow-root &gt; jupyter.log 2&gt;&amp;1 &amp; 用&amp;让命令后台运行, 并把标准输出写入jupyter.log中 nohup表示no hang up, 就是不挂起, 于是这个命令执行后即使终端退出, 也不会停止运行. 2.后台终止 12ps -a #查看进程pidkill -9 pid #终止进程 卸载Jupyter lab命令行输入以下内容 12345678pip uninstall jupyter -ypip uninstall jupyter_core -ypip uninstall jupyter-client -ypip uninstall jupyter-console -ypip uninstall notebook -ypip uninstall qtconsole -ypip uninstall nbconvert -ypip uninstall nbformat -y 参考 Jupyterlab官方文档]]></content>
+    <content type="text"><![CDATA[Jupyter Notebook 的本质是一个 Web 应用程序，便于创建和共享文学化程序文档，支持实时代码，数学方程，可视化和 markdown。 用途包括：数据清理和转换，数值模拟，统计建模，机器学习等等 。用户可以通过电子邮件，Dropbox，GitHub 和 Jupyter Notebook Viewer，将 Jupyter Notebook 分享给其他人。在其中，代码可以实时的生成图像，视频，LaTeX和JavaScript。而Jupyter Lab 是 Jupyter Notebook的升级版本， 安装Anaconda将执行脚本获取到本地： 1wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.3.1-Linux-x86_64.sh 执行Anaconda安装： 1bash Anaconda3-5.3.1-Linux-x86_64.sh 安装过程提示1： 直接回车 安装过程提示2： 输入yes+回车 安装提示3： Anaconda的安装位置默认会在执行用户的home目录下的anaconda3目录中，如果是要给服务器的全部用户安装的话，建议大家改成个公共的位置（如果安装时没有添加-u，目录如果存在会报错）。下面我是给改成安装在/opt/anaconda3下了。 其实安装位置可以在执行安装脚本的时候直接指定，像上面要指定安装到/opt/anaconda3目录下，可以这样修改执行内容：bash bash Anaconda3-5.3.1-Linux-x86_64.sh -p /opt/anaconda3，这一步安装目录就已经指定好了，直接回车了。 安装提示4： 修改.bashrc脚本将Anaconda目录添加到PATH中，输入yes+回车 安装提示5： 更新：安装2019版本的时候显示如下，输入yes+回车 安装提示6： 是否安装Microsoft VSCode，由于是在云服务器上部署的，输入no+回车 此时Anaconda安装完成！！ 直接输入conda应该会提示说没找到该命令，这时候执行下：source ~/.bashrc，之后就可以正常使用了 Conda管理多个python123conda upgrade condaconda update --allconda update anaconda 查看conda环境： 1conda info -e 12# 基于 python3.7 创建一个名为py38 的环境conda create --name py38 python=3.8 12# 基于 python2.7 创建一个名为py27 的环境conda create --name py27 python=2.7 123# 激活环境activate py3 # windowssource activate 环境名 # linux/mac 退出conda base环境 1conda deactivate 进入conda base 环境 1conda activate base 安装Jupyter lab1.在anaconda环境中安装Jupyter lab 1pip install jupyterlab 2生成配置文件 1jupyter notebook --generate-config 3.生成密码,创建哈希密码 123456ipythonfrom notebook.auth import passwdpasswd()# 输入你自己设置登录JupyterLab界面的密码，# 然后就会生产下面这样的密码，将它记下来，待会儿用'sha1:---------------------------------------------' 4.宝塔面板打开 root/.jupyter/jupter_notebook_config.py, 1234567891011121314151617c.NotebookApp.allow_root = Truec.NotebookApp.ip = '*'c.NotebookApp.open_browser = Falsec.NotebookApp.password = u'sha1:-------------------------------------------------'c.NotebookApp.port = 8081c.NotebookApp.allow_remote_access = Truec.NotebookApp.notebook_dir = u'/home/jupyterlab'#################################允许以root方式运行jupyterlab允许任意ip段访问默认运行时不启动浏览器，因为服务器默认只有终端嘛设置之前生产的哈希密码设置访问端口允许远程访问jupyter运行目录 到此，Jupyter lab已经安装成功了。 启动 Jupyter lab。 1nohup jupyter lab &amp; 然后你就可以在浏览器输入地址 安装Jupyter lab插件安装Node.js 12345678curl -sL https://rpm.nodesource.com/setup_10.x | bash -yum install -y nodejs[root@localhost /]# node -vv10.9.0[root@localhost /]# npm -v6.2.0 安装插件 12pip install jupyter_contrib_nbextensionsjupyter contrib nbextension install --user 安装完后，命令行输入jupyter lab –watch 进入Jupyter Lab界面。点击 Settings –&gt; Advanced Settings Editor ，将Extension Manager 里的enabled 的 false 改成 true（在右边的里面改），如下图： 现在，看向界面左侧应该就可以看到一个插件管理的图标，点击就可以看到刚才安装的插件，这个插件还有查询功能，我们可以很方便的安装卸载插件，上面是已安装的插件，下面是可以安装的插件，安装完成后可以直接更新。 如果你下载了字体插件，还可以更改字体大小和字体：Setting –&gt; Jupyter Lab Theme 如果你下载了字体插件，还可以更改字体大小和字体： 后台运行Jupyter lab1.后台运行 1nohup jupyter lab --ip=0.0.0.0 --no-browser --allow-root &gt; jupyter.log 2&gt;&amp;1 &amp; 用&amp;让命令后台运行, 并把标准输出写入jupyter.log中 nohup表示no hang up, 就是不挂起, 于是这个命令执行后即使终端退出, 也不会停止运行. 2.后台终止 12ps -a #查看进程pidkill -9 pid #终止进程 卸载Jupyter lab命令行输入以下内容 12345678pip uninstall jupyter -ypip uninstall jupyter_core -ypip uninstall jupyter-client -ypip uninstall jupyter-console -ypip uninstall notebook -ypip uninstall qtconsole -ypip uninstall nbconvert -ypip uninstall nbformat -y 参考 Jupyterlab官方文档]]></content>
       <categories>
         <category>Jupyter</category>
       </categories>
@@ -21,8 +33,8 @@
         <category>腾讯云</category>
       </categories>
       <tags>
-        <tag>宝塔面板</tag>
         <tag>腾讯云</tag>
+        <tag>宝塔面板</tag>
         <tag>Nextcloud</tag>
       </tags>
   </entry>
@@ -425,8 +437,8 @@
         <category>Markdown</category>
       </categories>
       <tags>
-        <tag>Markdown</tag>
         <tag>Typora</tag>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -437,9 +449,9 @@
         <category>Markdown</category>
       </categories>
       <tags>
-        <tag>Markdown</tag>
         <tag>Typora</tag>
         <tag>颜色</tag>
+        <tag>Markdown</tag>
         <tag>修改</tag>
       </tags>
   </entry>
@@ -488,8 +500,8 @@
         <category>Typora</category>
       </categories>
       <tags>
-        <tag>Markdown</tag>
         <tag>Typora</tag>
+        <tag>Markdown</tag>
         <tag>修改</tag>
       </tags>
   </entry>
@@ -501,9 +513,9 @@
         <category>Hexo</category>
       </categories>
       <tags>
+        <tag>aplayer</tag>
         <tag>Hexo</tag>
         <tag>nest</tag>
-        <tag>aplayer</tag>
       </tags>
   </entry>
   <entry>
