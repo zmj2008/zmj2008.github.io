@@ -16,7 +16,7 @@
   <entry>
     <title><![CDATA[腾讯云部署图形化界面]]></title>
     <url>%2Fposts%2F8b61043f.html</url>
-    <content type="text"><![CDATA[腾讯云Linux系统默认是无图形化界面的，命令行不熟练话使用非常不方便，拥有一个图形化界面使用起来会非常的方便。本次就尝试在云服务器Centos7操作系统下部署一个”GNOME Desktop”图形化界面。 安装图形化桌面安装包：SSH远程登陆云服务器 输入以下指令: 1yum groupinstall "GNOME Desktop" "Graphical Administration Tools" 再输入’Y’确认安装 。 设置图形化界面为默认启动输入如下指令： 1ln -sf /lib/systemd/system/runlevel5.target /etc/systemd/system/default.target 重启服务器1reboot VNC方式登陆登陆腾讯云控制器—实例—登陆—VNC方式 按照提示一步一步往下操作既可进入页面。 到此图形化界面安装完毕。]]></content>
+    <content type="text"><![CDATA[腾讯云Linux系统默认是无图形化界面的，命令行不熟练话使用非常不方便，拥有一个图形化界面使用起来会非常的方便。本次就尝试在云服务器Centos7操作系统下部署一个”GNOME Desktop”图形化界面。 安装图形化桌面安装包SSH远程登陆云服务器 输入以下指令: 1yum groupinstall "GNOME Desktop" "Graphical Administration Tools" 再输入’Y’确认安装 。 设置图形化界面为默认启动输入如下指令： 1ln -sf /lib/systemd/system/runlevel5.target /etc/systemd/system/default.target 重启服务器1reboot VNC方式登陆登陆腾讯云控制器—实例—登陆—VNC方式 按照提示一步一步往下操作既可进入页面。 到此图形化界面安装完毕。]]></content>
       <categories>
         <category>腾讯云</category>
       </categories>
