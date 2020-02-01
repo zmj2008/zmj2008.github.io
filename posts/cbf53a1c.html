@@ -1,0 +1,1871 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="mHtRCFYVoA">
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="http://111.229.17.211:3389/imgs/2020/01/7dd90901bd1e9b13.png?v=7.2.0">
+
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+
+
+  <meta name="description" content="GitBook [1]  是一个基于 Node.js 的命令行工具，可使用 Github/Git 和 Markdown 来制作精美的电子书。GitBook 并非关于 Git 的教程， GitBook支持输出多种文档格式，同时静态站点：GitBook默认输出该种格式，生成的静态站点可直接托管搭载Github Pages服务上。 GitBook使用教程1.GitBook 简介GitBook">
+<meta name="keywords" content="Discord">
+<meta property="og:type" content="article">
+<meta property="og:title" content="12345">
+<meta property="og:url" content="https://www.iamzmj.top/posts/cbf53a1c.html">
+<meta property="og:site_name" content="占敏捷">
+<meta property="og:description" content="GitBook [1]  是一个基于 Node.js 的命令行工具，可使用 Github/Git 和 Markdown 来制作精美的电子书。GitBook 并非关于 Git 的教程， GitBook支持输出多种文档格式，同时静态站点：GitBook默认输出该种格式，生成的静态站点可直接托管搭载Github Pages服务上。 GitBook使用教程1.GitBook 简介GitBook">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://111.229.17.211:3389/imgs/2020/01/eb723bcef1dd22e1.jpg">
+<meta property="og:image" content="http://111.229.17.211:3389/imgs/2020/02/c5bec51ab120eb01.png">
+<meta property="og:updated_time" content="2020-02-01T02:39:10.809Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="12345">
+<meta name="twitter:description" content="GitBook [1]  是一个基于 Node.js 的命令行工具，可使用 Github/Git 和 Markdown 来制作精美的电子书。GitBook 并非关于 Git 的教程， GitBook支持输出多种文档格式，同时静态站点：GitBook默认输出该种格式，生成的静态站点可直接托管搭载Github Pages服务上。 GitBook使用教程1.GitBook 简介GitBook">
+<meta name="twitter:image" content="http://111.229.17.211:3389/imgs/2020/01/eb723bcef1dd22e1.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="占敏捷" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://www.iamzmj.top/posts/cbf53a1c">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>12345 | 占敏捷</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    
+	<div class="headband"></div>
+	
+	<a href="https://www.iamzmj.top" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">占敏捷</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">有事没事写点什么</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">80</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">30</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">59</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-guestbook">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/guestbook/" rel="section"><i class="menu-item-icon fa fa-fw fa-comments"></i> <br>音乐</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/yourname" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="external nofollow noopener noreferrer" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.iamzmj.top/posts/cbf53a1c.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Martin Zhan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://111.229.17.211:3389/imgs/2020/01/bc3fbb2b1ccf8067.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="占敏捷">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">12345
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+		  
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-30 16:36:33" itemprop="dateCreated datePublished" datetime="2020-01-30T16:36:33+08:00">2020-01-30</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-02-01 10:39:10" itemprop="dateModified" datetime="2020-02-01T10:39:10+08:00">2020-02-01</time>
+              </span>
+            
+          
+
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/cbf53a1c.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/cbf53a1c.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+                 热度： 
+                <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+              </span>
+            </span>
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <script type="text/javascript" src="/js/src/bai.js"></script>
+<img src="http://111.229.17.211:3389/imgs/2020/01/eb723bcef1dd22e1.jpg">  
+
+<p>GitBook [1]  是一个基于 <a href="https://baike.baidu.com/item/Node.js" rel="external nofollow noopener noreferrer" target="_blank">Node.js</a> 的命令行工具，可使用 <a href="https://baike.baidu.com/item/Github" rel="external nofollow noopener noreferrer" target="_blank">Github</a>/<a href="https://baike.baidu.com/item/Git/12647237" rel="external nofollow noopener noreferrer" target="_blank">Git</a> 和 <a href="https://baike.baidu.com/item/Markdown" rel="external nofollow noopener noreferrer" target="_blank">Markdown</a> 来制作精美的电子书。GitBook 并非关于 Git 的教程， GitBook支持输出多种文档格式，同时静态站点：GitBook默认输出该种格式，生成的静态站点可直接托管搭载Github Pages服务上。</p>
+<h1 id="GitBook使用教程"><a href="#GitBook使用教程" class="headerlink" title="GitBook使用教程"></a>GitBook使用教程</h1><h2 id="1-GitBook-简介"><a href="#1-GitBook-简介" class="headerlink" title="1.GitBook 简介"></a>1.GitBook 简介</h2><p><a href="https://www.gitbook.com/" rel="external nofollow noopener noreferrer" target="_blank">GitBook 官网</a></p>
+<p><a href="https://github.com/GitbookIO/gitbook" rel="external nofollow noopener noreferrer" target="_blank">GitBook 官方文档</a></p>
+<h2 id="2-GitBook-安装"><a href="#2-GitBook-安装" class="headerlink" title="2.GitBook 安装"></a>2.GitBook 安装</h2><h3 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h3><p>GitBook 是一个基于 Node.js 的命令行工具，本次在W10环境下载安装 <a href="https://nodejs.org/en" rel="external nofollow noopener noreferrer" target="_blank">Node.js</a>，安装完成之后，你可以使用下面的命令来检验是否安装成功。 </p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">node</span> <span class="title">-v</span></span><br><span class="line">v12.<span class="number">13.1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="安装-GitBook"><a href="#安装-GitBook" class="headerlink" title="安装 GitBook"></a>安装 GitBook</h3><p>输入下面的命令来安装 GitBook：</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install gitbook-<span class="keyword">cli</span> -g</span><br></pre></td></tr></table></figure>
+
+<p>安装完成之后，你可以使用下面的命令来检验是否安装成功：</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ gitbook -V</span><br><span class="line"><span class="keyword">CLI</span> <span class="keyword">version</span>: 2.3.2</span><br><span class="line">GitBook <span class="keyword">version</span>: 3.2.3</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装-GitBook-编辑器"><a href="#安装-GitBook-编辑器" class="headerlink" title="安装 GitBook 编辑器"></a>安装 GitBook 编辑器</h3><p>下载 <a href="https://github.com/GitbookIO/editor-legacy" rel="external nofollow noopener noreferrer" target="_blank">GitBook 编辑器</a>；如果是 Mac 用户且安装过 <code>brew cask</code> 的话可以使用 <code>brew cask install gitbook-editor</code> 命令行来安装 GitBook 编辑器。 </p>
+<h3 id="先睹为快"><a href="#先睹为快" class="headerlink" title="先睹为快"></a>先睹为快</h3><p>GitBook 准备工作做好之后，我们新建一个写书的文件夹，点击进入该文件夹，输入如下命令。 </p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ gitbook init</span><br><span class="line">warn: no <span class="selector-tag">summary</span> file <span class="keyword">in</span> this book</span><br><span class="line">info: create README.md</span><br><span class="line">info: create SUMMARY.md</span><br><span class="line">info: initialization is finished</span><br></pre></td></tr></table></figure>
+
+<p>可以看到他会创建 README.md 和 SUMMARY.md 这两个文件，README.md 说明文档，而 SUMMARY.md 是书的章节目录，其默认内容如下所示： </p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># Summary</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">* </span>[<span class="string">Introduction</span>](<span class="link">README.md</span>)</span><br></pre></td></tr></table></figure>
+
+<p>接下来，我们输入 <code>$ gitbook serve</code> 命令，然后在浏览器地址栏中输入 <code>http://localhost:4000</code> 便可预览书籍。  显示效果如下所示：</p>
+<img src="http://111.229.17.211:3389/imgs/2020/02/c5bec51ab120eb01.png">
+
+<p> 运行该命令后会在书籍的文件夹中生成一个 <code>_book</code> 文件夹, 里面的内容即为生成的 html 文件 。   </p>
+<h2 id="3-GitBook-目录结构"><a href="#3-GitBook-目录结构" class="headerlink" title="3.GitBook 目录结构"></a>3.GitBook 目录结构</h2><p>GitBook 基本的目录结构如下所示： </p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── book.json</span><br><span class="line">├── README.<span class="built_in">md</span></span><br><span class="line">├── SUMMARY.<span class="built_in">md</span></span><br><span class="line">├── chapter-<span class="number">1</span>/</span><br><span class="line">|   ├── README.<span class="built_in">md</span></span><br><span class="line">|   └── something.<span class="built_in">md</span></span><br><span class="line">└── chapter-<span class="number">2</span>/</span><br><span class="line">    ├── README.<span class="built_in">md</span></span><br><span class="line">    └── something.<span class="built_in">md</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="book-json"><a href="#book-json" class="headerlink" title="book.json"></a>book.json</h3><p> 该文件主要用来存放配置信息，样板如下：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"title"</span>: <span class="string">"Blankj's Glory"</span>,</span><br><span class="line">    <span class="attr">"author"</span>: <span class="string">"Blankj"</span>,</span><br><span class="line">    <span class="attr">"description"</span>: <span class="string">"select * from learn"</span>,</span><br><span class="line">    <span class="attr">"language"</span>: <span class="string">"zh-hans"</span>,</span><br><span class="line">    <span class="attr">"gitbook"</span>: <span class="string">"3.2.3"</span>,</span><br><span class="line">    <span class="attr">"styles"</span>: &#123;</span><br><span class="line">        <span class="attr">"website"</span>: <span class="string">"/styles/website.css"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"structure"</span>: &#123;</span><br><span class="line">        <span class="attr">"readme"</span>: <span class="string">"README.md"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"links"</span>: &#123;</span><br><span class="line">        <span class="attr">"sidebar"</span>: &#123;</span><br><span class="line">            <span class="attr">"我的狗窝"</span>: <span class="string">"https://blankj.com"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"plugins"</span>: [</span><br><span class="line">        <span class="string">"-sharing"</span>,</span><br><span class="line">        <span class="string">"splitter"</span>,</span><br><span class="line">        <span class="string">"expandable-chapters-small"</span>,</span><br><span class="line">        <span class="string">"anchors"</span>,</span><br><span class="line"></span><br><span class="line">        <span class="string">"github"</span>,</span><br><span class="line">        <span class="string">"github-buttons"</span>,</span><br><span class="line">        <span class="string">"donate"</span>,</span><br><span class="line">        <span class="string">"sharing-plus"</span>,</span><br><span class="line">        <span class="string">"anchor-navigation-ex"</span>,</span><br><span class="line">        <span class="string">"favicon"</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">"pluginsConfig"</span>: &#123;</span><br><span class="line">        <span class="attr">"github"</span>: &#123;</span><br><span class="line">            <span class="attr">"url"</span>: <span class="string">"https://github.com/Blankj"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">"github-buttons"</span>: &#123;</span><br><span class="line">            <span class="attr">"buttons"</span>: [&#123;</span><br><span class="line">                <span class="attr">"user"</span>: <span class="string">"Blankj"</span>,</span><br><span class="line">                <span class="attr">"repo"</span>: <span class="string">"glory"</span>,</span><br><span class="line">                <span class="attr">"type"</span>: <span class="string">"star"</span>,</span><br><span class="line">                <span class="attr">"size"</span>: <span class="string">"small"</span>,</span><br><span class="line">                <span class="attr">"count"</span>: <span class="literal">true</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">"donate"</span>: &#123;</span><br><span class="line">            <span class="attr">"alipay"</span>: <span class="string">"https://blankj.com/gitbook/source/images/donate.png"</span>,</span><br><span class="line">            <span class="attr">"title"</span>: <span class="string">""</span>,</span><br><span class="line">            <span class="attr">"button"</span>: <span class="string">"赞赏"</span>,</span><br><span class="line">            <span class="attr">"alipayText"</span>: <span class="string">" "</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">"sharing"</span>: &#123;</span><br><span class="line">            <span class="attr">"douban"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"facebook"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"google"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"hatenaBookmark"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"instapaper"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"line"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"linkedin"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"messenger"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"pocket"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"qq"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"qzone"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"stumbleupon"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"twitter"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"viber"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"vk"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"weibo"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"whatsapp"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"all"</span>: [</span><br><span class="line">                <span class="string">"google"</span>, <span class="string">"facebook"</span>, <span class="string">"weibo"</span>, <span class="string">"twitter"</span>,</span><br><span class="line">                <span class="string">"qq"</span>, <span class="string">"qzone"</span>, <span class="string">"linkedin"</span>, <span class="string">"pocket"</span></span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">"anchor-navigation-ex"</span>: &#123;</span><br><span class="line">            <span class="attr">"showLevel"</span>: <span class="literal">false</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">"favicon"</span>:&#123;</span><br><span class="line">            <span class="attr">"shortcut"</span>: <span class="string">"./source/images/favicon-32x32.webp"</span>,</span><br><span class="line">            <span class="attr">"bookmark"</span>: <span class="string">"./source/images/favicon-32x32.webp"</span>,</span><br><span class="line">            <span class="attr">"appleTouch"</span>: <span class="string">"./source/images/apple-touch-icon.webp"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中：</p>
+<h4 id="title"><a href="#title" class="headerlink" title="title"></a>title</h4><p>本书标题</p>
+<h4 id="author"><a href="#author" class="headerlink" title="author"></a>author</h4><p>本书作者</p>
+<h4 id="description"><a href="#description" class="headerlink" title="description"></a>description</h4><p>本书描述</p>
+<h4 id="language"><a href="#language" class="headerlink" title="language"></a>language</h4><p>本书语言，中文设置 “zh-hans” 即可</p>
+<h4 id="gitbook"><a href="#gitbook" class="headerlink" title="gitbook"></a>gitbook</h4><p>指定使用的 GitBook 版本</p>
+<h4 id="styles"><a href="#styles" class="headerlink" title="styles"></a>styles</h4><p>自定义页面样式</p>
+<h4 id="structure"><a href="#structure" class="headerlink" title="structure"></a>structure</h4><p>指定 Readme、Summary、Glossary 和 Languages 对应的文件名</p>
+<h4 id="links"><a href="#links" class="headerlink" title="links"></a>links</h4><p>在左侧导航栏添加链接信息</p>
+<h4 id="plugins"><a href="#plugins" class="headerlink" title="plugins"></a>plugins</h4><p>配置使用的插件</p>
+<h4 id="pluginsConfig"><a href="#pluginsConfig" class="headerlink" title="pluginsConfig"></a>pluginsConfig</h4><p>配置插件的属性</p>
+<h3 id="SUMMARY-md"><a href="#SUMMARY-md" class="headerlink" title="SUMMARY.md"></a>SUMMARY.md</h3><p>这个文件主要决定 GitBook 的章节目录，它通过 Markdown 中的列表语法来表示文件的父子关系，下面是一个简单的示例：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># Summary</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">* </span>[<span class="string">Introduction</span>](<span class="link">README.md</span>)</span><br><span class="line"><span class="bullet">* </span>[<span class="string">Part I</span>](<span class="link">part1/README.md</span>)</span><br><span class="line"><span class="bullet">    * </span>[<span class="string">Writing is nice</span>](<span class="link">part1/writing.md</span>)</span><br><span class="line"><span class="bullet">    * </span>[<span class="string">GitBook is nice</span>](<span class="link">part1/gitbook.md</span>)</span><br><span class="line"><span class="bullet">* </span>[<span class="string">Part II</span>](<span class="link">part2/README.md</span>)</span><br><span class="line"><span class="bullet">    * </span>[<span class="string">We love feedback</span>](<span class="link">part2/feedback_please.md</span>)</span><br><span class="line"><span class="bullet">    * </span>[<span class="string">Better tools for authors</span>](<span class="link">part2/better_tools.md</span>)</span><br></pre></td></tr></table></figure>
+
+<p>我们通过使用 <code>标题</code> 或者 <code>水平分割线</code> 将 GitBook 分为几个不同的部分，如下所示： </p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># Summary</span></span><br><span class="line"></span><br><span class="line"><span class="section">### Part I</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">* </span>[<span class="string">Introduction</span>](<span class="link">README.md</span>)</span><br><span class="line"><span class="bullet">* </span>[<span class="string">Writing is nice</span>](<span class="link">part1/writing.md</span>)</span><br><span class="line"><span class="bullet">* </span>[<span class="string">GitBook is nice</span>](<span class="link">part1/gitbook.md</span>)</span><br><span class="line"></span><br><span class="line"><span class="section">### Part II</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">* </span>[<span class="string">We love feedback</span>](<span class="link">part2/feedback_please.md</span>)</span><br><span class="line"><span class="bullet">* </span>[<span class="string">Better tools for authors</span>](<span class="link">part2/better_tools.md</span>)</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="bullet">* </span>[<span class="string">Last part without title</span>](<span class="link">part3/title.md</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-GitBook插件"><a href="#4-GitBook插件" class="headerlink" title="4.GitBook插件"></a>4.GitBook插件</h2><p>GitBook 有 <a href="https://plugins.gitbook.com/" rel="external nofollow noopener noreferrer" target="_blank">插件官网</a>，默认带有 5 个插件，highlight、search、sharing、font-settings、livereload，如果要去除自带的插件， 可以在插件名称前面加 <code>-</code>，比如： </p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"plugins"</span>: [</span><br><span class="line">    <span class="string">"-search"</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p>如果要配置使用的插件可以在 book.json 文件中加入即可，比如我们添加 <a href="https://plugins.gitbook.com/plugin/github" rel="external nofollow noopener noreferrer" target="_blank">plugin-github</a>，我们在 book.json 中加入配置如下即可：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"plugins"</span>: [ <span class="string">"github"</span> ],</span><br><span class="line">    <span class="attr">"pluginsConfig"</span>: &#123;</span><br><span class="line">        <span class="attr">"github"</span>: &#123;</span><br><span class="line">            <span class="attr">"url"</span>: <span class="string">"https://github.com/your/repo"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后在终端输入 <code>gitbook install ./</code> 即可。 </p>
+<p>如果要指定插件的版本可以使用 <a href="mailto:plugin@0.3.1" rel="external nofollow noopener noreferrer" target="_blank">plugin@0.3.1</a>，因为一些插件可能不会随着 GitBook 版本的升级而升级。 </p>
+<h2 id="5-GitBook常见命令"><a href="#5-GitBook常见命令" class="headerlink" title="5.GitBook常见命令"></a>5.GitBook常见命令</h2><p>不论是 <code>gitbook-cli</code> 命令行还是 <code>gitbook editor</code> 编辑器都离不开 <code>gitbook</code> 命令的操作使用,所以再次了解下常用命令。 <code>gitbook-cli</code> 是 <code>gitbook</code> 的脚手架工具,是 <code>gitbook</code> 的扩展功能,同时着管理 <code>gitbook</code>。</p>
+<h3 id="查看-gitbook-帮助信息"><a href="#查看-gitbook-帮助信息" class="headerlink" title="查看 gitbook 帮助信息"></a>查看 gitbook 帮助信息</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$ gitbook --<span class="keyword">help</span></span><br><span class="line"></span><br><span class="line">  Usage: gitbook [<span class="keyword">options</span>] [<span class="keyword">command</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  Option<span class="variable">s:</span></span><br><span class="line"></span><br><span class="line">    -v, --gitbook [<span class="keyword">version</span>]  specify GitBook <span class="keyword">version</span> <span class="keyword">to</span> use</span><br><span class="line">    -d, --<span class="keyword">debug</span>              enable <span class="keyword">verbose</span> error</span><br><span class="line">    -V, --<span class="keyword">version</span>            Display running versions of gitbook <span class="built_in">and</span> gitbook-cli</span><br><span class="line">    -h, --<span class="keyword">help</span>               output usage information</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  Command<span class="variable">s:</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">ls</span>                        List versions installed locally</span><br><span class="line">    current                   Display currently activated <span class="keyword">version</span></span><br><span class="line">    <span class="keyword">ls</span>-remote                 List remote versions available <span class="keyword">for</span> install</span><br><span class="line">    fetch [<span class="keyword">version</span>]           Download <span class="built_in">and</span> install <span class="keyword">a</span> <span class="symbol">&lt;version&gt;</span></span><br><span class="line">    alias [folder] [<span class="keyword">version</span>]  Set <span class="keyword">an</span> alias named <span class="symbol">&lt;version&gt;</span> pointing <span class="keyword">to</span> <span class="symbol">&lt;folder&gt;</span></span><br><span class="line">    uninstall [<span class="keyword">version</span>]       Uninstall <span class="keyword">a</span> <span class="keyword">version</span></span><br><span class="line">    <span class="keyword">update</span> [<span class="keyword">tag</span>]              Update <span class="keyword">to</span> the latest <span class="keyword">version</span> of GitBook</span><br><span class="line">    <span class="keyword">help</span>                      List commands <span class="keyword">for</span> GitBook</span><br><span class="line">    *                         run <span class="keyword">a</span> <span class="keyword">command</span> with <span class="keyword">a</span> specific gitbook <span class="keyword">version</span></span><br><span class="line">$</span><br></pre></td></tr></table></figure>
+
+<h3 id="列出-gitbook-可用命令"><a href="#列出-gitbook-可用命令" class="headerlink" title="列出 gitbook 可用命令"></a>列出 gitbook 可用命令</h3><figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">gitbook help</span><br><span class="line"></span><br><span class="line">$ gitbook help</span><br><span class="line">    build [book] [output]       build a book</span><br><span class="line">        --<span class="built_in">log</span>                   Minimum <span class="built_in">log</span> level <span class="keyword">to</span> display (<span class="keyword">Default</span> <span class="keyword">is</span> info; Values are debug, info, warn, <span class="keyword">error</span>, disabled)</span><br><span class="line">        --format                Format <span class="keyword">to</span> build <span class="keyword">to</span> (<span class="keyword">Default</span> <span class="keyword">is</span> website; Values are website, json, ebook)</span><br><span class="line">        --[no-]timing           Print timing debug information (<span class="keyword">Default</span> <span class="keyword">is</span> <span class="literal">false</span>)</span><br><span class="line"></span><br><span class="line">    serve [book] [output]       serve the book as a website <span class="keyword">for</span> testing</span><br><span class="line">        --port                  Port <span class="keyword">for</span> <span class="built_in">server</span> <span class="keyword">to</span> listen <span class="keyword">on</span> (<span class="keyword">Default</span> <span class="keyword">is</span> <span class="number">4000</span>)</span><br><span class="line">        --lrport                Port <span class="keyword">for</span> livereload <span class="built_in">server</span> <span class="keyword">to</span> listen <span class="keyword">on</span> (<span class="keyword">Default</span> <span class="keyword">is</span> <span class="number">35729</span>)</span><br><span class="line">        --[no-]watch            Enable file watcher <span class="keyword">and</span> live reloading (<span class="keyword">Default</span> <span class="keyword">is</span> <span class="literal">true</span>)</span><br><span class="line">        --[no-]live             Enable live reloading (<span class="keyword">Default</span> <span class="keyword">is</span> <span class="literal">true</span>)</span><br><span class="line">        --[no-]open             Enable opening book <span class="keyword">in</span> browser (<span class="keyword">Default</span> <span class="keyword">is</span> <span class="literal">false</span>)</span><br><span class="line">        --browser               Specify browser <span class="keyword">for</span> opening book (<span class="keyword">Default</span> <span class="keyword">is</span> )</span><br><span class="line">        --<span class="built_in">log</span>                   Minimum <span class="built_in">log</span> level <span class="keyword">to</span> display (<span class="keyword">Default</span> <span class="keyword">is</span> info; Values are debug, info, warn, <span class="keyword">error</span>, disabled)</span><br><span class="line">        --format                Format <span class="keyword">to</span> build <span class="keyword">to</span> (<span class="keyword">Default</span> <span class="keyword">is</span> website; Values are website, json, ebook)</span><br><span class="line"></span><br><span class="line">    install [book]              install all plugins dependencies</span><br><span class="line">        --<span class="built_in">log</span>                   Minimum <span class="built_in">log</span> level <span class="keyword">to</span> display (<span class="keyword">Default</span> <span class="keyword">is</span> info; Values are debug, info, warn, <span class="keyword">error</span>, disabled)</span><br><span class="line"></span><br><span class="line">    parse [book]                parse <span class="keyword">and</span> print debug information about a book</span><br><span class="line">        --<span class="built_in">log</span>                   Minimum <span class="built_in">log</span> level <span class="keyword">to</span> display (<span class="keyword">Default</span> <span class="keyword">is</span> info; Values are debug, info, warn, <span class="keyword">error</span>, disabled)</span><br><span class="line"></span><br><span class="line">    init [book]                 setup <span class="keyword">and</span> create files <span class="keyword">for</span> chapters</span><br><span class="line">        --<span class="built_in">log</span>                   Minimum <span class="built_in">log</span> level <span class="keyword">to</span> display (<span class="keyword">Default</span> <span class="keyword">is</span> info; Values are debug, info, warn, <span class="keyword">error</span>, disabled)</span><br><span class="line"></span><br><span class="line">    pdf [book] [output]         build a book into an ebook file</span><br><span class="line">        --<span class="built_in">log</span>                   Minimum <span class="built_in">log</span> level <span class="keyword">to</span> display (<span class="keyword">Default</span> <span class="keyword">is</span> info; Values are debug, info, warn, <span class="keyword">error</span>, disabled)</span><br><span class="line"></span><br><span class="line">    epub [book] [output]        build a book into an ebook file</span><br><span class="line">        --<span class="built_in">log</span>                   Minimum <span class="built_in">log</span> level <span class="keyword">to</span> display (<span class="keyword">Default</span> <span class="keyword">is</span> info; Values are debug, info, warn, <span class="keyword">error</span>, disabled)</span><br><span class="line"></span><br><span class="line">    mobi [book] [output]        build a book into an ebook file</span><br><span class="line">        --<span class="built_in">log</span>                   Minimum <span class="built_in">log</span> level <span class="keyword">to</span> display (<span class="keyword">Default</span> <span class="keyword">is</span> info; Values are debug, info, warn, <span class="keyword">error</span>, disabled)</span><br><span class="line"></span><br><span class="line">$</span><br></pre></td></tr></table></figure>
+
+<h3 id="构建电子书"><a href="#构建电子书" class="headerlink" title="构建电子书"></a>构建电子书</h3><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 默认输出到 `_book/` 目录</span><br><span class="line">$ gitbook <span class="keyword">build</span> </span><br><span class="line"></span><br><span class="line"># 指定输出目录 <span class="symbol">`/Users/sunpo/Desktop/book/`</span></span><br><span class="line">$ gitbook <span class="keyword">build</span> ./ /Users/sunpo/Desktop/book/</span><br><span class="line"></span><br><span class="line"># 指定输出格式 <span class="symbol">`json`</span></span><br><span class="line">$ gitbook <span class="keyword">build</span> --format=json</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动本地服务器"><a href="#启动本地服务器" class="headerlink" title="启动本地服务器"></a>启动本地服务器</h3><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认服务端口: `4000`,热部署端口: `35729`</span></span><br><span class="line">$ gitbook serve </span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定输出目录 `/Users/sunpo/Desktop/book/`</span></span><br><span class="line">$ gitbook serve <span class="string">./</span> <span class="string">/Users/sunpo/Desktop/book/</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定服务端口: `5000` 和热部署端口: `45729`</span></span><br><span class="line">$ gitbook serve <span class="params">--port=5000</span> <span class="params">--lrport=45729</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装当前项目所需插件</span></span><br><span class="line">$ gitbook <span class="keyword">install</span> </span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装指定项目所需插件 `/Users/sunpo/Desktop/gitbook-demo/`</span></span><br><span class="line">$ gitbook <span class="keyword">install</span> /<span class="keyword">Users</span>/sunpo/Desktop/gitbook-demo/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装当前项目所需插件且指定日志输出级别: `debug`</span></span><br><span class="line">$ gitbook <span class="keyword">install</span> <span class="comment">--log=debug</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="指定文件夹别名"><a href="#指定文件夹别名" class="headerlink" title="指定文件夹别名"></a>指定文件夹别名</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载并安装指定的 `gitbook` 版本</span></span><br><span class="line">$ gitbook alias <span class="regexp">/Users/</span>sunpo<span class="regexp">/Desktop/</span>book<span class="regexp">/gitbook/</span> <span class="number">1.0</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="安装指定版本"><a href="#安装指定版本" class="headerlink" title="安装指定版本"></a>安装指定版本</h3><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 下载并安装指定的 `gitbook` 版本</span><br><span class="line">$ gitbook fetch <span class="number">2.6</span>.<span class="number">9</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="卸载指定版本"><a href="#卸载指定版本" class="headerlink" title="卸载指定版本"></a>卸载指定版本</h3><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 卸载指定的 `gitbook` 版本</span><br><span class="line">$ gitbook uninstall <span class="number">2.6</span>.<span class="number">9</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="列出本地安装版本"><a href="#列出本地安装版本" class="headerlink" title="列出本地安装版本"></a>列出本地安装版本</h3><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 列出本地已安装 `gitbook` 版本</span><br><span class="line">$ gitbook ls</span><br></pre></td></tr></table></figure>
+
+<h3 id="列出远程可用版本"><a href="#列出远程可用版本" class="headerlink" title="列出远程可用版本"></a>列出远程可用版本</h3><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 列出远程可用的 `gitbook` 版本</span><br><span class="line">$ gitbook ls-remote</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出-PDF-电子书"><a href="#输出-PDF-电子书" class="headerlink" title="输出 PDF 电子书"></a>输出 PDF 电子书</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认输出到当前项目</span></span><br><span class="line"><span class="variable">$ </span>gitbook pdf </span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定输出文件 `/Users/sunpo/Desktop/book.pdf`</span></span><br><span class="line"><span class="variable">$ </span>gitbook pdf ./ <span class="regexp">/Users/sunpo</span><span class="regexp">/Desktop/book</span>.pdf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定输出日志级别: `debug`</span></span><br><span class="line"><span class="variable">$ </span>gitbook pdf --log=debug</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出-epub-电子书"><a href="#输出-epub-电子书" class="headerlink" title="输出 epub 电子书"></a>输出 epub 电子书</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认输出到当前项目</span></span><br><span class="line"><span class="variable">$ </span>gitbook epub </span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定输出文件 `/Users/sunpo/Desktop/book.epub`</span></span><br><span class="line"><span class="variable">$ </span>gitbook epub ./ <span class="regexp">/Users/sunpo</span><span class="regexp">/Desktop/book</span>.epub</span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定输出日志级别: `debug`</span></span><br><span class="line"><span class="variable">$ </span>gitbook epub --log=debug</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出-mobi-电子书"><a href="#输出-mobi-电子书" class="headerlink" title="输出 mobi 电子书"></a>输出 mobi 电子书</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认输出到当前项目</span></span><br><span class="line"><span class="variable">$ </span>gitbook mobi </span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定输出文件 `/Users/sunpo/Desktop/book.mobi`</span></span><br><span class="line"><span class="variable">$ </span>gitbook mobi ./ <span class="regexp">/Users/sunpo</span><span class="regexp">/Desktop/book</span>.mobi</span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定输出日志级别: `debug`</span></span><br><span class="line"><span class="variable">$ </span>gitbook mobi --log=debug</span><br></pre></td></tr></table></figure>
+
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p> GitBook 使用心得，在此做一整理。❤️❤️</p>
+
+      
+    </div>
+
+    
+
+  
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>~若你喜欢这篇文章何不请我喝杯咖啡~</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/wechatpay.jpg" alt="Martin Zhan 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="https://raw.githubusercontent.com/zhanminjie/mybigimage/master/blogimage/alipay.jpg" alt="Martin Zhan 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+     
+     <div>
+
+<div>
+
+    <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+
+</div>
+
+
+</div>
+
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/Discord/" rel="tag"><i class="fa fa-tag"></i> Discord</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/49f3b7ae.html" rel="next" title="西餐餐桌礼仪有哪些">
+                <i class="fa fa-chevron-left"></i> 西餐餐桌礼仪有哪些
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+			<a href="/">
+              <img class="site-author-image" itemprop="image" src="http://111.229.17.211:3389/imgs/2020/01/bc3fbb2b1ccf8067.jpg" alt="Martin Zhan">
+			</a>
+            
+              <p class="site-author-name" itemprop="name">Martin Zhan</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">59</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">30</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">80</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/zmj2008" title="GitHub &rarr; https://github.com/zmj2008" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="mailto:zhanminjie@hotmail.com" title="E-Mail &rarr; mailto:zhanminjie@hotmail.com" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://www.jianshu.com/u/b4ad99801783" title="简书 &rarr; https://www.jianshu.com/u/b4ad99801783" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-book"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="http://zhanmuji.lofter.com" title="lofter &rarr; http://zhanmuji.lofter.com" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-leaf"></i></a>
+                </span>
+              
+            </div>
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="external nofollow noopener noreferrer" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.gscq.me/" title="http://www.gscq.me/" rel="external nofollow noopener noreferrer" target="_blank">乐赏</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://music.liuzhijin.cn/" title="https://music.liuzhijin.cn/" rel="external nofollow noopener noreferrer" target="_blank">实验室</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GitBook使用教程"><span class="nav-number">1.</span> <span class="nav-text">GitBook使用教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-GitBook-简介"><span class="nav-number">1.1.</span> <span class="nav-text">1.GitBook 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-GitBook-安装"><span class="nav-number">1.2.</span> <span class="nav-text">2.GitBook 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-Node-js"><span class="nav-number">1.2.1.</span> <span class="nav-text">安装 Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-GitBook"><span class="nav-number">1.2.2.</span> <span class="nav-text">安装 GitBook</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-GitBook-编辑器"><span class="nav-number">1.2.3.</span> <span class="nav-text">安装 GitBook 编辑器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#先睹为快"><span class="nav-number">1.2.4.</span> <span class="nav-text">先睹为快</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-GitBook-目录结构"><span class="nav-number">1.3.</span> <span class="nav-text">3.GitBook 目录结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#book-json"><span class="nav-number">1.3.1.</span> <span class="nav-text">book.json</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#title"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">title</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#author"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">author</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#description"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#language"><span class="nav-number">1.3.1.4.</span> <span class="nav-text">language</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gitbook"><span class="nav-number">1.3.1.5.</span> <span class="nav-text">gitbook</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#styles"><span class="nav-number">1.3.1.6.</span> <span class="nav-text">styles</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#structure"><span class="nav-number">1.3.1.7.</span> <span class="nav-text">structure</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#links"><span class="nav-number">1.3.1.8.</span> <span class="nav-text">links</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#plugins"><span class="nav-number">1.3.1.9.</span> <span class="nav-text">plugins</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pluginsConfig"><span class="nav-number">1.3.1.10.</span> <span class="nav-text">pluginsConfig</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SUMMARY-md"><span class="nav-number">1.3.2.</span> <span class="nav-text">SUMMARY.md</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-GitBook插件"><span class="nav-number">1.4.</span> <span class="nav-text">4.GitBook插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-GitBook常见命令"><span class="nav-number">1.5.</span> <span class="nav-text">5.GitBook常见命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看-gitbook-帮助信息"><span class="nav-number">1.5.1.</span> <span class="nav-text">查看 gitbook 帮助信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列出-gitbook-可用命令"><span class="nav-number">1.5.2.</span> <span class="nav-text">列出 gitbook 可用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建电子书"><span class="nav-number">1.5.3.</span> <span class="nav-text">构建电子书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动本地服务器"><span class="nav-number">1.5.4.</span> <span class="nav-text">启动本地服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装插件"><span class="nav-number">1.5.5.</span> <span class="nav-text">安装插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指定文件夹别名"><span class="nav-number">1.5.6.</span> <span class="nav-text">指定文件夹别名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装指定版本"><span class="nav-number">1.5.7.</span> <span class="nav-text">安装指定版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#卸载指定版本"><span class="nav-number">1.5.8.</span> <span class="nav-text">卸载指定版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列出本地安装版本"><span class="nav-number">1.5.9.</span> <span class="nav-text">列出本地安装版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列出远程可用版本"><span class="nav-number">1.5.10.</span> <span class="nav-text">列出远程可用版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出-PDF-电子书"><span class="nav-number">1.5.11.</span> <span class="nav-text">输出 PDF 电子书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出-epub-电子书"><span class="nav-number">1.5.12.</span> <span class="nav-text">输出 epub 电子书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出-mobi-电子书"><span class="nav-number">1.5.13.</span> <span class="nav-text">输出 mobi 电子书</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结语"><span class="nav-number">2.</span> <span class="nav-text">结语</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+	  
+	  
+        <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+        <div class="widget-wrap">
+            <div id="myCanvasContainer" class="widget tagcloud">
+                <canvas width="200" height="250" id="resCanvas" style="width=100%">
+                  <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/5G/">5G</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Centos7/">Centos7</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Discord/">Discord</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ECS/">ECS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ESS/">ESS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GooglePlay/">GooglePlay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hugo/">Hugo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hyper-V/">Hyper-V</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IE浏览器/">IE浏览器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ImgURL/">ImgURL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jupyter/">Jupyter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jupyterlab/">Jupyterlab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nextcloud/">Nextcloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OSS/">OSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Picgo/">Picgo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SLB/">SLB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/">Typora</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPC/">VPC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Word/">Word</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aplayer/">aplayer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/myQR/">myQR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nest/">nest</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openssl/">openssl</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/qBittorrent/">qBittorrent</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh-key/">ssh-key</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tagcloud/">tagcloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/booklist/">书单</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二维码/">二维码</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云服务器/">云服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云盾/">云盾</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/optimize/">优化</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/modification/">修改</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/兼职/">兼职</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动漫/">动漫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博弈论/">博弈论</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/figurebed/">图床</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图形化界面/">图形化界面</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/墨菲定律/">墨菲定律</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/多公网IP/">多公网IP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/多账号/">多账号</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/宝塔面板/">宝塔面板</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/家常菜/">家常菜</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/弹性网卡/">弹性网卡</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cellphone/">手机</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库/">数据库</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日剧/">日剧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Japan/">日本</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务员/">服务员</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/木村拓哉/">木村拓哉</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ukiyoe/">浮世绘</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/玫瑰战争/">玫瑰战争</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/礼仪/">礼仪</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/神曲/">神曲</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动通信/">移动通信</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system/">系统</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/系统优化/">系统优化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美食/">美食</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/考古/">考古</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/腾讯云/">腾讯云</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/良渚/">良渚</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/西餐/">西餐</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video/">视频</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plan/">计划</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书笔记/">读书笔记</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/谷歌浏览器/">谷歌浏览器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/通信技术/">通信技术</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/酒店/">酒店</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/阿里云/">阿里云</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/snowflake/">雪花</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/colour/">颜色</a><span class="tag-list-count">1</span></li></ul>
+                </canvas>
+            </div>
+        </div>
+      
+ 
+    </div>
+  </aside>
+    
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Martin Zhan</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="BbeiAn-info">
+    
+    <a target="_blank" href="http://beian.miit.gov.cn/" style="color:#DC143C" rel="external nofollow noopener noreferrer">浙ICP备-19050976号</a> 	
+<!--a标签中增加nofollow属性，避免爬虫出站。-->| 
+	
+	<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602010614" style="color:#DC143C;text-decoration:none;padding-left:30px;background:url(http://111.229.17.211:3389/imgs/2019/12/a46fc5b15b3363ff.png) no-repeat left center" rel="external nofollow noopener noreferrer">浙公网安备 33010602010614号</a>	  <!--这里将图标作为了背景，以使得能和后面的文字在同一行-->
+</div>
+
+
+
+
+
+<div class="run_time" style=" text-align:center;">
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+  <script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("07/23/2019 10:00:00");//此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "(*^_^*)本站已运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+    setInterval("createtime()",250);
+  </script>
+</div>
+
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+    
+    
+      
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest-nomobile.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.2.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.9/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: true,
+    appId: 'ssrHTRlfkWXbkUhce4IbCPhq-gzGzoHsz',
+    appKey: 'tKqaMBxQDAl3OI1wafrsutiO',
+    placeholder: 'ヾﾉ≧∀≦)o既然来了就随便说些什么吧',
+    avatar: 'mp',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: 'zh-cn' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+<script>
+if ($('body').find('div.pdf').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      $('body').find('div.pdf').each(function(i, o) {
+        PDFObject.embed($(o).attr('target'), $(o), {
+          pdfOpenParams: {
+            navpanes: 0,
+            toolbar: 0,
+            statusbar: 0,
+            pagemode: 'thumbs',
+            view: 'FitH'
+          },
+          PDFJS_URL: '/lib/pdf/web/viewer.html',
+          height: $(o).attr('height') || '500px'
+        });
+      });
+    },
+  });
+}
+</script>
+
+
+  
+<script>
+if ($('body').find('pre.mermaid').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      mermaid.initialize({
+        theme: 'forest',
+        logLevel: 3,
+        flowchart: { curve: 'linear' },
+        gantt: { axisFormat: '%m/%d/%Y' },
+        sequence: { actorMargin: 50 }
+      });
+    }
+  });
+}
+</script>
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+<!-- 音频播放 -->
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script> 
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":100,"vOffset":-100},"mobile":{"show":false,"scale":0.5}});</script></body>
+</html>
+
+<!-- 雪花特效 -->
+<script type="text/javascript">
+  var windowWidth = $(window).width();
+  if (windowWidth > 0) {
+    document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
+  }
+</script>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
