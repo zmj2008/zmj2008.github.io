@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[腾讯云部署Calibre-web电子书管理平台]]></title>
     <url>%2Fposts%2F85cd889d.html</url>
-    <content type="text"><![CDATA[部署初衷Calibre 是一款强大且易用的电子书本地管理工具，可以在 Windows、macOS 和 Linux 平台集中整理各种格式的电子书…… Calibre 不只是一款「本地电子书管理工具」，「管理电子书」不是我们真正的需求。Calibre 带来的，是我们靠依附于电子书平台，无法带来的完全自由而又完善的电子书使用体验。而在服务器上部署calibre-web的初衷是用来随时随地在网上看电子书。 安装环境CentOS 7.7 x64 宝塔面板 安装宝塔面板 1yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh janeczku/calibre-web项目地址，直接get clone calibre-web-master压缩包到电脑桌面。 项目部署开放8083端口1.进入腾讯云管理控制平台-点击安全组-放行8083端口； 2.进入宝塔面板，点击安全栏—放行8083端口； 域名解析1.进入腾讯云管理控制平台-点击域名解析-域名绑定IP地址； 2.进入腾讯云管理控制平台-点击SSL证书-申请域名证书（可选）； 创建站点进入宝塔面板，点击网站栏—添加站点（我此处站点根目录地址为：/www/wwwroot/x04680126.top） ​ 3.进入网站根目录， 删除里面已生成的 404.html、index.html两个文件夹。 4.在网站根目录上传 calibre-web-master 软件包并解压。 5.在站点根目录下新建 books 文件夹 (或者其他名称)，改所有者 www, 改权限 777，应用到子目录，将books文件夹作为 Calibre-Web 的数据库存放文件夹。 Python 项目管理器宝塔面板软件商店搜索 Python项目管理器并安装。 安装 Python 3.5 以上的任一版本 避免麻烦不直接使用centos7中的python版本。 进入Python项目管理器设置界面，设置如下并保存。 项目添加完成后并运行： 完成以上步骤，我这里输入 x04680126.top:8083(ip:端口号)就可以通过域名访问初始页面。 数据库位置填写先前已经创建好的books文件夹路径（/www/wwwroot/x04680126.top/books）。 创建数据库根据自己的系统平台下载 Calibre 程序并安装。 再将准备好的电子书书拖入calibre 64bit - E-book management软件中，逐个编辑元数据(内容可以参照豆瓣读书)。 再任意选择一本书右键，选择打开所jiangwenjian在目录，进入Calibre书库文件夹，其中 metadata.db 既为数据库文件。 上传数据Ctrl+A将Calibre书库文件夹内的所有文件压缩打包，上传至 服务器（/www/wwwroot/x04680126.top/books） 路径下。 至此数据库文件打包上传完成。在浏览器中输入 平台地址 x04680126.top:8083，登陆平台进入管理界面，选择重新链接 Calibre 数据库即可。 项目效果重新进入管理平台，UI配置中选择 Dark Theme主题，效果如下：]]></content>
+    <content type="text"><![CDATA[Calibre 是一款强大且易用的电子书本地管理工具，可以在 Windows、macOS 和 Linux 平台集中整理各种格式的电子书…… Calibre 不只是一款「本地电子书管理工具」，「管理电子书」不是我们真正的需求。Calibre 带来的，是我们靠依附于电子书平台，无法带来的完全自由而又完善的电子书使用体验。而在服务器上部署calibre-web的初衷是用来随时随地在网上看电子书。 安装环境CentOS 7.7 x64 宝塔面板，服务器安装宝塔面板命令如下： 1yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh janeczku/calibre-web项目地址，直接get clone calibre-web-master压缩包到电脑桌面。 项目部署开放8083端口1.进入腾讯云管理控制平台-点击安全组-放行8083端口； 2.进入宝塔面板，点击安全栏—放行8083端口； 域名解析1.进入腾讯云管理控制平台-点击域名解析-域名绑定IP地址； 2.进入腾讯云管理控制平台-点击SSL证书-申请域名证书（可选）； 创建站点进入宝塔面板，点击网站栏—添加站点（我此处站点根目录地址为：/www/wwwroot/x04680126.top） 3.进入网站根目录， 删除里面已生成的 404.html、index.html两个文件夹。 4.在网站根目录上传 calibre-web-master 软件包并解压。 5.在站点根目录下新建 books 文件夹 (或者其他名称)，改所有者 www, 改权限 777，应用到子目录，将books文件夹作为 Calibre-Web 的数据库存放文件夹。 Python 项目管理器宝塔面板软件商店搜索 Python项目管理器并安装。 安装 Python 3.5 以上的任一版本 避免麻烦不直接使用centos7中的python版本。 进入Python项目管理器设置界面，设置如下并保存。 项目添加完成后并运行： 完成以上步骤，我这里输入 x04680126.top:8083(ip:端口号)就可以通过域名访问初始页面。 数据库位置填写先前已经创建好的books文件夹路径（/www/wwwroot/x04680126.top/books）。 创建数据库根据自己的系统平台下载 Calibre 程序并安装。 再将准备好的电子书书拖入calibre 64bit - E-book management软件中，逐个编辑元数据(内容可以参照豆瓣读书)。 再任意选择一本书右键，选择打开所jiangwenjian在目录，进入Calibre书库文件夹，其中 metadata.db 既为数据库文件。 上传数据Ctrl+A将Calibre书库文件夹内的所有文件压缩打包，上传至 服务器（/www/wwwroot/x04680126.top/books） 路径下。 至此数据库文件打包上传完成。在浏览器中输入 平台地址 x04680126.top:8083，登陆平台进入管理界面，选择重新链接 Calibre 数据库即可。 项目效果重新进入管理平台，UI配置中选择 Dark Theme主题，效果如下： 用户注册这块由于平台以自用为主，暂不考虑开通，若后期有需要在进行注册设置的更新。]]></content>
       <categories>
         <category>Calibre-web</category>
       </categories>
@@ -82,8 +82,8 @@
         <category>读书笔记</category>
       </categories>
       <tags>
-        <tag>墨菲定律</tag>
         <tag>读书笔记</tag>
+        <tag>墨菲定律</tag>
       </tags>
   </entry>
   <entry>
@@ -94,8 +94,8 @@
         <category>读书笔记</category>
       </categories>
       <tags>
-        <tag>读书笔记</tag>
         <tag>博弈论</tag>
+        <tag>读书笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -643,8 +643,8 @@
         <category>Markdown</category>
       </categories>
       <tags>
-        <tag>Typora</tag>
         <tag>Markdown</tag>
+        <tag>Typora</tag>
       </tags>
   </entry>
   <entry>
@@ -655,9 +655,9 @@
         <category>Markdown</category>
       </categories>
       <tags>
+        <tag>Markdown</tag>
         <tag>Typora</tag>
         <tag>颜色</tag>
-        <tag>Markdown</tag>
         <tag>修改</tag>
       </tags>
   </entry>
@@ -706,8 +706,8 @@
         <category>Typora</category>
       </categories>
       <tags>
-        <tag>Typora</tag>
         <tag>Markdown</tag>
+        <tag>Typora</tag>
         <tag>修改</tag>
       </tags>
   </entry>
